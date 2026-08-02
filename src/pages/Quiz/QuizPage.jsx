@@ -22,6 +22,7 @@ import WelcomeScreen from '../../components/Welcome/WelcomeScreen.jsx';
 import InstructionsModal from '../../components/Welcome/InstructionsModal.jsx';
 import ReviewMode from '../../components/Quiz/ReviewMode.jsx';
 import CountdownTimer from '../../components/Quiz/CountdownTimer.jsx';
+import { getQuestionsForQuiz } from '../../data/questionRegistry.js';
 
 function QuizPage() {
   const navigate = useNavigate();
@@ -81,6 +82,14 @@ function QuizPage() {
         questions = storedQuiz.questions;
       } else if (state.selectedQuiz.questions) {
         questions = state.selectedQuiz.questions;
+      }
+      
+      // If still no questions, try loading from the registry
+      if (!questions || questions.length === 0) {
+        const registryQuestions = getQuestionsForQuiz(state.selectedQuiz.questionFile);
+        if (registryQuestions && registryQuestions.length > 0) {
+          questions = registryQuestions;
+        }
       }
       
       if (questions && questions.length > 0) {

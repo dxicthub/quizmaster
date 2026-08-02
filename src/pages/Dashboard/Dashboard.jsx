@@ -15,6 +15,7 @@ import QuizCard from '../../components/Dashboard/QuizCard.jsx';
 import QuizSearch from '../../components/Dashboard/QuizSearch.jsx';
 import QuizFilter from '../../components/Dashboard/QuizFilter.jsx';
 import { quizCategories } from '../../data/quizCategories.js';
+import { getQuestionsForQuiz } from '../../data/questionRegistry.js';
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -121,11 +122,12 @@ function Dashboard() {
       return;
     }
 
-    if (!quiz.questionFile) {
+    if (!quiz.questionFile && !quiz.questions) {
       toast.error('This quiz has no questions. Please contact the administrator.');
       return;
     }
 
+    // First check if questions exist in localStorage (from Question Manager)
     const savedQuestions = localStorage.getItem(`questions_${quiz.id}`);
     let questions = [];
     
@@ -144,29 +146,22 @@ function Dashboard() {
       navigate(`/app/quiz/${quiz.id}`);
     };
 
+    // If no questions in localStorage, try loading from the static registry
     if (!questions || questions.length === 0) {
-      import(`../../data/${quiz.questionFile}`)
-        .then(module => {
-          const fileQuestions = module.questions || module.default || [];
-          console.log('✅ Loaded questions from file:', fileQuestions.length);
-          
-          if (fileQuestions && fileQuestions.length > 0) {
-            goToQuiz({ ...quiz, questions: fileQuestions });
-          } else if (quiz.questions && quiz.questions.length > 0) {
-            goToQuiz({ ...quiz, questions: quiz.questions });
-          } else {
-            toast.error(`"${quiz.title}" has no questions. Please contact the administrator.`);
-          }
-        })
-        .catch((error) => {
-          console.error('❌ Error loading questions from file:', error);
-          if (quiz.questions && quiz.questions.length > 0) {
-            goToQuiz({ ...quiz, questions: quiz.questions });
-          } else {
-            toast.error(`Failed to load "${quiz.title}" questions. The question file may be missing.`);
-          }
-        });
+      // Try to get questions from the registry
+      const fileQuestions = getQuestionsForQuiz(quiz.questionFile);
+      
+      if (fileQuestions && fileQuestions.length > 0) {
+        console.log('✅ Loaded questions from registry:', fileQuestions.length);
+        goToQuiz({ ...quiz, questions: fileQuestions });
+      } else if (quiz.questions && quiz.questions.length > 0) {
+        // Use questions from the quiz object if available
+        goToQuiz({ ...quiz, questions: quiz.questions });
+      } else {
+        toast.error(`"${quiz.title}" has no questions. Please contact the administrator.`);
+      }
     } else {
+      // Use questions from localStorage
       console.log('✅ Using questions from localStorage:', questions.length);
       goToQuiz({ ...quiz, questions });
     }
