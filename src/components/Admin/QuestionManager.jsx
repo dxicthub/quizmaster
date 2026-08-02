@@ -1,3 +1,4 @@
+// components/Admin/QuestionManager.jsx
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -10,6 +11,7 @@ import {
 } from 'react-icons/fa';
 import toast from 'react-hot-toast';
 import Swal from 'sweetalert2';
+import { getQuestionsForQuiz } from '../../data/questionRegistry.js';
 
 function QuestionManager({ quiz, onClose, onSave }) {
   const [questions, setQuestions] = useState([]);
@@ -43,19 +45,64 @@ function QuestionManager({ quiz, onClose, onSave }) {
     }
   }, [quiz]);
 
-  // Load questions from the question file
+  // Load questions from the question file using registry
   const loadQuestionsFromFile = async () => {
     try {
-      if (quiz && quiz.questionFile) {
-        const module = await import(`../../data/${quiz.questionFile}`);
-        const loadedQuestions = module.questions || module.default || [];
-        setQuestions(loadedQuestions);
-        setFilteredQuestions(loadedQuestions);
-        calculateStats(loadedQuestions);
+      if (quiz) {
+        // Try to get questions from the registry first (works on Vercel)
+        const fileQuestions = getQuestionsForQuiz(quiz.questionFile, quiz.title, quiz.id);
+        
+        if (fileQuestions && fileQuestions.length > 0) {
+          console.log('✅ Loaded questions from registry:', fileQuestions.length);
+          setQuestions(fileQuestions);
+          setFilteredQuestions(fileQuestions);
+          calculateStats(fileQuestions);
+          return;
+        }
+
+        // If not in registry, try localStorage
+        const savedQuestions = localStorage.getItem(`questions_${quiz.id}`);
+        if (savedQuestions) {
+          const parsed = JSON.parse(savedQuestions);
+          if (parsed && parsed.length > 0) {
+            console.log('✅ Loaded questions from localStorage:', parsed.length);
+            setQuestions(parsed);
+            setFilteredQuestions(parsed);
+            calculateStats(parsed);
+            return;
+          }
+        }
+
+        // If still no questions, try dynamic import as fallback (only works on localhost)
+        if (quiz.questionFile) {
+          try {
+            const module = await import(`../../data/${quiz.questionFile}`);
+            const loadedQuestions = module.questions || module.default || [];
+            if (loadedQuestions && loadedQuestions.length > 0) {
+              console.log('✅ Loaded questions from file (fallback):', loadedQuestions.length);
+              setQuestions(loadedQuestions);
+              setFilteredQuestions(loadedQuestions);
+              calculateStats(loadedQuestions);
+              return;
+            }
+          } catch (e) {
+            console.warn('⚠️ Could not load from file:', e);
+          }
+        }
+
+        // If no questions found, set empty array
+        console.warn('⚠️ No questions found for quiz:', quiz.title);
+        setQuestions([]);
+        setFilteredQuestions([]);
+        calculateStats([]);
+        toast.info('No questions found for this quiz. You can add questions manually.');
       }
     } catch (error) {
       console.error('Error loading questions:', error);
       toast.error('Failed to load questions');
+      setQuestions([]);
+      setFilteredQuestions([]);
+      calculateStats([]);
     }
   };
 
@@ -63,9 +110,9 @@ function QuestionManager({ quiz, onClose, onSave }) {
   const calculateStats = (questionsList) => {
     const stats = {
       total: questionsList.length,
-      easy: questionsList.filter(q => q.difficulty === 'easy').length,
-      medium: questionsList.filter(q => q.difficulty === 'medium').length,
-      hard: questionsList.filter(q => q.difficulty === 'hard').length,
+      easy: questionsList.filter(q => q.difficulty === 'easy' || q.difficulty === 'Easy').length,
+      medium: questionsList.filter(q => q.difficulty === 'medium' || q.difficulty === 'Medium').length,
+      hard: questionsList.filter(q => q.difficulty === 'hard' || q.difficulty === 'Hard').length,
       multipleChoice: questionsList.filter(q => q.type === 'multiple-choice').length,
       trueFalse: questionsList.filter(q => q.type === 'true-false').length,
       fillIn: questionsList.filter(q => q.type === 'fill-in').length,
