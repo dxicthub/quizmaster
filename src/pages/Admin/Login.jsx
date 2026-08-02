@@ -11,7 +11,8 @@ import {
   FaShieldAlt,
   FaEye,
   FaEyeSlash,
-  FaCheckCircle
+  FaCheckCircle,
+  FaInfoCircle
 } from 'react-icons/fa';
 import { useAdmin } from '../../context/AdminContext.jsx';
 import toast from 'react-hot-toast';

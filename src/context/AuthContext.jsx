@@ -174,6 +174,48 @@ export function AuthProvider({ children }) {
     return () => clearInterval(interval);
   }, [state.isAuthenticated]);
 
+  // Initialize default test account
+  const initializeDefaultAccount = () => {
+    const students = JSON.parse(localStorage.getItem('students') || '[]');
+    
+    // Check if test account already exists
+    const testAccountExists = students.some(s => s.email === 'student@quizmaster.com');
+    
+    if (!testAccountExists) {
+      // Create default test account
+      const testStudent = {
+        id: 'test-student-001',
+        fullName: 'Test Student',
+        email: 'student@quizmaster.com',
+        phone: '+234 801 234 5678',
+        passcode: 'QZ-STUDENT',
+        batch: 'Batch A',
+        month: 'January',
+        year: '2024',
+        batchLabel: 'January Batch A, 2024',
+        registeredAt: new Date().toISOString(),
+        quizHistory: [],
+        favorites: [],
+        isActive: true,
+        emailVerified: true,
+        verificationToken: null,
+        verificationTokenCreatedAt: null,
+      };
+      
+      students.push(testStudent);
+      localStorage.setItem('students', JSON.stringify(students));
+      
+      console.log('✅ Default test account created:');
+      console.log('   Email: student@quizmaster.com');
+      console.log('   Passcode: QZ-STUDENT');
+    }
+  };
+
+  // Initialize default account on mount
+  useEffect(() => {
+    initializeDefaultAccount();
+  }, []);
+
   // Register a new student with email verification
   const registerStudent = (studentData, newStudentData) => {
     // If newStudentData is provided (from Register component), use it directly
