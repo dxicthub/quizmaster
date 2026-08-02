@@ -33,11 +33,8 @@ const AdminLayout = () => {
   const [showNotifications, setShowNotifications] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   
-  // Refs for hover detection - specific to each dropdown
   const profileMenuRef = useRef(null);
   const notificationRef = useRef(null);
-  
-  // Timer refs for delay
   const profileTimerRef = useRef(null);
   const notificationTimerRef = useRef(null);
   
@@ -45,7 +42,6 @@ const AdminLayout = () => {
   const navigate = useNavigate();
   const { logout, admin } = useAdmin();
 
-  // Navigation items with icons
   const navItems = [
     { path: '/admin/dashboard', label: 'Dashboard', icon: FaTachometerAlt, badge: null },
     { path: '/admin/students', label: 'Students', icon: FaUsers, badge: null },
@@ -81,7 +77,6 @@ const AdminLayout = () => {
     }, 200);
   };
 
-  // Notification menu hover handlers
   const handleNotificationMouseEnter = () => {
     if (profileTimerRef.current) {
       clearTimeout(profileTimerRef.current);
@@ -103,7 +98,6 @@ const AdminLayout = () => {
     }, 200);
   };
 
-  // Cleanup timers on unmount
   useEffect(() => {
     return () => {
       if (profileTimerRef.current) {
@@ -148,8 +142,10 @@ const AdminLayout = () => {
     const handleResize = () => {
       if (window.innerWidth < 1024) {
         setSidebarOpen(false);
+        setMobileOpen(false);
       } else {
         setSidebarOpen(true);
+        setMobileOpen(false);
       }
     };
     handleResize();
@@ -252,6 +248,14 @@ const AdminLayout = () => {
     toast.success('All notifications marked as read');
   };
 
+  // Toggle mobile menu
+  const toggleMobileMenu = () => {
+    setMobileOpen(!mobileOpen);
+    // Close other dropdowns
+    setShowProfileMenu(false);
+    setShowNotifications(false);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-gray-50 dark:from-slate-900 dark:via-gray-900 dark:to-slate-800">
       {/* Animated Background Orbs */}
@@ -278,33 +282,42 @@ const AdminLayout = () => {
       <motion.aside
         initial={{ x: -280 }}
         animate={{ 
-          x: sidebarOpen ? 0 : -280,
-          width: sidebarOpen ? 280 : 0
+          x: sidebarOpen || mobileOpen ? 0 : -280,
+          width: sidebarOpen || mobileOpen ? 280 : 0
         }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className={`fixed left-0 top-0 h-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl border-r border-gray-200/50 dark:border-gray-700/50 shadow-2xl z-50 overflow-hidden lg:block ${
+        className={`fixed left-0 top-0 h-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl border-r border-gray-200/50 dark:border-gray-700/50 shadow-2xl z-50 overflow-hidden ${
           mobileOpen ? 'block' : 'hidden lg:block'
         }`}
-        style={{ width: sidebarOpen ? 280 : 0 }}
+        style={{ width: sidebarOpen || mobileOpen ? 280 : 0 }}
       >
         <div className="flex flex-col h-full">
           {/* Brand */}
           <div className="p-6 border-b border-gray-200/50 dark:border-gray-700/50">
-            <div className="flex items-center gap-3">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-xl blur-lg opacity-30 animate-pulse" />
-                <div className="relative p-2.5 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl shadow-lg shadow-purple-500/30">
-                  <FaGraduationCap className="text-white text-2xl" />
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-xl blur-lg opacity-30 animate-pulse" />
+                  <div className="relative p-2.5 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl shadow-lg shadow-purple-500/30">
+                    <FaGraduationCap className="text-white text-2xl" />
+                  </div>
+                </div>
+                <div>
+                  <h1 className="text-xl font-bold bg-gradient-to-r from-purple-600 to-indigo-500 bg-clip-text text-transparent">
+                    JEOQuiz
+                  </h1>
+                  <p className="text-[10px] text-gray-500 dark:text-gray-400 font-medium tracking-wider uppercase">
+                    Admin Panel
+                  </p>
                 </div>
               </div>
-              <div>
-                <h1 className="text-xl font-bold bg-gradient-to-r from-purple-600 to-indigo-500 bg-clip-text text-transparent">
-                  JEOQuiz
-                </h1>
-                <p className="text-[10px] text-gray-500 dark:text-gray-400 font-medium tracking-wider uppercase">
-                  Admin Panel
-                </p>
-              </div>
+              {/* Close button for mobile */}
+              <button
+                onClick={() => setMobileOpen(false)}
+                className="lg:hidden p-2 rounded-xl hover:bg-gray-100/50 dark:hover:bg-gray-800/50 transition-colors"
+              >
+                <FaTimes className="text-gray-600 dark:text-gray-300" />
+              </button>
             </div>
           </div>
 
@@ -338,7 +351,9 @@ const AdminLayout = () => {
                 <NavLink
                   key={item.path}
                   to={item.path}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={() => {
+                    setMobileOpen(false);
+                  }}
                   className={({ isActive }) => `
                     flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 group relative
                     ${isActive 
@@ -408,12 +423,17 @@ const AdminLayout = () => {
         }`}>
           <div className="flex items-center justify-between px-4 md:px-6 py-4">
             <div className="flex items-center gap-3">
-              {/* Mobile Menu Toggle */}
+              {/* Mobile Menu Toggle - Hamburger Icon */}
               <button
-                onClick={() => setMobileOpen(!mobileOpen)}
+                onClick={toggleMobileMenu}
                 className="lg:hidden p-2 rounded-xl hover:bg-gray-100/50 dark:hover:bg-gray-800/50 transition-colors"
+                aria-label="Toggle menu"
               >
-                {mobileOpen ? <FaTimes className="text-gray-600 dark:text-gray-300" /> : <FaBars className="text-gray-600 dark:text-gray-300" />}
+                {mobileOpen ? (
+                  <FaTimes className="text-gray-600 dark:text-gray-300 text-xl" />
+                ) : (
+                  <FaBars className="text-gray-600 dark:text-gray-300 text-xl" />
+                )}
               </button>
 
               {/* Desktop Sidebar Toggle */}
@@ -482,7 +502,7 @@ const AdminLayout = () => {
                 </div>
               </button>
 
-              {/* Notification Bell - Independent hover */}
+              {/* Notification Bell */}
               <div 
                 className="relative"
                 onMouseEnter={handleNotificationMouseEnter}
@@ -579,7 +599,7 @@ const AdminLayout = () => {
                 </AnimatePresence>
               </div>
 
-              {/* Profile Menu - Independent hover */}
+              {/* Profile Menu */}
               <div 
                 className="relative"
                 onMouseEnter={handleProfileMouseEnter}
