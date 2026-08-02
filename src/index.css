@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
+  }
+
+  body {
+    @apply font-sans antialiased transition-colors duration-300;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-gray-800 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary-400 dark:bg-primary-600 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary-500 dark:bg-primary-500;
+  }
+}
+
+@layer components {
+  .glassmorphism {
+    @apply bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg border border-white/20 dark:border-gray-700/30;
+  }
+
+  .card-shadow {
+    @apply shadow-[0_8px_32px_rgba(0,0,0,0.08)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.4)];
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-br from-primary-50 via-white to-primary-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900;
+  }
+
+  .option-hover {
+    @apply hover:scale-[1.02] transition-transform duration-200;
+  }
+
+  .option-selected-correct {
+    @apply bg-success-50 dark:bg-success-900/30 border-success-500 text-success-700 dark:text-success-300;
+  }
+
+  .option-selected-wrong {
+    @apply bg-danger-50 dark:bg-danger-900/30 border-danger-500 text-danger-700 dark:text-danger-300;
+  }
+
+  .option-correct-reveal {
+    @apply bg-success-50 dark:bg-success-900/30 border-success-500 text-success-700 dark:text-success-300;
+  }
+
+  .option-default {
+    @apply bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300;
+  }
+}
