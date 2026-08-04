@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+// App.jsx
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { AuthProvider } from './context/AuthContext.jsx';
 import { QuizProvider } from './context/QuizContext.jsx';
@@ -30,64 +31,7 @@ import AdminSettings from './pages/Admin/Settings.jsx';
 import AdminArchive from './pages/Admin/Archive.jsx';
 import AdminActivity from './pages/Admin/Activity.jsx';
 import ErrorBoundary from './components/ErrorBoundary.jsx';
-
-// Component to handle page title updates
-function PageTitleUpdater() {
-  const location = useLocation();
-
-  useEffect(() => {
-    // Define titles for each route
-    const routeTitles = {
-      '/': 'Home',
-      '/register': 'Register',
-      '/login': 'Student Login',
-      '/admin/login': 'Admin Login',
-      '/admin/dashboard': 'Admin Dashboard',
-      '/admin/students': 'Student Management',
-      '/admin/archive': 'Archived Students',
-      '/admin/quizzes': 'Quiz Management',
-      '/admin/results': 'Quiz Results',
-      '/admin/analytics': 'Analytics Dashboard',
-      '/admin/leaderboard': 'Leaderboard',
-      '/admin/activity': 'Activity Log',
-      '/admin/categories': 'Quiz Categories',
-      '/admin/history': 'Activity History',
-      '/admin/top-performers': 'Top Performers',
-      '/admin/reports': 'Reports',
-      '/admin/settings': 'Settings',
-      '/app': 'Student Dashboard',
-      '/app/quiz': 'Quiz',
-      '/app/results': 'Quiz Results',
-      '/app/profile': 'My Profile',
-      '/app/history': 'Quiz History',
-    };
-
-    // Check if the current path matches any route
-    let pageTitle = 'QuizMaster';
-    
-    // Exact match
-    if (routeTitles[location.pathname]) {
-      pageTitle = `QuizMaster - ${routeTitles[location.pathname]}`;
-    } else {
-      // Check for dynamic routes (like /app/quiz/:topic)
-      for (const [route, title] of Object.entries(routeTitles)) {
-        if (route.includes(':')) {
-          const routePattern = route.replace(/:\w+/g, '[^/]+');
-          const regex = new RegExp(`^${routePattern}$`);
-          if (regex.test(location.pathname)) {
-            pageTitle = `QuizMaster - ${title}`;
-            break;
-          }
-        }
-      }
-    }
-
-    // Update the document title
-    document.title = pageTitle;
-  }, [location]);
-
-  return null;
-}
+import ReviewMode from './components/Quiz/ReviewMode.jsx';
 
 function App() {
   return (
@@ -96,7 +40,6 @@ function App() {
         <AdminProvider>
           <QuizProvider>
             <Router>
-              <PageTitleUpdater />
               <Toaster
                 position="top-center"
                 reverseOrder={false}
@@ -146,6 +89,8 @@ function App() {
                   <Route path="results" element={<ResultsPage />} />
                   <Route path="profile" element={<Profile />} />
                   <Route path="history" element={<History />} />
+                  {/* Add the review route here */}
+                  <Route path="review" element={<ReviewMode />} />
                 </Route>
                 
                 <Route path="*" element={<Navigate to="/" replace />} />

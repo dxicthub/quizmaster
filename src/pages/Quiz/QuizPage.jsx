@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   FaArrowLeft, FaLock, FaHome, FaBook, 
   FaUser, FaClock, FaCheckCircle, FaTimesCircle,
   FaQuestionCircle, FaRocket, FaSpinner,
-  FaInfoCircle, FaArrowRight, FaArrowLeft as FaArrowLeftIcon
+  FaInfoCircle, FaArrowRight, FaArrowLeft as FaArrowLeftIcon,
+  FaRedo
 } from 'react-icons/fa';
 import toast from 'react-hot-toast';
 import Swal from 'sweetalert2';
@@ -26,6 +27,7 @@ import { getQuestionsForQuiz } from '../../data/questionRegistry.js';
 
 function QuizPage() {
   const navigate = useNavigate();
+  const location = useLocation();
   const { topic } = useParams();
   const { student } = useAuth();
   const {
@@ -51,6 +53,8 @@ function QuizPage() {
 
   const [isReviewing, setIsReviewing] = useState(false);
   const [loadingQuestions, setLoadingQuestions] = useState(true);
+  const [isRetake, setIsRetake] = useState(false);
+  const [reviewData, setReviewData] = useState(null);
   const currentQuestion = getCurrentQuestion();
   const answeredCount = Object.keys(state.answers).length;
   const progress = getProgress();
@@ -59,6 +63,37 @@ function QuizPage() {
   const isQuizComplete = state.quizCompleted;
   const quizStarted = state.quizStarted;
   const countdownTimer = state.countdownTimer || 0;
+
+  // Check for retake flag in URL
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const retakeParam = searchParams.get('retake');
+    if (retakeParam === 'true') {
+      setIsRetake(true);
+      console.log('🔄 Retake quiz mode activated');
+    }
+  }, [location.search]);
+
+  // Check for review mode from results page
+  useEffect(() => {
+    // Check if we should be in review mode
+    const shouldReview = localStorage.getItem('shouldReview') === 'true';
+    const savedReviewData = localStorage.getItem('reviewData');
+    
+    if (shouldReview && savedReviewData) {
+      try {
+        const data = JSON.parse(savedReviewData);
+        setReviewData(data);
+        setIsReviewing(true);
+        setReviewing(true);
+        // Clear the flag after reading
+        localStorage.removeItem('shouldReview');
+        console.log('📋 Review mode activated from results page');
+      } catch (error) {
+        console.error('Error loading review data:', error);
+      }
+    }
+  }, [setReviewing]);
 
   // Load the most up-to-date questions when the component mounts or quiz is selected
   useEffect(() => {
@@ -262,6 +297,15 @@ function QuizPage() {
 
   const handleReview = () => {
     if (state.isSubmitting) return;
+    
+    // Store the review data in localStorage
+    const reviewData = {
+      questions: state.questions || [],
+      answers: state.answers || {},
+    };
+    localStorage.setItem('reviewData', JSON.stringify(reviewData));
+    localStorage.setItem('shouldReview', 'true');
+    
     setReviewing(true);
     setIsReviewing(true);
     toast.info('📋 Reviewing all questions');
@@ -270,6 +314,10 @@ function QuizPage() {
   const handleCloseReview = () => {
     setReviewing(false);
     setIsReviewing(false);
+    // Clear review data from localStorage
+    localStorage.removeItem('reviewData');
+    localStorage.removeItem('shouldReview');
+    navigate('/app/results');
   };
 
   const handleBackToDashboard = () => {
@@ -379,11 +427,15 @@ function QuizPage() {
     return null;
   }
 
-  if (isReviewing) {
+  // Show ReviewMode if in review state or if reviewData exists
+  if (isReviewing || reviewData) {
+    const questions = reviewData?.questions || state.questions || [];
+    const answers = reviewData?.answers || state.answers || {};
+    
     return (
       <ReviewMode
-        questions={state.questions}
-        answers={state.answers}
+        questions={questions}
+        answers={answers}
         onClose={handleCloseReview}
       />
     );
@@ -475,6 +527,25 @@ function QuizPage() {
                     </div>
                   </div>
                 </div>
+
+                {/* Retake Indicator */}
+                {isRetake && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="mb-4 p-3 rounded-xl bg-gradient-to-r from-purple-100/50 to-indigo-100/50 dark:from-purple-900/30 dark:to-indigo-900/30 border border-purple-300/50 dark:border-purple-700/30 flex items-center gap-3"
+                  >
+                    <FaRedo className="text-purple-500 text-lg animate-pulse" />
+                    <div>
+                      <span className="text-sm font-semibold text-purple-700 dark:text-purple-300">
+                        🔄 Retaking Quiz - Fresh Attempt
+                      </span>
+                      <span className="text-xs text-purple-500 dark:text-purple-400 ml-2">
+                        (Previous results are saved separately)
+                      </span>
+                    </div>
+                  </motion.div>
+                )}
 
                 {/* Header with progress and timers */}
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">

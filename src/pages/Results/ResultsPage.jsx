@@ -1,3 +1,4 @@
+// pages/Results/ResultsPage.jsx
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -16,20 +17,27 @@ import Swal from 'sweetalert2';
 function ResultsPage() {
   const navigate = useNavigate();
   const { student } = useAuth();
-  const { state, getResults, restartQuiz, clearQuizState, setReviewing } = useQuiz();
+  const { 
+    state, 
+    getResults, 
+    restartQuiz, 
+    clearQuizState, 
+    setReviewing,
+    setReviewQuestions,
+    selectQuiz,
+    startQuiz
+  } = useQuiz();
   const results = getResults();
   const passed = results.passed;
   const failed = results.failed;
   const total = results.total;
   const percentage = results.percentage;
   const passedQuiz = percentage >= 90;
-  const [showCertificate, setShowCertificate] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     window.scrollTo(0, 0);
     
-    // Simulate loading
     setTimeout(() => {
       setIsLoading(false);
     }, 500);
@@ -47,15 +55,15 @@ function ResultsPage() {
     }
   }, []);
 
-  const handleRestart = () => {
+  const handleRetakeQuiz = () => {
     Swal.fire({
-      title: '🔄 Restart Quiz?',
-      text: 'This will clear your current progress and start a new attempt.',
+      title: '🔄 Retake Quiz?',
+      text: 'This will start a fresh attempt. Your previous score will be saved in your history.',
       icon: 'question',
       showCancelButton: true,
       confirmButtonColor: '#8b5cf6',
       cancelButtonColor: '#ef4444',
-      confirmButtonText: 'Yes, restart',
+      confirmButtonText: 'Yes, retake',
       cancelButtonText: 'Cancel',
       backdrop: 'rgba(0,0,0,0.5)',
       customClass: {
@@ -65,22 +73,51 @@ function ResultsPage() {
       }
     }).then((result) => {
       if (result.isConfirmed) {
-        restartQuiz();
-        navigate('/');
-        toast.success('Quiz restarted successfully!');
+        // Store the quiz info before clearing
+        const quizId = state.selectedQuiz?.id;
+        const quizTitle = state.selectedQuiz?.title;
+        
+        // Clear current state
+        clearQuizState();
+        
+        // Find the quiz in available quizzes and select it
+        const storedQuizzes = JSON.parse(localStorage.getItem('quizCategories') || '[]');
+        const quiz = storedQuizzes.find(q => q.id === quizId) || 
+                     state.selectedQuiz;
+        
+        if (quiz) {
+          // Select the quiz and start it fresh
+          selectQuiz(quiz);
+          
+          // Navigate to the quiz with retake flag
+          navigate(`/app/quiz/${quizId}?retake=true`);
+          toast.info('🔄 Retaking quiz - fresh attempt started!');
+        } else {
+          toast.error('Unable to find quiz. Please try again.');
+        }
       }
     });
   };
 
   const handleReview = () => {
+    // Store the current attempt data for review
+    const reviewData = {
+      questions: state.questions || [],
+      answers: state.answers || {},
+    };
+    
+    // Save review data to localStorage for persistence
+    localStorage.setItem('reviewData', JSON.stringify(reviewData));
+    
+    // Navigate to review mode
     setReviewing(true);
-    navigate('/quiz');
+    navigate('/app/review');
     toast.info('📋 Reviewing your answers');
   };
 
   const handleGoDashboard = () => {
     clearQuizState();
-    navigate('/');
+    navigate('/app');
   };
 
   const handleDownloadCertificate = () => {
@@ -296,6 +333,7 @@ function ResultsPage() {
   };
 
   const formatTime = (totalSeconds) => {
+    if (!totalSeconds) return '0m 0s';
     const hours = Math.floor(totalSeconds / 3600);
     const minutes = Math.floor((totalSeconds % 3600) / 60);
     const seconds = totalSeconds % 60;
@@ -380,7 +418,7 @@ function ResultsPage() {
                 <span className="w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-600" />
                 <span className="flex items-center gap-1.5">
                   <FaClock className="text-blue-500" />
-                  {formatTime(results.timeTaken)}
+                  {formatTime(results.timeTaken || state.timer || 0)}
                 </span>
               </div>
               
@@ -517,7 +555,7 @@ function ResultsPage() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={handleRestart}
+                onClick={handleRetakeQuiz}
                 className="px-6 py-3 rounded-xl font-medium bg-gradient-to-r from-purple-500 to-violet-500 text-white transition-all duration-300 flex items-center gap-2 shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50"
               >
                 <FaRedo />
@@ -547,7 +585,7 @@ function ResultsPage() {
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <span className="flex items-center gap-1.5">
                   <FaClock className="text-blue-500" />
-                  Time taken: {formatTime(state.timer)}
+                  Time taken: {formatTime(state.timer || 0)}
                 </span>
                 <span className="w-px h-4 bg-gray-300 dark:bg-gray-600" />
                 <span className="flex items-center gap-1.5">
