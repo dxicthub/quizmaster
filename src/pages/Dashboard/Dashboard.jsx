@@ -6,7 +6,8 @@ import {
   FaChartBar, FaEyeSlash, FaRocket, FaFire,
   FaBookOpen, FaGraduationCap, FaAward,
   FaArrowRight, FaSpinner, FaCheckCircle,
-  FaStar, FaMedal, FaCrown
+  FaStar, FaMedal, FaCrown, FaUserCircle,
+  FaHistory, FaTrophy
 } from 'react-icons/fa';
 import toast from 'react-hot-toast';
 import { useAuth } from '../../context/AuthContext.jsx';
@@ -253,6 +254,16 @@ function Dashboard() {
                       {avgScore}% Avg Score
                     </span>
                   </div>
+                  {/* My Details Button - NEW */}
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => navigate('/app/profile')}
+                    className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-xl font-medium shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300"
+                  >
+                    <FaUserCircle className="text-lg" />
+                    <span className="text-sm font-medium">My Details</span>
+                  </motion.button>
                 </div>
               )}
             </div>
@@ -275,7 +286,11 @@ function Dashboard() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
                     whileHover={{ y: -4, scale: 1.02 }}
-                    className="group relative overflow-hidden rounded-2xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="group relative overflow-hidden rounded-2xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+                    onClick={() => {
+                      if (index === 3) return; // Available quizzes
+                      navigate('/app/profile');
+                    }}
                   >
                     <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
                     <div className="relative p-4 flex items-center gap-4">
@@ -295,6 +310,52 @@ function Dashboard() {
                 );
               })}
             </div>
+          )}
+
+          {/* Quick Action Cards - NEW */}
+          {student && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15 }}
+              className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6"
+            >
+              <motion.div
+                whileHover={{ y: -4, scale: 1.02 }}
+                onClick={() => navigate('/app/profile')}
+                className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-50/50 to-indigo-50/50 dark:from-blue-900/20 dark:to-indigo-900/20 backdrop-blur-sm border border-blue-200/50 dark:border-blue-700/30 p-4 cursor-pointer shadow-lg hover:shadow-xl transition-all duration-300 group"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-indigo-500 opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
+                <div className="relative flex items-center gap-4">
+                  <div className="p-3 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-500 shadow-lg">
+                    <FaUserCircle className="text-white text-2xl" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-800 dark:text-gray-200">My Profile</h3>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">View your details and statistics</p>
+                  </div>
+                  <FaArrowRight className="text-gray-400 group-hover:text-blue-500 transition-colors" />
+                </div>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ y: -4, scale: 1.02 }}
+                onClick={() => navigate('/app/history')}
+                className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-50/50 to-pink-50/50 dark:from-purple-900/20 dark:to-pink-900/20 backdrop-blur-sm border border-purple-200/50 dark:border-purple-700/30 p-4 cursor-pointer shadow-lg hover:shadow-xl transition-all duration-300 group"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
+                <div className="relative flex items-center gap-4">
+                  <div className="p-3 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 shadow-lg">
+                    <FaHistory className="text-white text-2xl" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-gray-800 dark:text-gray-200">Quiz History</h3>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">View all your quiz attempts</p>
+                  </div>
+                  <FaArrowRight className="text-gray-400 group-hover:text-purple-500 transition-colors" />
+                </div>
+              </motion.div>
+            </motion.div>
           )}
 
           {/* Recently Taken Section - Enhanced */}

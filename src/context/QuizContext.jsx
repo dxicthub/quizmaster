@@ -329,7 +329,11 @@ export function QuizProvider({ children }) {
           dispatch({ type: ACTIONS.SET_SUBMITTING, payload: true });
           setTimeout(() => {
             const results = getResults();
+            const currentQuestions = state.questions || [];
+            const currentAnswers = state.answers || {};
+            
             const historyEntry = {
+              id: Date.now().toString(),
               quizId: state.selectedQuiz?.id,
               quizTitle: state.selectedQuiz?.title,
               date: new Date().toISOString(),
@@ -339,7 +343,28 @@ export function QuizProvider({ children }) {
               unanswered: results.unanswered,
               total: results.total,
               timeTaken: state.timer,
+              questions: currentQuestions.map(q => ({ ...q })),
+              answers: { ...currentAnswers },
             };
+            
+            // Save to localStorage with unique key
+            const attemptKey = `attempt_${historyEntry.id}`;
+            localStorage.setItem(attemptKey, JSON.stringify({
+              questions: historyEntry.questions,
+              answers: historyEntry.answers,
+              quizTitle: historyEntry.quizTitle,
+              score: historyEntry.score,
+              date: historyEntry.date,
+            }));
+            
+            // Save to quiz attempts list
+            if (state.selectedQuiz?.id) {
+              const quizAttemptsKey = `quiz_attempts_${state.selectedQuiz.id}`;
+              const existingAttempts = JSON.parse(localStorage.getItem(quizAttemptsKey) || '[]');
+              existingAttempts.push(historyEntry.id);
+              localStorage.setItem(quizAttemptsKey, JSON.stringify(existingAttempts));
+            }
+            
             dispatch({ type: ACTIONS.ADD_QUIZ_HISTORY, payload: historyEntry });
             addStudentQuizHistory(historyEntry);
             dispatch({ type: ACTIONS.COMPLETE_QUIZ });
@@ -371,7 +396,11 @@ export function QuizProvider({ children }) {
             dispatch({ type: ACTIONS.SET_SUBMITTING, payload: true });
             setTimeout(() => {
               const results = getResults();
+              const currentQuestions = state.questions || [];
+              const currentAnswers = state.answers || {};
+              
               const historyEntry = {
+                id: Date.now().toString(),
                 quizId: state.selectedQuiz?.id,
                 quizTitle: state.selectedQuiz?.title,
                 date: new Date().toISOString(),
@@ -381,7 +410,28 @@ export function QuizProvider({ children }) {
                 unanswered: results.unanswered,
                 total: results.total,
                 timeTaken: state.timer,
+                questions: currentQuestions.map(q => ({ ...q })),
+                answers: { ...currentAnswers },
               };
+              
+              // Save to localStorage with unique key
+              const attemptKey = `attempt_${historyEntry.id}`;
+              localStorage.setItem(attemptKey, JSON.stringify({
+                questions: historyEntry.questions,
+                answers: historyEntry.answers,
+                quizTitle: historyEntry.quizTitle,
+                score: historyEntry.score,
+                date: historyEntry.date,
+              }));
+              
+              // Save to quiz attempts list
+              if (state.selectedQuiz?.id) {
+                const quizAttemptsKey = `quiz_attempts_${state.selectedQuiz.id}`;
+                const existingAttempts = JSON.parse(localStorage.getItem(quizAttemptsKey) || '[]');
+                existingAttempts.push(historyEntry.id);
+                localStorage.setItem(quizAttemptsKey, JSON.stringify(existingAttempts));
+              }
+              
               dispatch({ type: ACTIONS.ADD_QUIZ_HISTORY, payload: historyEntry });
               addStudentQuizHistory(historyEntry);
               dispatch({ type: ACTIONS.COMPLETE_QUIZ });
@@ -466,7 +516,12 @@ export function QuizProvider({ children }) {
     },
     completeQuiz: () => {
       const results = getResults();
+      const currentQuestions = state.questions || [];
+      const currentAnswers = state.answers || {};
+      
+      // Create a detailed history entry with questions and answers
       const historyEntry = {
+        id: Date.now().toString(),
         quizId: state.selectedQuiz?.id,
         quizTitle: state.selectedQuiz?.title,
         date: new Date().toISOString(),
@@ -476,13 +531,58 @@ export function QuizProvider({ children }) {
         unanswered: results.unanswered,
         total: results.total,
         timeTaken: state.timer,
+        // Store the questions and answers for this specific attempt
+        questions: currentQuestions.map(q => ({ ...q })),
+        answers: { ...currentAnswers },
+        attemptNumber: (student?.quizHistory?.filter(h => h.quizTitle === state.selectedQuiz?.title).length || 0) + 1,
       };
+      
+      console.log('📝 Saving quiz attempt:', {
+        id: historyEntry.id,
+        quizTitle: historyEntry.quizTitle,
+        questionCount: historyEntry.questions.length,
+        answerCount: Object.keys(historyEntry.answers).length,
+        score: historyEntry.score,
+      });
+      
+      // Save to localStorage with a unique key for this attempt
+      const attemptKey = `attempt_${historyEntry.id}`;
+      localStorage.setItem(attemptKey, JSON.stringify({
+        questions: historyEntry.questions,
+        answers: historyEntry.answers,
+        quizTitle: historyEntry.quizTitle,
+        score: historyEntry.score,
+        date: historyEntry.date,
+      }));
+      
+      // Save to a list of attempt IDs for this quiz
+      if (state.selectedQuiz?.id) {
+        const quizAttemptsKey = `quiz_attempts_${state.selectedQuiz.id}`;
+        const existingAttempts = JSON.parse(localStorage.getItem(quizAttemptsKey) || '[]');
+        existingAttempts.push(historyEntry.id);
+        localStorage.setItem(quizAttemptsKey, JSON.stringify(existingAttempts));
+        console.log(`📚 Saved attempt to quiz_attempts_${state.selectedQuiz.id}:`, existingAttempts);
+      }
+      
+      // Also save a review-specific data
+      const reviewKey = `review_${historyEntry.id}`;
+      localStorage.setItem(reviewKey, JSON.stringify({
+        questions: historyEntry.questions,
+        answers: historyEntry.answers,
+        quizTitle: historyEntry.quizTitle,
+        score: historyEntry.score,
+        date: historyEntry.date,
+        attemptNumber: historyEntry.attemptNumber,
+      }));
+      
       dispatch({ type: ACTIONS.ADD_QUIZ_HISTORY, payload: historyEntry });
       addStudentQuizHistory(historyEntry);
       dispatch({ type: ACTIONS.COMPLETE_QUIZ });
       if (state.selectedQuiz) {
         dispatch({ type: ACTIONS.ADD_RECENTLY_TAKEN, payload: state.selectedQuiz.id });
       }
+      
+      console.log('✅ Quiz attempt saved successfully!');
     },
     restartQuiz: () => {
       dispatch({ type: ACTIONS.RESTART_QUIZ });
