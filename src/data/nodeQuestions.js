@@ -11,7 +11,7 @@ export const questions = [
       'C. A database management system',
       'D. A CSS preprocessor'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ export const questions = [
       'C. angular',
       'D. vue'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ export const questions = [
       'C. include(\'module\')',
       'D. load(\'module\')'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ export const questions = [
       'C. A way to handle events',
       'D. A performance optimization tool'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ export const questions = [
       'C. A function that returns a value',
       'D. A function that is called recursively'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 6,
@@ -81,7 +81,7 @@ export const questions = [
       'C. A function that returns a value immediately',
       'D. A way to handle errors'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 7,
@@ -95,7 +95,7 @@ export const questions = [
       'C. It ensures a function runs synchronously',
       'D. It optimizes function performance'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 8,
@@ -109,7 +109,7 @@ export const questions = [
       'C. Using promises with .catch()',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'A' // Moved from D to A
   },
   {
     id: 9,
@@ -123,7 +123,7 @@ export const questions = [
       'C. os',
       'D. http'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 10,
@@ -137,7 +137,7 @@ export const questions = [
       'C. To manage operating system information',
       'D. To handle file streams'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 11,
@@ -151,7 +151,7 @@ export const questions = [
       'C. To manage file system operations',
       'D. To handle path operations'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 12,
@@ -165,7 +165,7 @@ export const questions = [
       'C. Using the http.listen() method',
       'D. Using the http.start() method'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 13,
@@ -179,7 +179,7 @@ export const questions = [
       'C. A class that manages file operations',
       'D. A class that handles database connections'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 14,
@@ -193,7 +193,7 @@ export const questions = [
       'C. A type of string',
       'D. A type of object'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 15,
@@ -207,7 +207,7 @@ export const questions = [
       'C. A type of array',
       'D. A type of event'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 16,
@@ -221,7 +221,7 @@ export const questions = [
       'C. Writable',
       'D. Processable'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 17,
@@ -235,7 +235,7 @@ export const questions = [
       'C. To handle file operations',
       'D. To manage HTTP requests'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 18,
@@ -249,7 +249,7 @@ export const questions = [
       'C. To handle child routes',
       'D. To manage child events'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 19,
@@ -263,7 +263,7 @@ export const questions = [
       'C. To handle worker events',
       'D. To manage worker data'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 20,
@@ -277,7 +277,7 @@ export const questions = [
       'C. Using import env from \'env\'',
       'D. Using process.env.VARIABLE'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 21,
@@ -291,7 +291,7 @@ export const questions = [
       'C. A class for creating processes',
       'D. A function for handling processes'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 22,
@@ -305,7 +305,7 @@ export const questions = [
       'C. To debug Node.js applications',
       'D. To test Node.js applications'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 23,
@@ -319,7 +319,7 @@ export const questions = [
       'C. To define project tests',
       'D. To define project routes'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 24,
@@ -333,7 +333,7 @@ export const questions = [
       'C. Using the --trace flag',
       'D. Using the --log flag'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 25,
@@ -347,7 +347,7 @@ export const questions = [
       'C. To optimize application code',
       'D. To monitor application memory'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 26,
@@ -361,7 +361,7 @@ export const questions = [
       'C. To manage memory allocation',
       'D. To optimize memory usage'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 27,
@@ -375,7 +375,7 @@ export const questions = [
       'C. To manage cryptographic keys',
       'D. To handle secure connections'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 28,
@@ -389,7 +389,7 @@ export const questions = [
       'C. To manage compressed data',
       'D. To handle file compression'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 29,
@@ -403,7 +403,7 @@ export const questions = [
       'C. To manage network connections',
       'D. To handle network events'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 30,
@@ -417,7 +417,7 @@ export const questions = [
       'C. To handle DNS requests',
       'D. To configure DNS settings'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 31,
@@ -431,7 +431,7 @@ export const questions = [
       'C. To execute a function after a specified delay',
       'D. To execute a function at regular intervals'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 32,
@@ -445,7 +445,7 @@ export const questions = [
       'C. process.nextTick runs after the current event loop cycle',
       'D. setImmediate runs before the current event loop cycle'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 33,
@@ -459,7 +459,7 @@ export const questions = [
       'C. document',
       'D. localStorage'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 34,
@@ -473,7 +473,7 @@ export const questions = [
       'C. To handle console input',
       'D. To configure console settings'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 35,
@@ -487,7 +487,7 @@ export const questions = [
       'C. To handle error events',
       'D. To configure error settings'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 36,
@@ -501,7 +501,7 @@ export const questions = [
       'C. To manage URL parameters',
       'D. To configure URL settings'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 37,
@@ -515,7 +515,7 @@ export const questions = [
       'C. To manage query parameters',
       'D. To configure query settings'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 38,
@@ -529,7 +529,7 @@ export const questions = [
       'C. To manage assertion errors',
       'D. To configure assertion settings'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 39,
@@ -543,7 +543,7 @@ export const questions = [
       'C. A way to evaluate code',
       'D. A way to print output'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 40,
@@ -557,7 +557,7 @@ export const questions = [
       'C. To handle debugging events',
       'D. To configure debugging options'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 41,
@@ -571,7 +571,7 @@ export const questions = [
       'C. A type of message',
       'D. A type of signal'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 42,
@@ -585,7 +585,7 @@ export const questions = [
       'C. To handle exit events',
       'D. To configure exit settings'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 43,
@@ -599,7 +599,7 @@ export const questions = [
       'C. Using the child_process module',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'D' // Kept as D
   },
   {
     id: 44,
@@ -613,7 +613,7 @@ export const questions = [
       'C. Keep dependencies updated',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'A' // Moved from D to A
   },
   {
     id: 45,
@@ -627,7 +627,7 @@ export const questions = [
       'C. 3000',
       'D. 8080'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 46,
@@ -641,7 +641,7 @@ export const questions = [
       'C. A testing framework',
       'D. A build tool'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 47,
@@ -655,7 +655,7 @@ export const questions = [
       'C. A type of routing',
       'D. A type of error handling'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 48,
@@ -669,7 +669,7 @@ export const questions = [
       'C. A type of framework',
       'D. A type of routing'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 49,
@@ -683,7 +683,7 @@ export const questions = [
       'C. Using a cloud platform like AWS or Vercel',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'B' // Moved from D to B
   },
   {
     id: 50,
@@ -697,7 +697,7 @@ export const questions = [
       'C. Use environment variables for configuration',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
   }
 ];
 

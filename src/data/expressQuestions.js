@@ -11,7 +11,7 @@ export const questions = [
       'C. A database ORM',
       'D. A testing framework'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ export const questions = [
       'C. app.put()',
       'D. app.delete()'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ export const questions = [
       'C. app.put()',
       'D. app.delete()'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ export const questions = [
       'C. A templating engine',
       'D. A testing utility'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ export const questions = [
       'C. Request body data',
       'D. Request headers'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 6,
@@ -81,7 +81,7 @@ export const questions = [
       'C. Request body data',
       'D. Request headers'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 7,
@@ -95,7 +95,7 @@ export const questions = [
       'C. res.render()',
       'D. res.sendFile()'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 8,
@@ -109,7 +109,7 @@ export const questions = [
       'C. A request body parameter',
       'D. A header parameter'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 9,
@@ -123,7 +123,7 @@ export const questions = [
       'C. To throw an error',
       'D. To render a view'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 10,
@@ -137,7 +137,7 @@ export const questions = [
       'C. Using promises',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
   },
   {
     id: 11,
@@ -151,7 +151,7 @@ export const questions = [
       'C. (err, res, next)',
       'D. (req, res, err, next)'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 12,
@@ -165,7 +165,7 @@ export const questions = [
       'C. Using res.sendFile()',
       'D. Using app.use(express.static())'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 13,
@@ -179,7 +179,7 @@ export const questions = [
       'C. Handlebars',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'B' // Moved from D to B
   },
   {
     id: 14,
@@ -193,7 +193,7 @@ export const questions = [
       'C. To parse route parameters',
       'D. To parse headers'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 15,
@@ -207,7 +207,7 @@ export const questions = [
       'C. To handle POST requests',
       'D. To handle error responses'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 16,
@@ -221,7 +221,7 @@ export const questions = [
       'C. To manage middleware',
       'D. To handle errors'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 17,
@@ -235,7 +235,7 @@ export const questions = [
       'C. A type of error handling',
       'D. A type of routing'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 18,
@@ -249,7 +249,7 @@ export const questions = [
       'C. Using express.cors()',
       'D. Using res.cors()'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 19,
@@ -263,7 +263,7 @@ export const questions = [
       'C. To handle file uploads',
       'D. To manage static files'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 20,
@@ -277,7 +277,7 @@ export const questions = [
       'C. Using app.cookie()',
       'D. Using express.cookie()'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 21,
@@ -291,7 +291,7 @@ export const questions = [
       'C. OAuth',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'B' // Moved from D to B
   },
   {
     id: 22,
@@ -305,7 +305,7 @@ export const questions = [
       'C. A testing framework',
       'D. A build tool'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 23,
@@ -319,7 +319,7 @@ export const questions = [
       'C. Using express.env',
       'D. Using req.env'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 24,
@@ -333,7 +333,7 @@ export const questions = [
       'C. To set middleware',
       'D. To set error handlers'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 25,
@@ -347,7 +347,7 @@ export const questions = [
       'C. To get route parameters',
       'D. To get middleware'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 26,
@@ -361,7 +361,7 @@ export const questions = [
       'C. Using express.json()',
       'D. Using express.urlencoded()'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 27,
@@ -375,7 +375,7 @@ export const questions = [
       'C. Validator.js',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'D' // Kept as D
   },
   {
     id: 28,
@@ -389,7 +389,7 @@ export const questions = [
       'C. A testing framework',
       'D. A build tool'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 29,
@@ -403,7 +403,7 @@ export const questions = [
       'C. To compress database queries',
       'D. To compress session data'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 30,
@@ -417,7 +417,7 @@ export const questions = [
       'C. To secure file uploads',
       'D. To secure sessions'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 31,
@@ -431,7 +431,7 @@ export const questions = [
       'C. To limit the speed of responses',
       'D. To limit the number of concurrent connections'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 32,
@@ -445,7 +445,7 @@ export const questions = [
       'C. Using load balancing',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'A' // Moved from D to A
   },
   {
     id: 33,
@@ -459,7 +459,7 @@ export const questions = [
       'C. To manage middleware',
       'D. To handle errors'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 34,
@@ -473,7 +473,7 @@ export const questions = [
       'C. Using custom headers',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
   },
   {
     id: 35,
@@ -487,7 +487,7 @@ export const questions = [
       'C. 204',
       'D. 301'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 36,
@@ -501,7 +501,7 @@ export const questions = [
       'C. 204',
       'D. 301'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 37,
@@ -515,7 +515,7 @@ export const questions = [
       'C. 403',
       'D. 404'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 38,
@@ -529,7 +529,7 @@ export const questions = [
       'C. 401',
       'D. 403'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 39,
@@ -543,7 +543,7 @@ export const questions = [
       'C. 502',
       'D. 503'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 40,
@@ -557,7 +557,7 @@ export const questions = [
       'C. Using express.https()',
       'D. Using res.https()'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 41,
@@ -571,7 +571,7 @@ export const questions = [
       'C. To manage database connections',
       'D. To handle file uploads'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 42,
@@ -585,7 +585,7 @@ export const questions = [
       'C. Supertest',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
   },
   {
     id: 43,
@@ -599,7 +599,7 @@ export const questions = [
       'C. Using express.debug()',
       'D. Using req.debug()'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 44,
@@ -613,7 +613,7 @@ export const questions = [
       'C. Using environment variables',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'A' // Moved from D to A
   },
   {
     id: 45,
@@ -627,7 +627,7 @@ export const questions = [
       'C. Keep dependencies updated',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'B' // Moved from D to B
   },
   {
     id: 46,
@@ -641,7 +641,7 @@ export const questions = [
       'C. Vercel (serverless)',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
   },
   {
     id: 47,
@@ -655,7 +655,7 @@ export const questions = [
       'C. 443',
       'D. 8080'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 48,
@@ -669,7 +669,7 @@ export const questions = [
       'C. bodyParser.json()',
       'D. Both A and C'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'A' // Moved from D to A
   },
   {
     id: 49,
@@ -683,7 +683,7 @@ export const questions = [
       'C. bodyParser.urlencoded()',
       'D. Both A and C'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'B' // Moved from D to B
   },
   {
     id: 50,
@@ -697,7 +697,7 @@ export const questions = [
       'C. Use middleware effectively',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
   }
 ];
 

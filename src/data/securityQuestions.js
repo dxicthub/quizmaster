@@ -11,7 +11,7 @@ export const questions = [
       'C. Hosting websites',
       'D. Building websites'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ export const questions = [
       'C. Cross-Site Security',
       'D. Cross-Site Server'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ export const questions = [
       'C. Use HTTPS',
       'D. Use firewall'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ export const questions = [
       'C. Cross-Site Security',
       'D. Cross-Site Server'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ export const questions = [
       'C. Use same-site cookies',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'B' // Moved from D to B
   },
   {
     id: 6,
@@ -81,7 +81,7 @@ export const questions = [
       'C. An attack where malicious HTML is inserted into pages',
       'D. An attack where malicious CSS is inserted into pages'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 7,
@@ -95,7 +95,7 @@ export const questions = [
       'C. Use eval()',
       'D. Use all of the above'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 8,
@@ -109,7 +109,7 @@ export const questions = [
       'C. A database protocol',
       'D. A file transfer protocol'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 9,
@@ -123,7 +123,7 @@ export const questions = [
       'C. To authorize users',
       'D. To store data'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 10,
@@ -137,7 +137,7 @@ export const questions = [
       'C. A security protocol',
       'D. A caching policy'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 11,
@@ -151,7 +151,7 @@ export const questions = [
       'C. To prevent SQL injection',
       'D. To prevent DDoS attacks'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 12,
@@ -165,7 +165,7 @@ export const questions = [
       'C. Cross-Origin Resource Security',
       'D. Cross-Origin Request Sharing'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 13,
@@ -179,7 +179,7 @@ export const questions = [
       'C. To allow all cross-origin requests',
       'D. To manage cookies'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 14,
@@ -193,7 +193,7 @@ export const questions = [
       'C. Use secure password storage',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
   },
   {
     id: 15,
@@ -207,7 +207,7 @@ export const questions = [
       'C. Regenerate session IDs after login',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'D' // Kept as D
   },
   {
     id: 16,
@@ -221,7 +221,7 @@ export const questions = [
       'C. To ensure cookies are not accessible via JavaScript',
       'D. To ensure cookies are not accessible via HTTP'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 17,
@@ -235,7 +235,7 @@ export const questions = [
       'C. To ensure cookies are only sent over HTTPS',
       'D. To ensure cookies are encrypted'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 18,
@@ -249,7 +249,7 @@ export const questions = [
       'C. To prevent SQL injection',
       'D. To prevent DDoS attacks'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 19,
@@ -263,7 +263,7 @@ export const questions = [
       'C. To improve user experience',
       'D. To reduce bandwidth'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 20,
@@ -277,7 +277,7 @@ export const questions = [
       'C. Formatting user input',
       'D. Storing user input'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 21,
@@ -291,7 +291,7 @@ export const questions = [
       'C. Encoding data before validating it',
       'D. Encoding data before sanitizing it'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 22,
@@ -305,7 +305,7 @@ export const questions = [
       'C. To improve SEO',
       'D. To improve accessibility'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 23,
@@ -319,7 +319,7 @@ export const questions = [
       'C. Strict-Transport-Security',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'D' // Kept as D
   },
   {
     id: 24,
@@ -333,7 +333,7 @@ export const questions = [
       'C. HTTP Secure Transport Security',
       'D. HTTPS Secure Transport Security'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 25,
@@ -347,7 +347,7 @@ export const questions = [
       'C. To force browsers to use SSL',
       'D. To force browsers to use TLS'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 26,
@@ -361,7 +361,7 @@ export const questions = [
       'C. To prevent CSRF attacks',
       'D. To prevent SQL injection'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 27,
@@ -375,7 +375,7 @@ export const questions = [
       'C. To prevent CSRF attacks',
       'D. To prevent SQL injection'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 28,
@@ -389,7 +389,7 @@ export const questions = [
       'C. Dynamic Denial of Service',
       'D. Digital Denial of Service'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 29,
@@ -403,7 +403,7 @@ export const questions = [
       'C. Use CDN',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'B' // Moved from D to B
   },
   {
     id: 30,
@@ -417,7 +417,7 @@ export const questions = [
       'C. An attack where a third party eavesdrops on communication',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
   },
   {
     id: 31,
@@ -431,7 +431,7 @@ export const questions = [
       'C. Use secure protocols',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'D' // Kept as D
   },
   {
     id: 32,
@@ -445,7 +445,7 @@ export const questions = [
       'C. Use unique passwords per site',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'A' // Moved from D to A
   },
   {
     id: 33,
@@ -459,7 +459,7 @@ export const questions = [
       'C. PBKDF2',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'B' // Moved from D to B
   },
   {
     id: 34,
@@ -473,7 +473,7 @@ export const questions = [
       'C. Encrypting passwords',
       'D. Encoding passwords'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 35,
@@ -487,7 +487,7 @@ export const questions = [
       'C. To verify user permissions',
       'D. To backup data'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 36,
@@ -501,7 +501,7 @@ export const questions = [
       'C. Testing application usability',
       'D. Testing application accessibility'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 37,
@@ -515,7 +515,7 @@ export const questions = [
       'C. Open Web Application Security Platform',
       'D. Open Web Application Security Program'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 38,
@@ -529,7 +529,7 @@ export const questions = [
       'C. A list of the top 10 web application languages',
       'D. A list of the top 10 web application databases'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 39,
@@ -543,7 +543,7 @@ export const questions = [
       'C. Validate user input',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'D' // Kept as D
   },
   {
     id: 40,
@@ -557,7 +557,7 @@ export const questions = [
       'C. Use input validation',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'A' // Moved from D to A
   },
   {
     id: 41,
@@ -571,7 +571,7 @@ export const questions = [
       'C. Validate token signatures',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'B' // Moved from D to B
   },
   {
     id: 42,
@@ -585,7 +585,7 @@ export const questions = [
       'C. Validate redirect URIs',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
   },
   {
     id: 43,
@@ -599,7 +599,7 @@ export const questions = [
       'C. A security best practice',
       'D. A security protocol'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 44,
@@ -613,7 +613,7 @@ export const questions = [
       'C. Implement access controls',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'A' // Moved from D to A
   },
   {
     id: 45,
@@ -627,7 +627,7 @@ export const questions = [
       'C. Provide user privacy controls',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'B' // Moved from D to B
   },
   {
     id: 46,
@@ -641,7 +641,7 @@ export const questions = [
       'C. A security model that never verifies',
       'D. A security model that verifies once'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 47,
@@ -655,7 +655,7 @@ export const questions = [
       'C. Monitoring user activity',
       'D. Monitoring database activity'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 48,
@@ -669,7 +669,7 @@ export const questions = [
       'C. Responding to user requests',
       'D. Responding to system updates'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 49,
@@ -683,7 +683,7 @@ export const questions = [
       'C. Training employees on design',
       'D. Training employees on marketing'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 50,
@@ -697,7 +697,7 @@ export const questions = [
       'C. Cloud-native security',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
   }
 ];
 

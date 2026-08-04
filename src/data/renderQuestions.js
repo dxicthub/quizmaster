@@ -11,7 +11,7 @@ export const questions = [
       'C. A database management system',
       'D. A design tool'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ export const questions = [
       'C. Databases',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ export const questions = [
       'C. deploy.yaml',
       'D. settings.yaml'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ export const questions = [
       'C. Redis',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'A' // Moved from D to A
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ export const questions = [
       'C. Both A and B',
       'D. Only through the API'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'B' // Moved from C to B
   },
   {
     id: 6,
@@ -81,7 +81,7 @@ export const questions = [
       'C. A database instance',
       'D. A background worker'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 7,
@@ -95,7 +95,7 @@ export const questions = [
       'C. A database-driven application',
       'D. An API service'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 8,
@@ -109,7 +109,7 @@ export const questions = [
       'C. A static site',
       'D. A database instance'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 9,
@@ -123,7 +123,7 @@ export const questions = [
       'C. A background worker',
       'D. A database instance'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 10,
@@ -137,7 +137,7 @@ export const questions = [
       'C. A static site',
       'D. A database instance'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 11,
@@ -151,7 +151,7 @@ export const questions = [
       'C. Via SSH key authentication only',
       'D. Using FTP protocol'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 12,
@@ -165,7 +165,7 @@ export const questions = [
       'C. Scheduled deployments only',
       'D. API calls only'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 13,
@@ -179,7 +179,7 @@ export const questions = [
       'C. Output directory',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'B' // Moved from D to B
   },
   {
     id: 14,
@@ -193,7 +193,7 @@ export const questions = [
       'C. A security audit',
       'D. A code review tool'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 15,
@@ -207,7 +207,7 @@ export const questions = [
       'C. Manual scaling',
       'D. Scaling only during deployment'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 16,
@@ -221,7 +221,7 @@ export const questions = [
       'C. Both A and B',
       'D. Only through the API'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'A' // Moved from C to A
   },
   {
     id: 17,
@@ -235,7 +235,7 @@ export const questions = [
       'C. Response times',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'B' // Moved from D to B
   },
   {
     id: 18,
@@ -249,7 +249,7 @@ export const questions = [
       'C. Both A and B',
       'D. Only through the API'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 19,
@@ -263,7 +263,7 @@ export const questions = [
       'C. Both A and B',
       'D. Only through the CLI'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'D' // Moved from C to D
   },
   {
     id: 20,
@@ -277,7 +277,7 @@ export const questions = [
       'C. Only for paid plans',
       'D. Only for enterprise plans'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 21,
@@ -291,7 +291,7 @@ export const questions = [
       'C. Both A and B',
       'D. Only enterprise pricing'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'B' // Moved from C to B
   },
   {
     id: 22,
@@ -305,7 +305,7 @@ export const questions = [
       'C. Only for students',
       'D. Only for open-source projects'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 23,
@@ -319,7 +319,7 @@ export const questions = [
       'C. A PostgreSQL client',
       'D. A PostgreSQL backup tool'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 24,
@@ -333,7 +333,7 @@ export const questions = [
       'C. A Redis client',
       'D. A Redis backup tool'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 25,
@@ -347,7 +347,7 @@ export const questions = [
       'C. A backup storage',
       'D. A cache storage'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 26,
@@ -361,7 +361,7 @@ export const questions = [
       'C. Staging environments',
       'D. Development environments'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 27,
@@ -375,7 +375,7 @@ export const questions = [
       'C. A code template',
       'D. A deployment template'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 28,
@@ -389,7 +389,7 @@ export const questions = [
       'C. Only for logs',
       'D. Only for metrics'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 29,
@@ -403,7 +403,7 @@ export const questions = [
       'C. Only for logs',
       'D. Only for metrics'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 30,
@@ -417,7 +417,7 @@ export const questions = [
       'C. Restrict access to services',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
   },
   {
     id: 31,
@@ -431,7 +431,7 @@ export const questions = [
       'C. Both A and B',
       'D. Only rolling deployments'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'D' // Moved from C to D
   },
   {
     id: 32,
@@ -445,7 +445,7 @@ export const questions = [
       'C. Both A and B',
       'D. Only through the API'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'A' // Moved from C to A
   },
   {
     id: 33,
@@ -459,7 +459,7 @@ export const questions = [
       'C. A group of users',
       'D. A group of domains'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 34,
@@ -473,7 +473,7 @@ export const questions = [
       'C. Both A and B',
       'D. Only using environment variables'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 35,
@@ -487,7 +487,7 @@ export const questions = [
       'C. Slack',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'D' // Kept as D
   },
   {
     id: 36,
@@ -501,7 +501,7 @@ export const questions = [
       'C. Webhooks',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'A' // Moved from D to A
   },
   {
     id: 37,
@@ -515,7 +515,7 @@ export const questions = [
       'C. Priority support for paid plans',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'B' // Moved from D to B
   },
   {
     id: 38,
@@ -529,7 +529,7 @@ export const questions = [
       'C. Both A and B',
       'D. Only in the Render CLI'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'C' // Kept as C
   },
   {
     id: 39,
@@ -543,7 +543,7 @@ export const questions = [
       'C. Both A and B',
       'D. Only through the API'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'D' // Moved from C to D
   },
   {
     id: 40,
@@ -557,7 +557,7 @@ export const questions = [
       'C. Europe',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'A' // Moved from D to A
   },
   {
     id: 41,
@@ -571,7 +571,7 @@ export const questions = [
       'C. HIPAA',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'B' // Moved from D to B
   },
   {
     id: 42,
@@ -585,7 +585,7 @@ export const questions = [
       'C. Background workers',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
   },
   {
     id: 43,
@@ -599,7 +599,7 @@ export const questions = [
       'C. Takes about an hour',
       'D. Takes about 24 hours'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 44,
@@ -613,7 +613,7 @@ export const questions = [
       'C. Only with manual triggers',
       'D. Only with the Render CLI'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 45,
@@ -627,7 +627,7 @@ export const questions = [
       'C. Only for enterprise plans',
       'D. Only for paid plans'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 46,
@@ -641,7 +641,7 @@ export const questions = [
       'C. Using auto-scaling',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
   },
   {
     id: 47,
@@ -655,7 +655,7 @@ export const questions = [
       'C. Use logging for debugging',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'D' // Kept as D
   },
   {
     id: 48,
@@ -669,7 +669,7 @@ export const questions = [
       'C. Hosting static websites',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'A' // Moved from D to A
   },
   {
     id: 49,
@@ -683,7 +683,7 @@ export const questions = [
       'C. Netlify',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'B' // Moved from D to B
   },
   {
     id: 50,
@@ -697,7 +697,7 @@ export const questions = [
       'C. Deploy your first service',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
   }
 ];
 

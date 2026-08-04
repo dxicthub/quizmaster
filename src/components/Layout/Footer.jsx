@@ -40,7 +40,8 @@ function Footer() {
               <FaRocket className="text-blue-400 ml-1" />
             </div>
             <div className="text-xs text-gray-400 dark:text-gray-500">
-              © {currentYear} JEO Digital Solutions. All rights reserved.
+              © {currentYear} JEO Digital Solutions. All rights reserved. 
+              <p> Powered by DXICTHUB</p>
             </div>
           </div>
         </div>

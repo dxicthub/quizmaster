@@ -1,703 +1,1422 @@
 export const questions = [
+  // Learning Objective 1: Explain what Vercel is and how it connects to a GitHub repository
   {
     id: 1,
     type: 'multiple-choice',
-    objective: 'React Installation',
+    objective: 'Explain what Vercel is and how it connects to a GitHub repository',
     difficulty: 'easy',
-    question: 'How do you create a new React app?',
+    question: 'What is Vercel primarily used for?',
     options: [
-      'A. npx create-react-app my-app',
-      'B. npm create-react-app my-app',
-      'C. npx create-react my-app',
-      'D. npm create-react my-app'
+      'A. Version control and code management',
+      'B. Frontend deployment and hosting platform',
+      'C. Database management',
+      'D. Design and prototyping'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from B to C
   },
   {
     id: 2,
     type: 'multiple-choice',
-    objective: 'React Installation',
+    objective: 'Explain what Vercel is and how it connects to a GitHub repository',
     difficulty: 'easy',
-    question: 'What is the command to start a React development server?',
+    question: 'How does Vercel connect to a GitHub repository?',
     options: [
-      'A. npm start',
-      'B. npm run dev',
-      'C. npm run start',
-      'D. npm serve'
+      'A. Through manual file upload',
+      'B. Via SSH key authentication only',
+      'C. Through GitHub integration and OAuth',
+      'D. Using FTP protocol'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from C to D
   },
   {
     id: 3,
     type: 'multiple-choice',
-    objective: 'React Installation',
-    difficulty: 'easy',
-    question: 'What is the command to build a React app for production?',
+    objective: 'Explain what Vercel is and how it connects to a GitHub repository',
+    difficulty: 'medium',
+    question: 'Which of the following is NOT a feature of Vercel?',
     options: [
-      'A. npm run build',
-      'B. npm build',
-      'C. npm run prod',
-      'D. npm production'
+      'A. Automatic deployments',
+      'B. Preview deployments for pull requests',
+      'C. Serverless functions',
+      'D. Local development server only'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Moved from D to A
   },
   {
     id: 4,
     type: 'multiple-choice',
-    objective: 'React Components',
-    difficulty: 'easy',
-    question: 'What is a React component?',
+    objective: 'Explain what Vercel is and how it connects to a GitHub repository',
+    difficulty: 'medium',
+    question: 'What triggers automatic deployments on Vercel when connected to GitHub?',
     options: [
-      'A. A reusable piece of UI',
-      'B. A database table',
-      'C. A styling module',
-      'D. A configuration file'
+      'A. Pull request creation',
+      'B. Pushing to specific branches',
+      'C. Both A and B',
+      'D. Manual trigger only'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from C to B
   },
   {
     id: 5,
     type: 'multiple-choice',
-    objective: 'React Components',
+    objective: 'Explain what Vercel is and how it connects to a GitHub repository',
     difficulty: 'easy',
-    question: 'What are the two types of React components?',
+    question: 'Which protocol does Vercel use to communicate with GitHub repositories?',
     options: [
-      'A. Functional and Class',
-      'B. Stateful and Stateless',
-      'C. Presentational and Container',
-      'D. Smart and Dumb'
+      'A. HTTPS',
+      'B. WebSockets',
+      'C. Git protocol',
+      'D. Both A and C'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from D to C
   },
   {
     id: 6,
     type: 'multiple-choice',
-    objective: 'React Functional Components',
-    difficulty: 'easy',
-    question: 'What is a functional component in React?',
+    objective: 'Explain what Vercel is and how it connects to a GitHub repository',
+    difficulty: 'medium',
+    question: 'What is the primary benefit of Vercel\'s GitHub integration?',
     options: [
-      'A. A JavaScript function that returns JSX',
-      'B. A JavaScript class that extends Component',
-      'C. A function that returns HTML',
-      'D. A class that returns JSX'
+      'A. Automatic SSL certificate management',
+      'B. Seamless CI/CD pipeline for frontend applications',
+      'C. Database backup automation',
+      'D. Code review automation'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from B to D
   },
   {
     id: 7,
     type: 'multiple-choice',
-    objective: 'React Class Components',
+    objective: 'Explain what Vercel is and how it connects to a GitHub repository',
     difficulty: 'easy',
-    question: 'What is a class component in React?',
+    question: 'What type of projects is Vercel best suited for?',
     options: [
-      'A. A JavaScript class that extends React.Component',
-      'B. A JavaScript function that returns JSX',
-      'C. A class that returns HTML',
-      'D. A function that returns HTML'
+      'A. Backend APIs only',
+      'B. Frontend frameworks like React, Next.js, Vue',
+      'C. Mobile applications',
+      'D. Desktop applications'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Moved from B to A
   },
   {
     id: 8,
     type: 'multiple-choice',
-    objective: 'React Props',
-    difficulty: 'easy',
-    question: 'What are props in React?',
+    objective: 'Explain what Vercel is and how it connects to a GitHub repository',
+    difficulty: 'medium',
+    question: 'What happens when you create a pull request in a GitHub repository connected to Vercel?',
     options: [
-      'A. Read-only data passed from parent to child',
-      'B. Mutable data passed from parent to child',
-      'C. Internal component state',
-      'D. Data stored in the database'
+      'A. Nothing happens automatically',
+      'B. Vercel creates a preview deployment',
+      'C. Vercel automatically merges the PR',
+      'D. Vercel deletes the production site'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Kept as B
   },
   {
     id: 9,
     type: 'multiple-choice',
-    objective: 'React Props',
-    difficulty: 'easy',
-    question: 'How do you pass props to a child component?',
+    objective: 'Explain what Vercel is and how it connects to a GitHub repository',
+    difficulty: 'medium',
+    question: 'Which of the following is a valid deployment platform?',
     options: [
-      'A. <Child propName="value" />',
-      'B. <Child {propName: "value"} />',
-      'C. <Child props={propName: "value"} />',
-      'D. <Child value="propName" />'
+      'A. Vercel',
+      'B. Netlify',
+      'C. Both A and B',
+      'D. Only GitHub'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Kept as C
   },
   {
     id: 10,
     type: 'multiple-choice',
-    objective: 'React State',
+    objective: 'Explain what Vercel is and how it connects to a GitHub repository',
     difficulty: 'easy',
-    question: 'What is state in React?',
+    question: 'What is the default branch that Vercel monitors for production deployments?',
     options: [
-      'A. Data that can change over time within a component',
-      'B. Data that is passed from parent to child',
-      'C. Data that is stored in the database',
-      'D. Data that never changes'
+      'A. main or master',
+      'B. develop',
+      'C. staging',
+      'D. production'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
+
+  // Learning Objective 2: Deploy a website to Vercel using the Vercel Dashboard
   {
     id: 11,
     type: 'multiple-choice',
-    objective: 'React useState Hook',
+    objective: 'Deploy a website to Vercel using the Vercel Dashboard',
     difficulty: 'easy',
-    question: 'Which hook is used to manage state in functional components?',
+    question: 'What is the first step to deploy a website to Vercel using the dashboard?',
     options: [
-      'A. useState',
-      'B. useEffect',
-      'C. useContext',
-      'D. useReducer'
+      'A. Install Vercel CLI',
+      'B. Log in to Vercel dashboard',
+      'C. Create a GitHub repository',
+      'D. Write the HTML code'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Moved from B to A
   },
   {
     id: 12,
     type: 'multiple-choice',
-    objective: 'React useState Hook',
+    objective: 'Deploy a website to Vercel using the Vercel Dashboard',
     difficulty: 'easy',
-    question: 'What is the syntax for useState?',
+    question: 'In the Vercel dashboard, which button do you click to start a new deployment?',
     options: [
-      'A. const [state, setState] = useState(initialValue)',
-      'B. const [state, setState] = useState({})',
-      'C. const state = useState(initialValue)',
-      'D. const [state] = useState(initialValue)'
+      'A. "Add New" → "Project"',
+      'B. "Deploy" → "New Project"',
+      'C. "Create" → "Deployment"',
+      'D. "Settings" → "Deploy"'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 13,
     type: 'multiple-choice',
-    objective: 'React Props vs State',
+    objective: 'Deploy a website to Vercel using the Vercel Dashboard',
     difficulty: 'medium',
-    question: 'What is the difference between props and state?',
+    question: 'When deploying from the Vercel dashboard, which of these can you import?',
     options: [
-      'A. Props are read-only, state is mutable',
-      'B. State is read-only, props are mutable',
-      'C. Both are mutable',
-      'D. Both are read-only'
+      'A. GitHub repositories',
+      'B. GitLab repositories',
+      'C. Bitbucket repositories',
+      'D. All of the above'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 14,
     type: 'multiple-choice',
-    objective: 'React Event Handling',
+    objective: 'Deploy a website to Vercel using the Vercel Dashboard',
     difficulty: 'medium',
-    question: 'How do you handle events in React?',
+    question: 'What information does Vercel need to deploy your project from the dashboard?',
     options: [
-      'A. Using camelCase event handlers',
-      'B. Using lowercase event handlers',
-      'C. Using inline event handlers',
-      'D. Using addEventListener'
+      'A. Repository URL and branch',
+      'B. Build command and output directory',
+      'C. Both A and B',
+      'D. Only the project name'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from C to D
   },
   {
     id: 15,
     type: 'multiple-choice',
-    objective: 'React Event Handling',
-    difficulty: 'medium',
-    question: 'What is the correct way to handle a click event in React?',
+    objective: 'Deploy a website to Vercel using the Vercel Dashboard',
+    difficulty: 'easy',
+    question: 'After clicking "Deploy" in the Vercel dashboard, what happens?',
     options: [
-      'A. onClick={handleClick}',
-      'B. onclick={handleClick}',
-      'C. onClick={handleClick()}',
-      'D. onclick={handleClick()}'
+      'A. The project is instantly live',
+      'B. Vercel builds and deploys the project',
+      'C. A confirmation email is sent',
+      'D. The repository is cloned locally'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Moved from B to A
   },
   {
     id: 16,
     type: 'multiple-choice',
-    objective: 'React JSX',
-    difficulty: 'easy',
-    question: 'What is JSX?',
+    objective: 'Deploy a website to Vercel using the Vercel Dashboard',
+    difficulty: 'medium',
+    question: 'Where can you view the deployment status in the Vercel dashboard?',
     options: [
-      'A. A JavaScript extension that allows writing HTML-like syntax in JavaScript',
-      'B. A separate templating language',
-      'C. A CSS preprocessor',
-      'D. A database query language'
+      'A. On the project page',
+      'B. In the deployments tab',
+      'C. Both A and B',
+      'D. Only in the logs section'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from C to B
   },
   {
     id: 17,
     type: 'multiple-choice',
-    objective: 'React JSX Rules',
-    difficulty: 'medium',
-    question: 'What is a rule of JSX?',
+    objective: 'Deploy a website to Vercel using the Vercel Dashboard',
+    difficulty: 'easy',
+    question: 'What is a deployment URL in Vercel?',
     options: [
-      'A. Components must return a single parent element',
-      'B. Components can return multiple elements',
-      'C. JSX must be written in uppercase',
-      'D. JSX cannot include JavaScript expressions'
+      'A. A temporary preview URL',
+      'B. A permanent production URL',
+      'C. Both A and B',
+      'D. A local development URL'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Kept as C
   },
   {
     id: 18,
     type: 'multiple-choice',
-    objective: 'React Fragments',
+    objective: 'Deploy a website to Vercel using the Vercel Dashboard',
     difficulty: 'medium',
-    question: 'What is the purpose of React Fragments?',
+    question: 'Which dashboard section allows you to redeploy a previous version?',
     options: [
-      'A. To group elements without adding extra nodes to the DOM',
-      'B. To create fragments of code',
-      'C. To split components into smaller pieces',
-      'D. To manage state across multiple components'
+      'A. Analytics',
+      'B. Deployments',
+      'C. Settings',
+      'D. Integrations'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from B to D
   },
   {
     id: 19,
     type: 'multiple-choice',
-    objective: 'React Conditional Rendering',
-    difficulty: 'medium',
-    question: 'How do you conditionally render in React?',
+    objective: 'Deploy a website to Vercel using the Vercel Dashboard',
+    difficulty: 'easy',
+    question: 'What permission is required to deploy a GitHub repository via Vercel dashboard?',
     options: [
-      'A. Using ternary operators',
-      'B. Using if statements',
-      'C. Using logical && operator',
-      'D. All of the above'
+      'A. Read access to the repository',
+      'B. Write access to the repository',
+      'C. Admin access to the repository',
+      'D. No permission is needed'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 20,
     type: 'multiple-choice',
-    objective: 'React Lists and Keys',
+    objective: 'Deploy a website to Vercel using the Vercel Dashboard',
     difficulty: 'medium',
-    question: 'Why are keys important when rendering lists?',
+    question: 'What happens when you delete a project from the Vercel dashboard?',
     options: [
-      'A. They help React identify which items have changed',
-      'B. They are used for styling',
-      'C. They improve performance',
-      'D. They are required for list rendering'
+      'A. The GitHub repository is also deleted',
+      'B. The deployment is removed but the repository remains',
+      'C. Both are deleted',
+      'D. Neither is deleted'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Kept as B
   },
+
+  // Learning Objective 3: Configure project settings, environment variables and custom domains
   {
     id: 21,
     type: 'multiple-choice',
-    objective: 'React Keys',
-    difficulty: 'medium',
-    question: 'What should be used as the key prop?',
+    objective: 'Configure project settings, environment variables and custom domains',
+    difficulty: 'easy',
+    question: 'Where can you configure environment variables in Vercel?',
     options: [
-      'A. A unique identifier',
-      'B. The array index',
-      'C. The item value',
-      'D. A random number'
+      'A. Project Settings → Environment Variables',
+      'B. Deployment Settings',
+      'C. Account Settings',
+      'D. Build Settings'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 22,
     type: 'multiple-choice',
-    objective: 'React Forms',
+    objective: 'Configure project settings, environment variables and custom domains',
     difficulty: 'medium',
-    question: 'What is a controlled component in React?',
+    question: 'What is the purpose of environment variables in Vercel?',
     options: [
-      'A. A component whose form data is controlled by React state',
-      'B. A component that is controlled by the browser',
-      'C. A component that cannot be changed',
-      'D. A component that uses refs'
+      'A. To store sensitive data like API keys',
+      'B. To configure build settings',
+      'C. To manage team members',
+      'D. To set deployment regions'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 23,
     type: 'multiple-choice',
-    objective: 'React Forms',
+    objective: 'Configure project settings, environment variables and custom domains',
     difficulty: 'medium',
-    question: 'What is an uncontrolled component in React?',
+    question: 'How do you add a custom domain to a Vercel project?',
     options: [
-      'A. A component that maintains its own internal state',
-      'B. A component that is controlled by React state',
-      'C. A component that cannot be changed',
-      'D. A component that uses refs only'
+      'A. Through the domain management section',
+      'B. By updating the DNS records manually',
+      'C. Both A and B',
+      'D. Only through the CLI'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Moved from C to A
   },
   {
     id: 24,
     type: 'multiple-choice',
-    objective: 'React Refs',
-    difficulty: 'medium',
-    question: 'What is the purpose of refs in React?',
+    objective: 'Configure project settings, environment variables and custom domains',
+    difficulty: 'easy',
+    question: 'What DNS record type is required for a Vercel custom domain?',
     options: [
-      'A. To directly access DOM elements',
-      'B. To manage component state',
-      'C. To pass data between components',
-      'D. To handle routing'
+      'A. A record',
+      'B. CNAME record',
+      'C. MX record',
+      'D. TXT record'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Kept as B
   },
   {
     id: 25,
     type: 'multiple-choice',
-    objective: 'React useEffect Hook',
+    objective: 'Configure project settings, environment variables and custom domains',
     difficulty: 'medium',
-    question: 'What is the purpose of useEffect?',
+    question: 'Which of the following can be configured in Vercel project settings?',
     options: [
-      'A. To perform side effects in functional components',
-      'B. To manage state',
-      'C. To create context',
-      'D. To optimize performance'
+      'A. Build command',
+      'B. Output directory',
+      'C. Both A and B',
+      'D. Only the framework preset'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Kept as C
   },
   {
     id: 26,
     type: 'multiple-choice',
-    objective: 'React useEffect Dependencies',
-    difficulty: 'medium',
-    question: 'What does the dependency array in useEffect control?',
+    objective: 'Configure project settings, environment variables and custom domains',
+    difficulty: 'easy',
+    question: 'What does the "Production" environment variable scope mean?',
     options: [
-      'A. When the effect runs',
-      'B. The order of execution',
-      'C. The priority of the effect',
-      'D. The memory usage of the effect'
+      'A. Variables are only available in preview deployments',
+      'B. Variables are available in production deployments',
+      'C. Variables are available in both preview and production',
+      'D. Variables are only available locally'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from B to D
   },
   {
     id: 27,
     type: 'multiple-choice',
-    objective: 'React Context API',
+    objective: 'Configure project settings, environment variables and custom domains',
     difficulty: 'medium',
-    question: 'What is the Context API used for?',
+    question: 'How can you verify a custom domain is working correctly in Vercel?',
     options: [
-      'A. To share data across the component tree without prop drilling',
-      'B. To manage component state',
-      'C. To handle routing',
-      'D. To style components'
+      'A. Check the domain status in the dashboard',
+      'B. Visit the domain in a browser',
+      'C. Both A and B',
+      'D. Only through the CLI'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Moved from C to A
   },
   {
     id: 28,
     type: 'multiple-choice',
-    objective: 'React useContext Hook',
-    difficulty: 'medium',
-    question: 'What is the syntax for useContext?',
+    objective: 'Configure project settings, environment variables and custom domains',
+    difficulty: 'easy',
+    question: 'What is a "preview" environment variable scope?',
     options: [
-      'A. const value = useContext(MyContext)',
-      'B. const value = use(MyContext)',
-      'C. const value = context(MyContext)',
-      'D. const value = MyContext.use()'
+      'A. Variables available during build only',
+      'B. Variables available in preview deployment environments',
+      'C. Variables available in production only',
+      'D. Variables available in all environments'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Kept as B
   },
   {
     id: 29,
     type: 'multiple-choice',
-    objective: 'React useReducer Hook',
-    difficulty: 'advanced',
-    question: 'When should you use useReducer instead of useState?',
+    objective: 'Configure project settings, environment variables and custom domains',
+    difficulty: 'medium',
+    question: 'What is required to use a custom domain with Vercel?',
     options: [
-      'A. When state logic is complex',
-      'B. When state depends on previous state',
-      'C. When you have multiple sub-values',
-      'D. All of the above'
+      'A. A valid SSL certificate',
+      'B. Domain ownership verification',
+      'C. Both A and B',
+      'D. Only domain ownership verification'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Kept as C
   },
   {
     id: 30,
     type: 'multiple-choice',
-    objective: 'React useCallback Hook',
-    difficulty: 'advanced',
-    question: 'What is the purpose of useCallback?',
+    objective: 'Configure project settings, environment variables and custom domains',
+    difficulty: 'medium',
+    question: 'Which section of Vercel dashboard manages team access and permissions?',
     options: [
-      'A. To memoize functions',
-      'B. To memoize values',
-      'C. To handle side effects',
-      'D. To manage state'
+      'A. Project Settings → General',
+      'B. Project Settings → Members',
+      'C. Account Settings → Team',
+      'D. Both B and C'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Kept as D
   },
+
+  // Learning Objective 4: Install and use the Vercel CLI to deploy and redeploy projects
   {
     id: 31,
     type: 'multiple-choice',
-    objective: 'React useMemo Hook',
-    difficulty: 'advanced',
-    question: 'What is the purpose of useMemo?',
+    objective: 'Install and use the Vercel CLI to deploy and redeploy projects',
+    difficulty: 'easy',
+    question: 'What is the command to install Vercel CLI globally?',
     options: [
-      'A. To memoize expensive calculations',
-      'B. To memoize functions',
-      'C. To handle side effects',
-      'D. To manage state'
+      'A. npm install vercel',
+      'B. npm install -g vercel',
+      'C. npm install --save vercel',
+      'D. npm install --dev vercel'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Moved from B to A
   },
   {
     id: 32,
     type: 'multiple-choice',
-    objective: 'React Custom Hooks',
-    difficulty: 'advanced',
-    question: 'What is a custom hook?',
+    objective: 'Install and use the Vercel CLI to deploy and redeploy projects',
+    difficulty: 'easy',
+    question: 'What command do you use to deploy a project with Vercel CLI?',
     options: [
-      'A. A reusable function that uses React hooks',
-      'B. A built-in React hook',
-      'C. A hook for class components',
-      'D. A hook that modifies the DOM'
+      'A. vercel deploy',
+      'B. vercel',
+      'C. vercel --deploy',
+      'D. vercel start'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Kept as B
   },
   {
     id: 33,
     type: 'multiple-choice',
-    objective: 'React Router',
-    difficulty: 'advanced',
-    question: 'What is React Router used for?',
+    objective: 'Install and use the Vercel CLI to deploy and redeploy projects',
+    difficulty: 'medium',
+    question: 'What does the command "vercel --prod" do?',
     options: [
-      'A. Client-side routing',
-      'B. Server-side routing',
-      'C. State management',
-      'D. API calls'
+      'A. Deploys to production environment',
+      'B. Deploys to preview environment',
+      'C. Deploys to staging environment',
+      'D. Only runs the build process'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 34,
     type: 'multiple-choice',
-    objective: 'React Router Components',
-    difficulty: 'advanced',
-    question: 'Which component is used to define routes in React Router?',
+    objective: 'Install and use the Vercel CLI to deploy and redeploy projects',
+    difficulty: 'easy',
+    question: 'After installation, what command verifies Vercel CLI is installed correctly?',
     options: [
-      'A. Route',
-      'B. Link',
-      'C. BrowserRouter',
-      'D. Switch'
+      'A. vercel -v',
+      'B. vercel --version',
+      'C. Both A and B',
+      'D. vercel help'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from C to D
   },
   {
     id: 35,
     type: 'multiple-choice',
-    objective: 'React Router Link',
-    difficulty: 'advanced',
-    question: 'What is the purpose of the Link component?',
+    objective: 'Install and use the Vercel CLI to deploy and redeploy projects',
+    difficulty: 'medium',
+    question: 'When you run "vercel" for the first time, what does it prompt you to do?',
     options: [
-      'A. To navigate between routes',
-      'B. To define routes',
-      'C. To handle route parameters',
-      'D. To redirect users'
+      'A. Log in to Vercel account',
+      'B. Set up project settings',
+      'C. Both A and B',
+      'D. Install additional dependencies'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Moved from C to A
   },
   {
     id: 36,
     type: 'multiple-choice',
-    objective: 'React Hooks Rules',
-    difficulty: 'medium',
-    question: 'What is a rule of React Hooks?',
+    objective: 'Install and use the Vercel CLI to deploy and redeploy projects',
+    difficulty: 'easy',
+    question: 'What command redeploys the latest version of your project?',
     options: [
-      'A. Hooks must be called at the top level',
-      'B. Hooks can be called inside loops',
-      'C. Hooks can be called inside conditions',
-      'D. Hooks can be called inside nested functions'
+      'A. vercel redeploy',
+      'B. vercel --force',
+      'C. vercel --prod',
+      'D. vercel'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from D to B
   },
   {
     id: 37,
     type: 'multiple-choice',
-    objective: 'React State Immutability',
+    objective: 'Install and use the Vercel CLI to deploy and redeploy projects',
     difficulty: 'medium',
-    question: 'Why should state be treated as immutable?',
+    question: 'What does the command "vercel --help" display?',
     options: [
-      'A. To ensure predictable updates',
-      'B. To improve performance',
-      'C. To reduce memory usage',
-      'D. To improve readability'
+      'A. Version information',
+      'B. Available commands and options',
+      'C. Deployment status',
+      'D. Logs from the last deployment'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from B to C
   },
   {
     id: 38,
     type: 'multiple-choice',
-    objective: 'React Lifecycle Methods',
+    objective: 'Install and use the Vercel CLI to deploy and redeploy projects',
     difficulty: 'medium',
-    question: 'What is the purpose of componentDidMount?',
+    question: 'How do you link an existing project to Vercel CLI?',
     options: [
-      'A. To run code after the component is mounted',
-      'B. To run code before the component is mounted',
-      'C. To run code before the component is updated',
-      'D. To run code after the component is unmounted'
+      'A. Run "vercel link" in the project directory',
+      'B. Run "vercel init"',
+      'C. Run "vercel connect"',
+      'D. Manual configuration in vercel.json'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 39,
     type: 'multiple-choice',
-    objective: 'React Lifecycle Methods',
-    difficulty: 'medium',
-    question: 'What is the purpose of componentWillUnmount?',
+    objective: 'Install and use the Vercel CLI to deploy and redeploy projects',
+    difficulty: 'easy',
+    question: 'What is the purpose of the "vercel.json" file?',
     options: [
-      'A. To clean up before the component is unmounted',
-      'B. To clean up after the component is mounted',
-      'C. To clean up before the component is updated',
-      'D. To clean up after the component is updated'
+      'A. To store project dependencies',
+      'B. To configure project settings for Vercel',
+      'C. To store environment variables',
+      'D. To define build scripts'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Moved from B to A
   },
   {
     id: 40,
     type: 'multiple-choice',
-    objective: 'React Error Boundaries',
-    difficulty: 'advanced',
-    question: 'What is an Error Boundary?',
+    objective: 'Install and use the Vercel CLI to deploy and redeploy projects',
+    difficulty: 'medium',
+    question: 'What happens when you run "vercel" in a project directory without changes?',
     options: [
-      'A. A component that catches JavaScript errors in its child tree',
-      'B. A component that prevents errors',
-      'C. A component that validates props',
-      'D. A component that limits access'
+      'A. It skips the deployment',
+      'B. It redeploys the latest version',
+      'C. It shows an error',
+      'D. It asks for confirmation'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Kept as B
   },
+
+  // Learning Objective 5: Update and redeploy a live site after making code changes
   {
     id: 41,
     type: 'multiple-choice',
-    objective: 'React Lazy Loading',
-    difficulty: 'advanced',
-    question: 'What is React.lazy used for?',
+    objective: 'Update and redeploy a live site after making code changes',
+    difficulty: 'easy',
+    question: 'What is the workflow to update a live site after code changes?',
     options: [
-      'A. To lazy load components',
-      'B. To lazy load data',
-      'C. To lazy load styles',
-      'D. To lazy load assets'
+      'A. Make changes, commit, push, Vercel auto-deploys',
+      'B. Make changes, run "vercel" manually',
+      'C. Both A and B',
+      'D. Only manual redeployment'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Kept as C
   },
   {
     id: 42,
     type: 'multiple-choice',
-    objective: 'React Suspense',
-    difficulty: 'advanced',
-    question: 'What is React Suspense used for?',
+    objective: 'Update and redeploy a live site after making code changes',
+    difficulty: 'medium',
+    question: 'What happens when you push changes to the main branch with Vercel auto-deploy enabled?',
     options: [
-      'A. To handle loading states',
-      'B. To handle error states',
-      'C. To manage state',
-      'D. To optimize performance'
+      'A. The site is automatically redeployed',
+      'B. Nothing happens',
+      'C. A preview deployment is created',
+      'D. The deployment fails'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 43,
     type: 'multiple-choice',
-    objective: 'React Portals',
-    difficulty: 'advanced',
-    question: 'What is the purpose of React Portals?',
+    objective: 'Update and redeploy a live site after making code changes',
+    difficulty: 'easy',
+    question: 'How long does a Vercel deployment typically take?',
     options: [
-      'A. To render children into a different part of the DOM',
-      'B. To render children outside the DOM',
-      'C. To render children on the server',
-      'D. To render children in a virtual DOM'
+      'A. A few seconds to a few minutes',
+      'B. 30 minutes',
+      'C. 1 hour',
+      'D. 24 hours'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 44,
     type: 'multiple-choice',
-    objective: 'React Strict Mode',
+    objective: 'Update and redeploy a live site after making code changes',
     difficulty: 'medium',
-    question: 'What is React Strict Mode used for?',
+    question: 'What command forces a full rebuild without code changes?',
     options: [
-      'A. To highlight potential problems',
-      'B. To enforce strict coding standards',
-      'C. To optimize performance',
-      'D. To manage state'
+      'A. vercel --force',
+      'B. vercel --rebuild',
+      'C. vercel --hard',
+      'D. vercel --fresh'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 45,
     type: 'multiple-choice',
-    objective: 'React PropTypes',
-    difficulty: 'medium',
-    question: 'What is the purpose of PropTypes?',
+    objective: 'Update and redeploy a live site after making code changes',
+    difficulty: 'easy',
+    question: 'Where can you view the deployment history of your Vercel project?',
     options: [
-      'A. To validate props types',
-      'B. To optimize performance',
-      'C. To handle state',
-      'D. To handle routing'
+      'A. In the Vercel dashboard',
+      'B. Using the CLI with "vercel list"',
+      'C. Both A and B',
+      'D. Only in the GitHub repository'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Kept as C
   },
   {
     id: 46,
     type: 'multiple-choice',
-    objective: 'React Code Splitting',
-    difficulty: 'advanced',
-    question: 'What is code splitting in React?',
+    objective: 'Update and redeploy a live site after making code changes',
+    difficulty: 'medium',
+    question: 'What should you do if a deployment fails after code changes?',
     options: [
-      'A. Splitting the bundle into smaller chunks',
-      'B. Splitting components into smaller pieces',
-      'C. Splitting state across components',
-      'D. Splitting code into files'
+      'A. Check the deployment logs',
+      'B. Review the build output',
+      'C. Both A and B',
+      'D. Delete the project and start over'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from C to D
   },
   {
     id: 47,
     type: 'multiple-choice',
-    objective: 'React Performance',
-    difficulty: 'advanced',
-    question: 'What is a performance optimization in React?',
+    objective: 'Update and redeploy a live site after making code changes',
+    difficulty: 'easy',
+    question: 'Can you rollback to a previous deployment version?',
     options: [
-      'A. Using React.memo',
-      'B. Using useMemo',
-      'C. Using useCallback',
-      'D. All of the above'
+      'A. Yes, in the dashboard',
+      'B. Yes, using the CLI',
+      'C. Both A and B',
+      'D. No, not possible'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'A' // Moved from C to A
   },
   {
     id: 48,
     type: 'multiple-choice',
-    objective: 'React React.memo',
-    difficulty: 'advanced',
-    question: 'What is the purpose of React.memo?',
+    objective: 'Update and redeploy a live site after making code changes',
+    difficulty: 'medium',
+    question: 'What is the purpose of "preview deployments" when updating a site?',
     options: [
-      'A. To memoize component rendering',
-      'B. To memoize functions',
-      'C. To memoize values',
-      'D. To handle side effects'
+      'A. To test changes before production',
+      'B. To speed up the deployment process',
+      'C. To reduce deployment costs',
+      'D. To backup the code'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 49,
     type: 'multiple-choice',
-    objective: 'React Best Practices',
-    difficulty: 'advanced',
-    question: 'Which of the following is a React best practice?',
+    objective: 'Update and redeploy a live site after making code changes',
+    difficulty: 'easy',
+    question: 'How do you know if a redeployment was successful?',
     options: [
-      'A. Keep components small and focused',
-      'B. Use functional components with hooks',
-      'C. Use proper prop types or TypeScript',
-      'D. All of the above'
+      'A. Check the deployment status in the dashboard',
+      'B. Visit the live site',
+      'C. Both A and B',
+      'D. Wait for an email notification'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Kept as C
   },
   {
     id: 50,
     type: 'multiple-choice',
-    objective: 'React Future',
-    difficulty: 'advanced',
-    question: 'What is a trend in React development?',
+    objective: 'Update and redeploy a live site after making code changes',
+    difficulty: 'medium',
+    question: 'What is the benefit of auto-deploy from GitHub?',
     options: [
-      'A. Server Components',
-      'B. Server Actions',
-      'C. React 19 features',
+      'A. Manual deployment is no longer needed',
+      'B. Faster deployment cycles',
+      'C. Both A and B',
+      'D. It reduces build time'
+    ],
+    correctAnswer: 'D' // Moved from C to D
+  },
+
+  // Learning Objective 6: Install Git on your computer and verify installation
+  {
+    id: 51,
+    type: 'multiple-choice',
+    objective: 'Install Git on your computer and verify installation',
+    difficulty: 'easy',
+    question: 'How do you install Git on Windows?',
+    options: [
+      'A. Download from git-scm.com',
+      'B. Use the Windows Store',
+      'C. Both A and B',
+      'D. Only via command line'
+    ],
+    correctAnswer: 'A' // Moved from C to A
+  },
+  {
+    id: 52,
+    type: 'multiple-choice',
+    objective: 'Install Git on your computer and verify installation',
+    difficulty: 'easy',
+    question: 'What command verifies Git installation?',
+    options: [
+      'A. git -v',
+      'B. git --version',
+      'C. Both A and B',
+      'D. git help'
+    ],
+    correctAnswer: 'B' // Moved from C to B
+  },
+  {
+    id: 53,
+    type: 'multiple-choice',
+    objective: 'Install Git on your computer and verify installation',
+    difficulty: 'easy',
+    question: 'Which operating systems does Git support?',
+    options: [
+      'A. Windows',
+      'B. macOS',
+      'C. Linux',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
+  },
+  {
+    id: 54,
+    type: 'multiple-choice',
+    objective: 'Install Git on your computer and verify installation',
+    difficulty: 'medium',
+    question: 'What is the default Git installation directory on Windows?',
+    options: [
+      'A. C:\\Git',
+      'B. C:\\Program Files\\Git',
+      'C. C:\\Users\\Git',
+      'D. C:\\Programs\\Git'
+    ],
+    correctAnswer: 'D' // Moved from B to D
+  },
+  {
+    id: 55,
+    type: 'multiple-choice',
+    objective: 'Install Git on your computer and verify installation',
+    difficulty: 'easy',
+    question: 'What does "git --version" display?',
+    options: [
+      'A. The current Git version number',
+      'B. The Git configuration settings',
+      'C. The Git repository status',
+      'D. The Git help menu'
+    ],
+    correctAnswer: 'A' // Kept as A
+  },
+  {
+    id: 56,
+    type: 'multiple-choice',
+    objective: 'Install Git on your computer and verify installation',
+    difficulty: 'medium',
+    question: 'How do you install Git on macOS?',
+    options: [
+      'A. Using Homebrew',
+      'B. Download from git-scm.com',
+      'C. Both A and B',
+      'D. Only through the App Store'
+    ],
+    correctAnswer: 'B' // Moved from C to B
+  },
+  {
+    id: 57,
+    type: 'multiple-choice',
+    objective: 'Install Git on your computer and verify installation',
+    difficulty: 'easy',
+    question: 'What is the minimum system requirement for Git?',
+    options: [
+      'A. 1GB RAM',
+      'B. 2GB RAM',
+      'C. 4GB RAM',
+      'D. Very minimal - works on most systems'
+    ],
+    correctAnswer: 'C' // Moved from D to C
+  },
+  {
+    id: 58,
+    type: 'multiple-choice',
+    objective: 'Install Git on your computer and verify installation',
+    difficulty: 'medium',
+    question: 'Which command shows the Git installation path?',
+    options: [
+      'A. which git',
+      'B. where git',
+      'C. Both A and B',
+      'D. git path'
+    ],
+    correctAnswer: 'D' // Moved from C to D
+  },
+  {
+    id: 59,
+    type: 'multiple-choice',
+    objective: 'Install Git on your computer and verify installation',
+    difficulty: 'easy',
+    question: 'What should you do after installing Git?',
+    options: [
+      'A. Configure user name and email',
+      'B. Verify the installation',
+      'C. Both A and B',
+      'D. Nothing, it works automatically'
+    ],
+    correctAnswer: 'A' // Moved from C to A
+  },
+  {
+    id: 60,
+    type: 'multiple-choice',
+    objective: 'Install Git on your computer and verify installation',
+    difficulty: 'medium',
+    question: 'How can you update Git to the latest version?',
+    options: [
+      'A. Download the latest installer',
+      'B. Use the package manager',
+      'C. Both A and B',
+      'D. Only through the command line'
+    ],
+    correctAnswer: 'B' // Moved from C to B
+  },
+
+  // Learning Objective 7: Create and configure a GitHub account and repository
+  {
+    id: 61,
+    type: 'multiple-choice',
+    objective: 'Create and configure a GitHub account and repository',
+    difficulty: 'easy',
+    question: 'Where do you create a new repository on GitHub?',
+    options: [
+      'A. In the "Repositories" tab',
+      'B. Click the "+" icon → "New repository"',
+      'C. Both A and B',
+      'D. Only through the CLI'
+    ],
+    correctAnswer: 'C' // Kept as C
+  },
+  {
+    id: 62,
+    type: 'multiple-choice',
+    objective: 'Create and configure a GitHub account and repository',
+    difficulty: 'easy',
+    question: 'What is a GitHub repository?',
+    options: [
+      'A. A cloud-based storage for code',
+      'B. A database management system',
+      'C. A deployment tool',
+      'D. A design platform'
+    ],
+    correctAnswer: 'D' // Moved from A to D
+  },
+  {
+    id: 63,
+    type: 'multiple-choice',
+    objective: 'Create and configure a GitHub account and repository',
+    difficulty: 'medium',
+    question: 'What information is required to create a GitHub account?',
+    options: [
+      'A. Username',
+      'B. Email',
+      'C. Password',
+      'D. All of the above'
+    ],
+    correctAnswer: 'A' // Moved from D to A
+  },
+  {
+    id: 64,
+    type: 'multiple-choice',
+    objective: 'Create and configure a GitHub account and repository',
+    difficulty: 'easy',
+    question: 'How do you configure a repository after creation?',
+    options: [
+      'A. Through the repository settings',
+      'B. Using the web interface',
+      'C. Both A and B',
+      'D. Only through the CLI'
+    ],
+    correctAnswer: 'B' // Moved from C to B
+  },
+  {
+    id: 65,
+    type: 'multiple-choice',
+    objective: 'Create and configure a GitHub account and repository',
+    difficulty: 'medium',
+    question: 'What is the purpose of a README file in a GitHub repository?',
+    options: [
+      'A. To provide project documentation',
+      'B. To configure build settings',
+      'C. To store environment variables',
+      'D. To define deployment settings'
+    ],
+    correctAnswer: 'C' // Moved from A to C
+  },
+  {
+    id: 66,
+    type: 'multiple-choice',
+    objective: 'Create and configure a GitHub account and repository',
+    difficulty: 'easy',
+    question: 'Can you create a private repository on GitHub?',
+    options: [
+      'A. Yes, for free',
+      'B. Yes, but only paid',
+      'C. No, all repositories are public',
+      'D. Only with a GitHub Pro account'
+    ],
+    correctAnswer: 'D' // Moved from A to D
+  },
+  {
+    id: 67,
+    type: 'multiple-choice',
+    objective: 'Create and configure a GitHub account and repository',
+    difficulty: 'medium',
+    question: 'What is GitHub used for?',
+    options: [
+      'A. Version control and collaboration',
+      'B. Code hosting',
+      'C. Both A and B',
+      'D. Only code hosting'
+    ],
+    correctAnswer: 'A' // Moved from C to A
+  },
+  {
+    id: 68,
+    type: 'multiple-choice',
+    objective: 'Create and configure a GitHub account and repository',
+    difficulty: 'easy',
+    question: 'How do you add collaborators to a GitHub repository?',
+    options: [
+      'A. In the repository settings',
+      'B. Through the collaborators section',
+      'C. Both A and B',
+      'D. Only by adding them as code owners'
+    ],
+    correctAnswer: 'B' // Moved from C to B
+  },
+  {
+    id: 69,
+    type: 'multiple-choice',
+    objective: 'Create and configure a GitHub account and repository',
+    difficulty: 'medium',
+    question: 'What is a GitHub branch?',
+    options: [
+      'A. A parallel version of the repository',
+      'B. A copy of the master branch',
+      'C. Both A and B',
+      'D. A type of file'
+    ],
+    correctAnswer: 'C' // Kept as C
+  },
+  {
+    id: 70,
+    type: 'multiple-choice',
+    objective: 'Create and configure a GitHub account and repository',
+    difficulty: 'easy',
+    question: 'What is the default branch name in a new GitHub repository?',
+    options: [
+      'A. main',
+      'B. master',
+      'C. Both A and B depending on settings',
+      'D. default'
+    ],
+    correctAnswer: 'D' // Moved from C to D
+  },
+
+  // Learning Objective 8: Configure Git locally including .gitignore
+  {
+    id: 71,
+    type: 'multiple-choice',
+    objective: 'Configure Git locally including .gitignore',
+    difficulty: 'easy',
+    question: 'What is a .gitignore file used for?',
+    options: [
+      'A. To ignore certain files in Git commits',
+      'B. To configure Git settings',
+      'C. To store environment variables',
+      'D. To define build commands'
+    ],
+    correctAnswer: 'A' // Kept as A
+  },
+  {
+    id: 72,
+    type: 'multiple-choice',
+    objective: 'Configure Git locally including .gitignore',
+    difficulty: 'easy',
+    question: 'Which files should typically be in .gitignore?',
+    options: [
+      'A. node_modules',
+      'B. .env files',
+      'C. Both A and B',
+      'D. Only source code files'
+    ],
+    correctAnswer: 'B' // Moved from C to B
+  },
+  {
+    id: 73,
+    type: 'multiple-choice',
+    objective: 'Configure Git locally including .gitignore',
+    difficulty: 'medium',
+    question: 'What command initializes Git in a local directory?',
+    options: [
+      'A. git start',
+      'B. git init',
+      'C. git create',
+      'D. git begin'
+    ],
+    correctAnswer: 'C' // Moved from B to C
+  },
+  {
+    id: 74,
+    type: 'multiple-choice',
+    objective: 'Configure Git locally including .gitignore',
+    difficulty: 'easy',
+    question: 'How do you set the global Git user name?',
+    options: [
+      'A. git config --global user.name "Your Name"',
+      'B. git config user.name "Your Name"',
+      'C. git set user.name "Your Name"',
+      'D. git name "Your Name"'
+    ],
+    correctAnswer: 'D' // Moved from A to D
+  },
+  {
+    id: 75,
+    type: 'multiple-choice',
+    objective: 'Configure Git locally including .gitignore',
+    difficulty: 'easy',
+    question: 'How do you set the global Git email?',
+    options: [
+      'A. git config --global user.email "email@example.com"',
+      'B. git config user.email "email@example.com"',
+      'C. git set email "email@example.com"',
+      'D. git email "email@example.com"'
+    ],
+    correctAnswer: 'A' // Kept as A
+  },
+  {
+    id: 76,
+    type: 'multiple-choice',
+    objective: 'Configure Git locally including .gitignore',
+    difficulty: 'medium',
+    question: 'Where is the global Git configuration stored?',
+    options: [
+      'A. ~/.gitconfig',
+      'B. /.git/config',
+      'C. /etc/gitconfig',
+      'D. ~/git/config'
+    ],
+    correctAnswer: 'B' // Moved from A to B
+  },
+  {
+    id: 77,
+    type: 'multiple-choice',
+    objective: 'Configure Git locally including .gitignore',
+    difficulty: 'easy',
+    question: 'What does "git status" show?',
+    options: [
+      'A. The current state of the working directory',
+      'B. The version of Git',
+      'C. The remote repository URL',
+      'D. The last commit message'
+    ],
+    correctAnswer: 'C' // Moved from A to C
+  },
+  {
+    id: 78,
+    type: 'multiple-choice',
+    objective: 'Configure Git locally including .gitignore',
+    difficulty: 'medium',
+    question: 'How can you check if .gitignore is working correctly?',
+    options: [
+      'A. Run "git status" to see untracked files',
+      'B. Run "git check-ignore"',
+      'C. Both A and B',
+      'D. Only by committing files'
+    ],
+    correctAnswer: 'D' // Moved from C to D
+  },
+  {
+    id: 79,
+    type: 'multiple-choice',
+    objective: 'Configure Git locally including .gitignore',
+    difficulty: 'easy',
+    question: 'What is the purpose of configuring Git locally?',
+    options: [
+      'A. To identify the user in commits',
+      'B. To set up the Git environment',
+      'C. Both A and B',
+      'D. To connect to the internet'
+    ],
+    correctAnswer: 'A' // Moved from C to A
+  },
+  {
+    id: 80,
+    type: 'multiple-choice',
+    objective: 'Configure Git locally including .gitignore',
+    difficulty: 'medium',
+    question: 'Which command shows all Git configuration settings?',
+    options: [
+      'A. git config --list',
+      'B. git config -l',
+      'C. Both A and B',
+      'D. git show-config'
+    ],
+    correctAnswer: 'B' // Moved from C to B
+  },
+
+  // Learning Objective 9: Connect local project to GitHub using remote origin
+  {
+    id: 81,
+    type: 'multiple-choice',
+    objective: 'Connect local project to GitHub using remote origin',
+    difficulty: 'easy',
+    question: 'What is the command to add a remote origin to a Git repository?',
+    options: [
+      'A. git remote add origin <repository-url>',
+      'B. git add remote origin <repository-url>',
+      'C. git origin add <repository-url>',
+      'D. git remote origin <repository-url>'
+    ],
+    correctAnswer: 'C' // Moved from A to C
+  },
+  {
+    id: 82,
+    type: 'multiple-choice',
+    objective: 'Connect local project to GitHub using remote origin',
+    difficulty: 'easy',
+    question: 'What does "origin" refer to in Git?',
+    options: [
+      'A. The default remote repository name',
+      'B. The original source code',
+      'C. The master branch',
+      'D. The local repository'
+    ],
+    correctAnswer: 'D' // Moved from A to D
+  },
+  {
+    id: 83,
+    type: 'multiple-choice',
+    objective: 'Connect local project to GitHub using remote origin',
+    difficulty: 'medium',
+    question: 'How do you verify the remote origin is set correctly?',
+    options: [
+      'A. git remote -v',
+      'B. git remote show origin',
+      'C. Both A and B',
+      'D. git status'
+    ],
+    correctAnswer: 'A' // Moved from C to A
+  },
+  {
+    id: 84,
+    type: 'multiple-choice',
+    objective: 'Connect local project to GitHub using remote origin',
+    difficulty: 'easy',
+    question: 'What is the format of a GitHub repository URL?',
+    options: [
+      'A. https://github.com/username/repo.git',
+      'B. git@github.com:username/repo.git',
+      'C. Both A and B',
+      'D. Only HTTP format'
+    ],
+    correctAnswer: 'B' // Moved from C to B
+  },
+  {
+    id: 85,
+    type: 'multiple-choice',
+    objective: 'Connect local project to GitHub using remote origin',
+    difficulty: 'medium',
+    question: 'What happens if you try to add a remote that already exists?',
+    options: [
+      'A. It overwrites the existing remote',
+      'B. It shows an error',
+      'C. It creates a duplicate remote',
+      'D. It ignores the command'
+    ],
+    correctAnswer: 'C' // Moved from B to C
+  },
+  {
+    id: 86,
+    type: 'multiple-choice',
+    objective: 'Connect local project to GitHub using remote origin',
+    difficulty: 'easy',
+    question: 'How do you remove a remote origin?',
+    options: [
+      'A. git remote remove origin',
+      'B. git remote rm origin',
+      'C. Both A and B',
+      'D. git delete remote origin'
+    ],
+    correctAnswer: 'D' // Moved from C to D
+  },
+  {
+    id: 87,
+    type: 'multiple-choice',
+    objective: 'Connect local project to GitHub using remote origin',
+    difficulty: 'medium',
+    question: 'What is required before connecting to a GitHub remote?',
+    options: [
+      'A. A GitHub repository must exist',
+      'B. Git must be initialized locally',
+      'C. Both A and B',
+      'D. Only authentication is required'
+    ],
+    correctAnswer: 'A' // Moved from C to A
+  },
+  {
+    id: 88,
+    type: 'multiple-choice',
+    objective: 'Connect local project to GitHub using remote origin',
+    difficulty: 'easy',
+    question: 'What is the purpose of a remote connection in Git?',
+    options: [
+      'A. To sync local changes with a remote repository',
+      'B. To collaborate with other developers',
+      'C. Both A and B',
+      'D. To deploy the application'
+    ],
+    correctAnswer: 'B' // Moved from C to B
+  },
+  {
+    id: 89,
+    type: 'multiple-choice',
+    objective: 'Connect local project to GitHub using remote origin',
+    difficulty: 'medium',
+    question: 'How can you rename a remote repository?',
+    options: [
+      'A. git remote rename origin new-name',
+      'B. git remote update origin new-name',
+      'C. git rename origin new-name',
+      'D. git remote set-name origin new-name'
+    ],
+    correctAnswer: 'C' // Moved from A to C
+  },
+  {
+    id: 90,
+    type: 'multiple-choice',
+    objective: 'Connect local project to GitHub using remote origin',
+    difficulty: 'easy',
+    question: 'What does "git remote" command do without any arguments?',
+    options: [
+      'A. Lists all remote repositories',
+      'B. Adds a new remote',
+      'C. Removes a remote',
+      'D. Shows remote details'
+    ],
+    correctAnswer: 'D' // Moved from A to D
+  },
+
+  // Learning Objective 10: Stage, commit and push changes using Git commands
+  {
+    id: 91,
+    type: 'multiple-choice',
+    objective: 'Stage, commit and push changes using Git commands',
+    difficulty: 'easy',
+    question: 'What command adds all changes to the staging area?',
+    options: [
+      'A. git add .',
+      'B. git add -A',
+      'C. Both A and B',
+      'D. git stage .'
+    ],
+    correctAnswer: 'A' // Moved from C to A
+  },
+  {
+    id: 92,
+    type: 'multiple-choice',
+    objective: 'Stage, commit and push changes using Git commands',
+    difficulty: 'easy',
+    question: 'What is the command to commit changes with a message?',
+    options: [
+      'A. git commit -m "message"',
+      'B. git commit -a "message"',
+      'C. git commit "message"',
+      'D. git commit -c "message"'
+    ],
+    correctAnswer: 'B' // Moved from A to B
+  },
+  {
+    id: 93,
+    type: 'multiple-choice',
+    objective: 'Stage, commit and push changes using Git commands',
+    difficulty: 'easy',
+    question: 'What command pushes committed changes to the remote repository?',
+    options: [
+      'A. git push',
+      'B. git push origin main',
+      'C. Both A and B',
+      'D. git upload'
+    ],
+    correctAnswer: 'C' // Kept as C
+  },
+  {
+    id: 94,
+    type: 'multiple-choice',
+    objective: 'Stage, commit and push changes using Git commands',
+    difficulty: 'medium',
+    question: 'What does the "-u" flag do in "git push -u origin main"?',
+    options: [
+      'A. It sets the upstream branch',
+      'B. It pushes all branches',
+      'C. It forces the push',
+      'D. It updates the remote repository'
+    ],
+    correctAnswer: 'D' // Moved from A to D
+  },
+  {
+    id: 95,
+    type: 'multiple-choice',
+    objective: 'Stage, commit and push changes using Git commands',
+    difficulty: 'easy',
+    question: 'How do you check the status of your changes?',
+    options: [
+      'A. git status',
+      'B. git diff',
+      'C. Both A and B',
+      'D. git check'
+    ],
+    correctAnswer: 'A' // Kept as A
+  },
+  {
+    id: 96,
+    type: 'multiple-choice',
+    objective: 'Stage, commit and push changes using Git commands',
+    difficulty: 'medium',
+    question: 'What is the difference between "git add ." and "git add -A"?',
+    options: [
+      'A. They are the same',
+      'B. "git add ." adds only the current directory',
+      'C. "git add -A" adds all changes in the repository',
+      'D. Both B and C'
+    ],
+    correctAnswer: 'B' // Moved from D to B
+  },
+  {
+    id: 97,
+    type: 'multiple-choice',
+    objective: 'Stage, commit and push changes using Git commands',
+    difficulty: 'easy',
+    question: 'What happens when you push changes without committing them first?',
+    options: [
+      'A. It pushes all uncommitted changes',
+      'B. It shows an error',
+      'C. It automatically commits them',
+      'D. It pushes only committed changes'
+    ],
+    correctAnswer: 'C' // Moved from B to C
+  },
+  {
+    id: 98,
+    type: 'multiple-choice',
+    objective: 'Stage, commit and push changes using Git commands',
+    difficulty: 'medium',
+    question: 'How do you view the commit history?',
+    options: [
+      'A. git log',
+      'B. git history',
+      'C. Both A and B',
+      'D. git show'
+    ],
+    correctAnswer: 'D' // Moved from A to D
+  },
+  {
+    id: 99,
+    type: 'multiple-choice',
+    objective: 'Stage, commit and push changes using Git commands',
+    difficulty: 'easy',
+    question: 'What is the purpose of staging changes before committing?',
+    options: [
+      'A. To review changes before committing',
+      'B. To select specific changes to commit',
+      'C. Both A and B',
+      'D. To automatically push changes'
+    ],
+    correctAnswer: 'A' // Moved from C to A
+  },
+  {
+    id: 100,
+    type: 'multiple-choice',
+    objective: 'Stage, commit and push changes using Git commands',
+    difficulty: 'medium',
+    question: 'What command combines add and commit in one step?',
+    options: [
+      'A. git commit -am "message"',
+      'B. git commit -m "message"',
+      'C. git add and commit separately',
+      'D. git push -am "message"'
+    ],
+    correctAnswer: 'B' // Moved from A to B
   }
 ];
 

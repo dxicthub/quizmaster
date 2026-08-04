@@ -11,7 +11,7 @@ export const questions = [
       'C. Designing software architecture',
       'D. Testing software'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ export const questions = [
       'C. Git',
       'D. Node.js'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ export const questions = [
       'C. Manual deployment process',
       'D. Deployment only on weekends'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ export const questions = [
       'C. To store database records',
       'D. To store images'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ export const questions = [
       'C. Continuous Integration/Continuous Delivery',
       'D. Continuous Input/Continuous Deployment'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'B' // Moved from C to B
   },
   {
     id: 6,
@@ -81,7 +81,7 @@ export const questions = [
       'C. Manually integrating code changes',
       'D. Testing code changes manually'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 7,
@@ -95,7 +95,7 @@ export const questions = [
       'C. Manually deploying code',
       'D. Testing code manually'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 8,
@@ -109,7 +109,7 @@ export const questions = [
       'C. Development, Staging, Testing',
       'D. Staging, Testing, Production'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 9,
@@ -123,7 +123,7 @@ export const questions = [
       'C. Production of final code',
       'D. Testing in production'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 10,
@@ -137,7 +137,7 @@ export const questions = [
       'C. The environment where testing happens',
       'D. The environment where staging happens'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 11,
@@ -151,7 +151,7 @@ export const questions = [
       'C. Rolling back to previous version',
       'D. Deploying to a single instance'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 12,
@@ -165,7 +165,7 @@ export const questions = [
       'C. Running one environment at a time',
       'D. Running multiple environments'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 13,
@@ -179,7 +179,7 @@ export const questions = [
       'C. Rolling back to previous version',
       'D. Deploying to staging first'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 14,
@@ -193,7 +193,7 @@ export const questions = [
       'C. Testing two different environments',
       'D. Testing two different users'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 15,
@@ -207,7 +207,7 @@ export const questions = [
       'C. GitLab CI',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'D' // Kept as D
   },
   {
     id: 16,
@@ -221,7 +221,7 @@ export const questions = [
       'C. Code review',
       'D. Code testing'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 17,
@@ -235,7 +235,7 @@ export const questions = [
       'C. Code hosting',
       'D. Code review'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 18,
@@ -249,7 +249,7 @@ export const questions = [
       'C. Increases reliability',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
   },
   {
     id: 19,
@@ -263,7 +263,7 @@ export const questions = [
       'C. Deleting the current version',
       'D. Skipping the deployment'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 20,
@@ -277,7 +277,7 @@ export const questions = [
       'C. Test rollback procedures',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'A' // Moved from D to A
   },
   {
     id: 21,
@@ -291,7 +291,7 @@ export const questions = [
       'C. Tracking user activity',
       'D. Tracking database changes'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 22,
@@ -305,7 +305,7 @@ export const questions = [
       'C. Recording code changes',
       'D. Recording database changes'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 23,
@@ -319,7 +319,7 @@ export const questions = [
       'C. Restrict access to deployments',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'D' // Kept as D
   },
   {
     id: 24,
@@ -333,7 +333,7 @@ export const questions = [
       'C. Managing API keys',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'A' // Moved from D to A
   },
   {
     id: 25,
@@ -347,7 +347,7 @@ export const questions = [
       'C. To reduce deployment costs',
       'D. To automate deployments'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 26,
@@ -361,7 +361,7 @@ export const questions = [
       'C. Google Cloud',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
   },
   {
     id: 27,
@@ -375,7 +375,7 @@ export const questions = [
       'C. Code editing',
       'D. Database management'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 28,
@@ -389,7 +389,7 @@ export const questions = [
       'C. Code editing',
       'D. Database management'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 29,
@@ -403,7 +403,7 @@ export const questions = [
       'C. Code editing',
       'D. Database management'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 30,
@@ -417,7 +417,7 @@ export const questions = [
       'C. Code editing',
       'D. Database management'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 31,
@@ -431,7 +431,7 @@ export const questions = [
       'C. Code editing',
       'D. Database management'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 32,
@@ -445,7 +445,7 @@ export const questions = [
       'C. Containerizing code',
       'D. Containerizing databases'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 33,
@@ -459,7 +459,7 @@ export const questions = [
       'C. Deploying on physical servers',
       'D. Deploying on virtual machines'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 34,
@@ -473,7 +473,7 @@ export const questions = [
       'C. A storage service',
       'D. A networking service'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 35,
@@ -487,7 +487,7 @@ export const questions = [
       'C. A pipeline for code',
       'D. A pipeline for testing'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 36,
@@ -501,7 +501,7 @@ export const questions = [
       'C. Managing infrastructure manually',
       'D. Managing code manually'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 37,
@@ -515,7 +515,7 @@ export const questions = [
       'C. Code editing',
       'D. Database management'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 38,
@@ -529,7 +529,7 @@ export const questions = [
       'C. Monitor after deployment',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
   },
   {
     id: 39,
@@ -543,7 +543,7 @@ export const questions = [
       'C. To test after deployment',
       'D. To test user acceptance'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 40,
@@ -557,7 +557,7 @@ export const questions = [
       'C. Documentation about how to develop the application',
       'D. Documentation about how to test the application'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 41,
@@ -571,7 +571,7 @@ export const questions = [
       'C. A list of items to test during deployment',
       'D. A list of items to document'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 42,
@@ -585,7 +585,7 @@ export const questions = [
       'C. All tests passed',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
   },
   {
     id: 43,
@@ -599,7 +599,7 @@ export const questions = [
       'C. Performance issues',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'D' // Kept as D
   },
   {
     id: 44,
@@ -613,7 +613,7 @@ export const questions = [
       'C. Monitor closely',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'A' // Moved from D to A
   },
   {
     id: 45,
@@ -627,7 +627,7 @@ export const questions = [
       'C. Deploying without communication',
       'D. Deploying without planning'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 46,
@@ -641,7 +641,7 @@ export const questions = [
       'C. To identify issues',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
   },
   {
     id: 47,
@@ -655,7 +655,7 @@ export const questions = [
       'C. Measurements to track user activity',
       'D. Measurements to track database performance'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 48,
@@ -669,7 +669,7 @@ export const questions = [
       'C. Deployment time doesn\'t matter',
       'D. Deployment time only matters for large projects'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 49,
@@ -683,7 +683,7 @@ export const questions = [
       'C. Higher deployment risk',
       'D. Lower deployment quality'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 50,
@@ -697,7 +697,7 @@ export const questions = [
       'C. Progressive delivery',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
   }
 ];
 

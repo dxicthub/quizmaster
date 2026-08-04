@@ -11,7 +11,7 @@ export const questions = [
       'C. A database system',
       'D. A design tool'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ export const questions = [
       'C. Rendering pages in the database',
       'D. Rendering pages in the browser'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ export const questions = [
       'C. Custom routing configuration',
       'D. Hash-based routing'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ export const questions = [
       'C. A CSS file',
       'D. A configuration file'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ export const questions = [
       'C. A router for static files',
       'D. A router for images'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 6,
@@ -81,7 +81,7 @@ export const questions = [
       'C. server directory',
       'D. routes directory'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 7,
@@ -95,7 +95,7 @@ export const questions = [
       'C. To handle database connections',
       'D. To manage user authentication'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 8,
@@ -109,7 +109,7 @@ export const questions = [
       'C. Rendering pages on the client',
       'D. Rendering pages in the database'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 9,
@@ -123,7 +123,7 @@ export const questions = [
       'C. Rendering pages on the client',
       'D. Rendering pages in the database'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 10,
@@ -137,7 +137,7 @@ export const questions = [
       'C. Regenerating static pages on each request',
       'D. Rebuilding the entire site'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 11,
@@ -151,7 +151,7 @@ export const questions = [
       'C. To fetch data on the client',
       'D. To fetch data from the database'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 12,
@@ -165,7 +165,7 @@ export const questions = [
       'C. To fetch data on the client',
       'D. To fetch data from the database'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 13,
@@ -179,7 +179,7 @@ export const questions = [
       'C. To define which paths should be rendered on the client',
       'D. To define which paths should be rendered in the database'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 14,
@@ -193,7 +193,7 @@ export const questions = [
       'C. Code that runs during a request',
       'D. Code that runs before the server starts'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 15,
@@ -207,7 +207,7 @@ export const questions = [
       'C. In the components directory',
       'D. In the styles directory'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 16,
@@ -221,7 +221,7 @@ export const questions = [
       'C. Image compression only',
       'D. Image caching only'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 17,
@@ -235,7 +235,7 @@ export const questions = [
       'C. Picture',
       'D. Figure'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 18,
@@ -249,7 +249,7 @@ export const questions = [
       'C. Font compression',
       'D. Font caching'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 19,
@@ -263,7 +263,7 @@ export const questions = [
       'C. To modify the footer section of a page',
       'D. To modify the header section of a page'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 20,
@@ -277,7 +277,7 @@ export const questions = [
       'C. To enable external links',
       'D. To enable email links'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 21,
@@ -291,7 +291,7 @@ export const questions = [
       'C. To load CSS files',
       'D. To load images'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 22,
@@ -305,7 +305,7 @@ export const questions = [
       'C. Loading components on the server',
       'D. Loading components in the browser'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 23,
@@ -319,7 +319,7 @@ export const questions = [
       'C. A route that is built dynamically',
       'D. A route that is served dynamically'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 24,
@@ -333,7 +333,7 @@ export const questions = [
       'C. A route that matches all paths',
       'D. A route that matches no paths'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 25,
@@ -347,7 +347,7 @@ export const questions = [
       'C. Using .env file',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'B' // Moved from D to B
   },
   {
     id: 26,
@@ -361,7 +361,7 @@ export const questions = [
       'C. BROWSER_',
       'D. CLIENT_'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 27,
@@ -375,7 +375,7 @@ export const questions = [
       'C. next.js',
       'D. next-config.js'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 28,
@@ -389,7 +389,7 @@ export const questions = [
       'C. By using .env file',
       'D. By using package.json'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 29,
@@ -403,7 +403,7 @@ export const questions = [
       'C. Using AWS',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'B' // Moved from D to B
   },
   {
     id: 30,
@@ -417,7 +417,7 @@ export const questions = [
       'C. AWS',
       'D. Heroku'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 31,
@@ -431,7 +431,7 @@ export const questions = [
       'C. Lazy loading',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'D' // Kept as D
   },
   {
     id: 32,
@@ -445,7 +445,7 @@ export const questions = [
       'C. Through the Head component',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'A' // Moved from D to A
   },
   {
     id: 33,
@@ -459,7 +459,7 @@ export const questions = [
       'C. OAuth with providers',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'B' // Moved from D to B
   },
   {
     id: 34,
@@ -473,7 +473,7 @@ export const questions = [
       'C. Using getServerSideProps',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
   },
   {
     id: 35,
@@ -487,7 +487,7 @@ export const questions = [
       'C. Context API',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'D' // Kept as D
   },
   {
     id: 36,
@@ -501,7 +501,7 @@ export const questions = [
       'C. Styled Components',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'A' // Moved from D to A
   },
   {
     id: 37,
@@ -515,7 +515,7 @@ export const questions = [
       'C. A way to inline CSS',
       'D. A way to use CSS frameworks'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 38,
@@ -529,7 +529,7 @@ export const questions = [
       'C. Add headers',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
   },
   {
     id: 39,
@@ -543,7 +543,7 @@ export const questions = [
       'C. getStaticPaths',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'D' // Kept as D
   },
   {
     id: 40,
@@ -557,7 +557,7 @@ export const questions = [
       'C. Components that render in the database',
       'D. Components that render in the browser'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 41,
@@ -571,7 +571,7 @@ export const questions = [
       'C. Components that render in the database',
       'D. Components that render in the browser'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 42,
@@ -585,7 +585,7 @@ export const questions = [
       'C. Functions that run in the database',
       'D. Functions that run in the browser'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 43,
@@ -599,7 +599,7 @@ export const questions = [
       'C. Supporting multiple currencies',
       'D. Supporting multiple countries'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 44,
@@ -613,7 +613,7 @@ export const questions = [
       'C. A performance monitoring tool',
       'D. A user tracking tool'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 45,
@@ -627,7 +627,7 @@ export const questions = [
       'C. Use environment variables for secrets',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'B' // Moved from D to B
   },
   {
     id: 46,
@@ -641,7 +641,7 @@ export const questions = [
       'C. Cypress',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
   },
   {
     id: 47,
@@ -655,7 +655,7 @@ export const questions = [
       'C. Using try-catch',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'D' // Kept as D
   },
   {
     id: 48,
@@ -669,7 +669,7 @@ export const questions = [
       'C. Create a 404.js file',
       'D. Create a 500.js file'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 49,
@@ -683,7 +683,7 @@ export const questions = [
       'C. Use dynamic imports for large components',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'B' // Moved from D to B
   },
   {
     id: 50,
@@ -697,7 +697,7 @@ export const questions = [
       'C. Partial Prerendering',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
   }
 ];
 

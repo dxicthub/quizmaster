@@ -11,7 +11,7 @@ export const questions = [
       'C. A JavaScript library',
       'D. A database system'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ export const questions = [
       'C. pad-4',
       'D. pt-4'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ export const questions = [
       'C. mar-4',
       'D. mt-4'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ export const questions = [
       'C. color-blue',
       'D. blue-text'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ export const questions = [
       'C. bg-blue',
       'D. blue-bg'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 6,
@@ -81,7 +81,7 @@ export const questions = [
       'C. tailwind.js',
       'D. settings.js'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 7,
@@ -95,7 +95,7 @@ export const questions = [
       'C. @media',
       'D. .responsive'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 8,
@@ -109,7 +109,7 @@ export const questions = [
       'C. Small screens (768px and up)',
       'D. Small screens (1024px and up)'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 9,
@@ -123,7 +123,7 @@ export const questions = [
       'C. Medium screens (1024px and up)',
       'D. Medium screens (1280px and up)'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 10,
@@ -137,7 +137,7 @@ export const questions = [
       'C. Large screens (1280px and up)',
       'D. Large screens (640px and up)'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 11,
@@ -151,7 +151,7 @@ export const questions = [
       'C. d-flex',
       'D. flexbox'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 12,
@@ -165,7 +165,7 @@ export const questions = [
       'C. align-center',
       'D. center-items'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 13,
@@ -179,7 +179,7 @@ export const questions = [
       'C. align-center',
       'D. center-items'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 14,
@@ -193,7 +193,7 @@ export const questions = [
       'C. d-grid',
       'D. grid-layout'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 15,
@@ -207,7 +207,7 @@ export const questions = [
       'C. grid-columns-3',
       'D. columns-3'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 16,
@@ -221,7 +221,7 @@ export const questions = [
       'C. grid-row-3',
       'D. row-3'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 17,
@@ -235,7 +235,7 @@ export const questions = [
       'C. Adds margin of 1rem (16px) on all sides',
       'D. Adds margin of 4px on all sides'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 18,
@@ -249,7 +249,7 @@ export const questions = [
       'C. Adds padding of 1rem (16px) on all sides',
       'D. Adds padding of 4px on all sides'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 19,
@@ -263,7 +263,7 @@ export const questions = [
       'C. size-lg',
       'D. fs-lg'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 20,
@@ -277,7 +277,7 @@ export const questions = [
       'C. weight-bold',
       'D. fw-bold'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 21,
@@ -291,7 +291,7 @@ export const questions = [
       'C. center-text',
       'D. text-align-center'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 22,
@@ -305,7 +305,7 @@ export const questions = [
       'C. Both A and B',
       'D. Only by using @media queries'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'C' // Kept as C
   },
   {
     id: 23,
@@ -319,7 +319,7 @@ export const questions = [
       'C. Use .dark class',
       'D. Use @media (prefers-color-scheme: dark)'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 24,
@@ -333,7 +333,7 @@ export const questions = [
       'C. Add to custom-colors in tailwind.config.js',
       'D. Add to variables in tailwind.config.js'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 25,
@@ -347,7 +347,7 @@ export const questions = [
       'C. Add to fonts in tailwind.config.js',
       'D. Add to custom-fonts in tailwind.config.js'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 26,
@@ -361,7 +361,7 @@ export const questions = [
       'C. Add to plugins in postcss.config.js',
       'D. Add to plugins in vite.config.js'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 27,
@@ -375,7 +375,7 @@ export const questions = [
       'C. To apply JavaScript to Tailwind',
       'D. To apply Tailwind to JavaScript'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 28,
@@ -389,7 +389,7 @@ export const questions = [
       'C. To define custom HTML',
       'D. To define custom components'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 29,
@@ -403,7 +403,7 @@ export const questions = [
       'C. radius-lg',
       'D. br-lg'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 30,
@@ -417,7 +417,7 @@ export const questions = [
       'C. shadow-lg',
       'D. bs-lg'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 31,
@@ -431,7 +431,7 @@ export const questions = [
       'C. op-50',
       'D. opacity-0.5'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 32,
@@ -445,7 +445,7 @@ export const questions = [
       'C. transition-colors',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'A' // Moved from D to A
   },
   {
     id: 33,
@@ -459,7 +459,7 @@ export const questions = [
       'C. animate-bounce',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'B' // Moved from D to B
   },
   {
     id: 34,
@@ -473,7 +473,7 @@ export const questions = [
       'C. scale-100',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
   },
   {
     id: 35,
@@ -487,7 +487,7 @@ export const questions = [
       'C. Use .hover class',
       'D. Use :hover selector'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 36,
@@ -501,7 +501,7 @@ export const questions = [
       'C. Use .focus class',
       'D. Use :focus selector'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 37,
@@ -515,7 +515,7 @@ export const questions = [
       'C. Use .active class',
       'D. Use :active selector'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 38,
@@ -529,7 +529,7 @@ export const questions = [
       'C. active',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
   },
   {
     id: 39,
@@ -543,7 +543,7 @@ export const questions = [
       'C. Use ::before and ::after selectors',
       'D. Use .before and .after classes'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 40,
@@ -557,7 +557,7 @@ export const questions = [
       'C. To create a container for images',
       'D. To create a container for videos'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 41,
@@ -571,7 +571,7 @@ export const questions = [
       'C. 768px',
       'D. 640px'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 42,
@@ -585,7 +585,7 @@ export const questions = [
       'C. 1024px',
       'D. 768px'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 43,
@@ -599,7 +599,7 @@ export const questions = [
       'C. Add to variants in package.json',
       'D. Add to variants in postcss.config.js'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 44,
@@ -613,7 +613,7 @@ export const questions = [
       'C. To remove unused HTML',
       'D. To remove unused images'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 45,
@@ -627,7 +627,7 @@ export const questions = [
       'C. Specifies files to compress',
       'D. Specifies files to exclude'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 46,
@@ -641,7 +641,7 @@ export const questions = [
       'C. Minified CSS',
       'D. Compiled CSS'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 47,
@@ -655,7 +655,7 @@ export const questions = [
       'C. Configure custom colors and fonts',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'D' // Kept as D
   },
   {
     id: 48,
@@ -669,7 +669,7 @@ export const questions = [
       'C. Consistent styling',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'A' // Moved from D to A
   },
   {
     id: 49,
@@ -683,7 +683,7 @@ export const questions = [
       'C. Design system integration',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'B' // Moved from D to B
   },
   {
     id: 50,
@@ -697,7 +697,7 @@ export const questions = [
       'C. Flowbite',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
   }
 ];
 

@@ -11,7 +11,7 @@ export const questions = [
       'C. Encrypting user data',
       'D. Logging user activity'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ export const questions = [
       'C. They are the same thing',
       'D. Authentication is for users; authorization is for systems'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ export const questions = [
       'C. Multi-factor',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'A' // Moved from D to A
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ export const questions = [
       'C. Using base64 encoding',
       'D. Encrypting with AES'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ export const questions = [
       'C. SHA-1',
       'D. Base64'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 6,
@@ -81,7 +81,7 @@ export const questions = [
       'C. Java Web Token',
       'D. JSON Written Token'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 7,
@@ -95,7 +95,7 @@ export const questions = [
       'C. Header, Claims, Verify',
       'D. Header, Payload, Verify'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 8,
@@ -109,7 +109,7 @@ export const questions = [
       'C. A database system',
       'D. A programming language'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 9,
@@ -123,7 +123,7 @@ export const questions = [
       'C. To store user data',
       'D. To encrypt the connection'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 10,
@@ -137,7 +137,7 @@ export const questions = [
       'C. A user role',
       'D. An API endpoint'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 11,
@@ -151,7 +151,7 @@ export const questions = [
       'C. Using multiple usernames',
       'D. Using multiple sessions'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 12,
@@ -165,7 +165,7 @@ export const questions = [
       'C. Something you have',
       'D. Something you are'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 13,
@@ -179,7 +179,7 @@ export const questions = [
       'C. Managing user roles',
       'D. Managing user permissions'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 14,
@@ -193,7 +193,7 @@ export const questions = [
       'C. A cookie that stores page views',
       'D. A cookie that stores analytics data'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 15,
@@ -207,7 +207,7 @@ export const questions = [
       'C. To prevent HTTPS access to the cookie',
       'D. To prevent all access to the cookie'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 16,
@@ -221,7 +221,7 @@ export const questions = [
       'C. To prevent JavaScript access',
       'D. To prevent HTTP access'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 17,
@@ -235,7 +235,7 @@ export const questions = [
       'C. To prevent SQL injection',
       'D. To prevent session hijacking'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 18,
@@ -249,7 +249,7 @@ export const questions = [
       'C. A token used to authorize actions',
       'D. A token used to encrypt data'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 19,
@@ -263,7 +263,7 @@ export const questions = [
       'C. A token used to authenticate users',
       'D. A token used to encrypt data'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 20,
@@ -277,7 +277,7 @@ export const questions = [
       'C. Authentication without a username',
       'D. Authentication without a server'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 21,
@@ -291,7 +291,7 @@ export const questions = [
       'C. A permanent login link',
       'D. A link to reset password'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 22,
@@ -305,7 +305,7 @@ export const questions = [
       'C. Authentication using social networks',
       'D. Authentication using social engineering'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 23,
@@ -319,7 +319,7 @@ export const questions = [
       'C. Standard Authentication Markup Language',
       'D. Secure Authentication Markup Language'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 24,
@@ -333,7 +333,7 @@ export const questions = [
       'C. Lightweight Directory Authentication Protocol',
       'D. Lightweight Data Authentication Protocol'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 25,
@@ -347,7 +347,7 @@ export const questions = [
       'C. One session for multiple users',
       'D. One user for multiple sessions'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 26,
@@ -361,7 +361,7 @@ export const questions = [
       'C. Session management',
       'D. Encryption'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 27,
@@ -375,7 +375,7 @@ export const questions = [
       'C. Locking an account after inactivity',
       'D. Locking an account after expiration'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 28,
@@ -389,7 +389,7 @@ export const questions = [
       'C. Reset without verification',
       'D. Use a fixed reset code'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 29,
@@ -403,7 +403,7 @@ export const questions = [
       'C. Authentication using biometric data',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'A' // Moved from D to A
   },
   {
     id: 30,
@@ -417,7 +417,7 @@ export const questions = [
       'C. Two-Factor Access',
       'D. Two-Factor Approval'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 31,
@@ -431,7 +431,7 @@ export const questions = [
       'C. Text-based One-Time Password',
       'D. Trust-based One-Time Password'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 32,
@@ -445,7 +445,7 @@ export const questions = [
       'C. HMAC-based OTP',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'D' // Kept as D
   },
   {
     id: 33,
@@ -459,7 +459,7 @@ export const questions = [
       'C. A piece of software for authentication',
       'D. A piece of code for authentication'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 34,
@@ -473,7 +473,7 @@ export const questions = [
       'C. A token that carries authorization',
       'D. A token that carries authentication'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 35,
@@ -487,7 +487,7 @@ export const questions = [
       'C. Protecting against SQL injection attacks',
       'D. Protecting against session hijacking'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 36,
@@ -501,7 +501,7 @@ export const questions = [
       'C. Protecting against SQL injection attacks',
       'D. Protecting against session hijacking'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 37,
@@ -515,7 +515,7 @@ export const questions = [
       'C. An attack where an attacker deletes a session ID',
       'D. An attack where an attacker encrypts a session ID'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 38,
@@ -529,7 +529,7 @@ export const questions = [
       'C. An attack where an attacker deletes a session ID',
       'D. An attack where an attacker encrypts a session ID'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 39,
@@ -543,7 +543,7 @@ export const questions = [
       'C. OpenID Configuration',
       'D. Open Identity Configuration'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 40,
@@ -557,7 +557,7 @@ export const questions = [
       'C. Use secure protocols (HTTPS)',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'D' // Kept as D
   },
   {
     id: 41,
@@ -571,7 +571,7 @@ export const questions = [
       'C. Trust once, verify never',
       'D. Verify once, trust always'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 42,
@@ -585,7 +585,7 @@ export const questions = [
       'C. A service that provides authentication',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'B' // Moved from D to B
   },
   {
     id: 43,
@@ -599,7 +599,7 @@ export const questions = [
       'C. Decentralized identity management',
       'D. Local identity management'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 44,
@@ -613,7 +613,7 @@ export const questions = [
       'C. A tool that encrypts passwords',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'D' // Kept as D
   },
   {
     id: 45,
@@ -627,7 +627,7 @@ export const questions = [
       'C. To reduce bandwidth usage',
       'D. To cache authentication tokens'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 46,
@@ -641,7 +641,7 @@ export const questions = [
       'C. Private Key for Code Exchange',
       'D. Protected Key for Code Exchange'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 47,
@@ -655,7 +655,7 @@ export const questions = [
       'C. Authenticating a device user',
       'D. Authenticating a device session'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 48,
@@ -669,7 +669,7 @@ export const questions = [
       'C. Authenticating multiple times simultaneously',
       'D. Authenticating for multiple applications'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 49,
@@ -683,7 +683,7 @@ export const questions = [
       'C. OpenID Connect',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'A' // Moved from D to A
   },
   {
     id: 50,
@@ -697,7 +697,7 @@ export const questions = [
       'C. Continuous authentication',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'B' // Moved from D to B
   }
 ];
 

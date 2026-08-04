@@ -11,7 +11,7 @@ export const questions = [
       'C. Advanced Programming Interface',
       'D. Application Process Interface'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ export const questions = [
       'C. GraphQL API',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'A' // Moved from D to A
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ export const questions = [
       'C. Request State Transfer',
       'D. Response State Transfer'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ export const questions = [
       'C. PUT',
       'D. DELETE'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ export const questions = [
       'C. PUT',
       'D. DELETE'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 6,
@@ -81,7 +81,7 @@ export const questions = [
       'C. POST',
       'D. GET'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 7,
@@ -95,7 +95,7 @@ export const questions = [
       'C. POST',
       'D. DELETE'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 8,
@@ -109,7 +109,7 @@ export const questions = [
       'C. GET',
       'D. PUT'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 9,
@@ -123,7 +123,7 @@ export const questions = [
       'C. Server Error',
       'D. Unauthorized'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 10,
@@ -137,7 +137,7 @@ export const questions = [
       'C. Server error',
       'D. Unauthorized'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 11,
@@ -151,7 +151,7 @@ export const questions = [
       'C. Unauthorized',
       'D. Server Error'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 12,
@@ -165,7 +165,7 @@ export const questions = [
       'C. Not Found',
       'D. Server Error'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 13,
@@ -179,7 +179,7 @@ export const questions = [
       'C. Bad Request',
       'D. Not Found'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 14,
@@ -193,7 +193,7 @@ export const questions = [
       'C. Not Found',
       'D. Unauthorized'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 15,
@@ -207,7 +207,7 @@ export const questions = [
       'C. Caching API responses',
       'D. Logging API calls'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 16,
@@ -221,7 +221,7 @@ export const questions = [
       'C. JWT',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'D' // Kept as D
   },
   {
     id: 17,
@@ -235,7 +235,7 @@ export const questions = [
       'C. A username for the API',
       'D. A token for the API'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 18,
@@ -249,7 +249,7 @@ export const questions = [
       'C. Java Web Token',
       'D. JSON Written Token'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 19,
@@ -263,7 +263,7 @@ export const questions = [
       'C. Header, Claims, Verify',
       'D. Header, Payload, Verify'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 20,
@@ -277,7 +277,7 @@ export const questions = [
       'C. A database system',
       'D. A design framework'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 21,
@@ -291,7 +291,7 @@ export const questions = [
       'C. Limiting the speed of responses',
       'D. Limiting the number of concurrent connections'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 22,
@@ -305,7 +305,7 @@ export const questions = [
       'C. Managing API security',
       'D. Managing API documentation'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 23,
@@ -319,7 +319,7 @@ export const questions = [
       'C. Information about the API\'s database',
       'D. Information about the API\'s server'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 24,
@@ -333,7 +333,7 @@ export const questions = [
       'C. cURL',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'D' // Kept as D
   },
   {
     id: 25,
@@ -347,7 +347,7 @@ export const questions = [
       'C. Monitoring API performance',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 26,
@@ -361,7 +361,7 @@ export const questions = [
       'C. A programming language',
       'D. A design framework'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 27,
@@ -375,7 +375,7 @@ export const questions = [
       'C. GraphQL is faster than REST',
       'D. REST is faster than GraphQL'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 28,
@@ -389,7 +389,7 @@ export const questions = [
       'C. Sensitive data exposure',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'D' // Kept as D
   },
   {
     id: 29,
@@ -403,7 +403,7 @@ export const questions = [
       'C. An authentication method',
       'D. A database protocol'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 30,
@@ -417,7 +417,7 @@ export const questions = [
       'C. The API server',
       'D. The API client'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 31,
@@ -431,7 +431,7 @@ export const questions = [
       'C. Both A and B',
       'D. HTML only'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'C' // Kept as C
   },
   {
     id: 32,
@@ -445,7 +445,7 @@ export const questions = [
       'C. Java Object Notation',
       'D. Java Online Notation'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 33,
@@ -459,7 +459,7 @@ export const questions = [
       'C. Page loading in web applications',
       'D. Page ranking in search results'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 34,
@@ -473,7 +473,7 @@ export const questions = [
       'C. Sorting data in responses',
       'D. Grouping data in responses'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 35,
@@ -487,7 +487,7 @@ export const questions = [
       'C. Pagination in responses',
       'D. Validation in responses'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 36,
@@ -501,7 +501,7 @@ export const questions = [
       'C. Validating the API client',
       'D. Validating the API database'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 37,
@@ -515,7 +515,7 @@ export const questions = [
       'C. Crashing on errors',
       'D. Logging errors only'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 38,
@@ -529,7 +529,7 @@ export const questions = [
       'C. Testing API endpoints',
       'D. Monitoring API performance'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 39,
@@ -543,7 +543,7 @@ export const questions = [
       'C. Tracking API development',
       'D. Tracking API testing'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 40,
@@ -557,7 +557,7 @@ export const questions = [
       'C. Version your API',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'D' // Kept as D
   },
   {
     id: 41,
@@ -571,7 +571,7 @@ export const questions = [
       'C. Designing the API database',
       'D. Designing the API client'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 42,
@@ -585,7 +585,7 @@ export const questions = [
       'C. Cacheability',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'B' // Moved from D to B
   },
   {
     id: 43,
@@ -599,7 +599,7 @@ export const questions = [
       'C. A server file',
       'D. A client application'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 44,
@@ -613,7 +613,7 @@ export const questions = [
       'C. A server file',
       'D. A client application'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 45,
@@ -627,7 +627,7 @@ export const questions = [
       'C. A web server',
       'D. An application server'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 46,
@@ -641,7 +641,7 @@ export const questions = [
       'C. Managing the API database',
       'D. Managing the API client'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 47,
@@ -655,7 +655,7 @@ export const questions = [
       'C. Analyzing the API database',
       'D. Analyzing the API client'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 48,
@@ -669,7 +669,7 @@ export const questions = [
       'C. Validate input',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'D' // Kept as D
   },
   {
     id: 49,
@@ -683,7 +683,7 @@ export const questions = [
       'C. RAML',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'A' // Moved from D to A
   },
   {
     id: 50,
@@ -697,7 +697,7 @@ export const questions = [
       'C. Serverless APIs',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'B' // Moved from D to B
   }
 ];
 

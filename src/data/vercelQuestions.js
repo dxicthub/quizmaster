@@ -11,7 +11,7 @@ export const questions = [
       'C. Database management',
       'D. Design and prototyping'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ export const questions = [
       'C. Via SSH key authentication only',
       'D. Using FTP protocol'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ export const questions = [
       'C. Serverless functions',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'D' // Kept as D
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ export const questions = [
       'C. Both A and B',
       'D. Manual trigger only'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'A' // Moved from C to A
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ export const questions = [
       'C. Both A and B',
       'D. WebSockets'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'B' // Moved from C to B
   },
   {
     id: 6,
@@ -81,7 +81,7 @@ export const questions = [
       'C. Database backup automation',
       'D. Code review automation'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 7,
@@ -95,7 +95,7 @@ export const questions = [
       'C. Mobile applications',
       'D. Desktop applications'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 8,
@@ -109,7 +109,7 @@ export const questions = [
       'C. Vercel automatically merges the PR',
       'D. Vercel deletes the production site'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 9,
@@ -123,7 +123,7 @@ export const questions = [
       'C. Both A and B',
       'D. Only GitHub'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'B' // Moved from C to B
   },
   {
     id: 10,
@@ -137,7 +137,7 @@ export const questions = [
       'C. staging',
       'D. production'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 11,
@@ -151,7 +151,7 @@ export const questions = [
       'C. Create a GitHub repository',
       'D. Write the HTML code'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 12,
@@ -165,7 +165,7 @@ export const questions = [
       'C. "Create" → "Deployment"',
       'D. "Settings" → "Deploy"'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 13,
@@ -179,7 +179,7 @@ export const questions = [
       'C. Bitbucket repositories',
       'D. All of the above'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 14,
@@ -193,7 +193,7 @@ export const questions = [
       'C. Both A and B',
       'D. Only the project name'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'C' // Kept as C
   },
   {
     id: 15,
@@ -207,7 +207,7 @@ export const questions = [
       'C. A confirmation email is sent',
       'D. The repository is cloned locally'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 16,
@@ -221,7 +221,7 @@ export const questions = [
       'C. Both A and B',
       'D. Only in the logs section'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'A' // Moved from C to A
   },
   {
     id: 17,
@@ -235,7 +235,7 @@ export const questions = [
       'C. Both A and B',
       'D. A local development URL'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'B' // Moved from C to B
   },
   {
     id: 18,
@@ -249,7 +249,7 @@ export const questions = [
       'C. Settings',
       'D. Integrations'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 19,
@@ -263,7 +263,7 @@ export const questions = [
       'C. Admin access to the repository',
       'D. No permission is needed'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 20,
@@ -277,7 +277,7 @@ export const questions = [
       'C. Both are deleted',
       'D. Neither is deleted'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 21,
@@ -291,7 +291,7 @@ export const questions = [
       'C. Account Settings',
       'D. Build Settings'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 22,
@@ -305,7 +305,7 @@ export const questions = [
       'C. To manage team members',
       'D. To set deployment regions'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 23,
@@ -319,7 +319,7 @@ export const questions = [
       'C. Both A and B',
       'D. Only through the CLI'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'D' // Moved from C to D
   },
   {
     id: 24,
@@ -333,7 +333,7 @@ export const questions = [
       'C. MX record',
       'D. TXT record'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 25,
@@ -347,7 +347,7 @@ export const questions = [
       'C. Both A and B',
       'D. Only the framework preset'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'B' // Moved from C to B
   },
   {
     id: 26,
@@ -361,7 +361,7 @@ export const questions = [
       'C. Variables are available in both preview and production',
       'D. Variables are only available locally'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 27,
@@ -375,7 +375,7 @@ export const questions = [
       'C. Both A and B',
       'D. Only through the CLI'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'D' // Moved from C to D
   },
   {
     id: 28,
@@ -389,7 +389,7 @@ export const questions = [
       'C. Variables available in production only',
       'D. Variables available in all environments'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 29,
@@ -403,7 +403,7 @@ export const questions = [
       'C. Both A and B',
       'D. Only domain ownership verification'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'B' // Moved from C to B
   },
   {
     id: 30,
@@ -417,7 +417,7 @@ export const questions = [
       'C. Both A and B',
       'D. Project Settings → General'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'C' // Kept as C
   },
   {
     id: 31,
@@ -431,7 +431,7 @@ export const questions = [
       'C. npm install --save vercel',
       'D. npm install --dev vercel'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 32,
@@ -445,7 +445,7 @@ export const questions = [
       'C. vercel --deploy',
       'D. vercel start'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 33,
@@ -459,7 +459,7 @@ export const questions = [
       'C. Deploys to staging environment',
       'D. Only runs the build process'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 34,
@@ -473,7 +473,7 @@ export const questions = [
       'C. Both A and B',
       'D. vercel help'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'C' // Kept as C
   },
   {
     id: 35,
@@ -487,7 +487,7 @@ export const questions = [
       'C. Both A and B',
       'D. Install additional dependencies'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'D' // Moved from C to D
   },
   {
     id: 36,
@@ -501,7 +501,7 @@ export const questions = [
       'C. vercel --force',
       'D. vercel --prod'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 37,
@@ -515,7 +515,7 @@ export const questions = [
       'C. Deployment status',
       'D. Logs from the last deployment'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 38,
@@ -529,7 +529,7 @@ export const questions = [
       'C. Run "vercel connect"',
       'D. Manual configuration in vercel.json'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 39,
@@ -543,7 +543,7 @@ export const questions = [
       'C. To store environment variables',
       'D. To define build scripts'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 40,
@@ -557,7 +557,7 @@ export const questions = [
       'C. It shows an error',
       'D. It asks for confirmation'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 41,
@@ -571,7 +571,7 @@ export const questions = [
       'C. Both A and B',
       'D. Only manual redeployment'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'B' // Moved from C to B
   },
   {
     id: 42,
@@ -585,7 +585,7 @@ export const questions = [
       'C. A preview deployment is created',
       'D. The deployment fails'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 43,
@@ -599,7 +599,7 @@ export const questions = [
       'C. 1 hour',
       'D. 24 hours'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 44,
@@ -613,7 +613,7 @@ export const questions = [
       'C. vercel --hard',
       'D. vercel --fresh'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 45,
@@ -627,7 +627,7 @@ export const questions = [
       'C. Both A and B',
       'D. Only in the GitHub repository'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'B' // Moved from C to B
   },
   {
     id: 46,
@@ -641,7 +641,7 @@ export const questions = [
       'C. Both A and B',
       'D. Delete the project and start over'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'C' // Kept as C
   },
   {
     id: 47,
@@ -655,7 +655,7 @@ export const questions = [
       'C. Both A and B',
       'D. No, not possible'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'D' // Moved from C to D
   },
   {
     id: 48,
@@ -669,7 +669,7 @@ export const questions = [
       'C. To reduce deployment costs',
       'D. To backup the code'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 49,
@@ -683,7 +683,7 @@ export const questions = [
       'C. Both A and B',
       'D. Wait for an email notification'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'B' // Moved from C to B
   },
   {
     id: 50,
@@ -697,7 +697,7 @@ export const questions = [
       'C. Both A and B',
       'D. It reduces build time'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'C' // Kept as C
   }
 ];
 

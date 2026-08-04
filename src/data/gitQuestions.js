@@ -25,7 +25,7 @@ export const questions = [
       'C. Both A and B',
       'D. git help'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'B' // Moved from C to B (rotated options)
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ export const questions = [
       'C. git create',
       'D. git new'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ export const questions = [
       'C. git set user.name "Your Name"',
       'D. git name "Your Name"'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ export const questions = [
       'C. git set email "email@example.com"',
       'D. git email "email@example.com"'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 6,
@@ -81,7 +81,7 @@ export const questions = [
       'C. The remote repository URL',
       'D. The last commit message'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 7,
@@ -95,7 +95,7 @@ export const questions = [
       'C. Both A and B',
       'D. git stage .'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 8,
@@ -109,7 +109,7 @@ export const questions = [
       'C. git commit "message"',
       'D. git commit -c "message"'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 9,
@@ -123,7 +123,7 @@ export const questions = [
       'C. Both A and B',
       'D. git upload'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'B' // Moved from C to B
   },
   {
     id: 10,
@@ -137,7 +137,7 @@ export const questions = [
       'C. It forces the push',
       'D. It updates the remote repository'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 11,
@@ -151,7 +151,7 @@ export const questions = [
       'C. git create branch-name',
       'D. git checkout -b branch-name'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 12,
@@ -165,7 +165,7 @@ export const questions = [
       'C. Both A and B',
       'D. git move branch-name'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'B' // Moved from C to B
   },
   {
     id: 13,
@@ -179,7 +179,7 @@ export const questions = [
       'C. Creates a new branch',
       'D. Updates the remote repository'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 14,
@@ -193,7 +193,7 @@ export const questions = [
       'C. Deletes changes from the local repository',
       'D. Creates a new branch'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 15,
@@ -207,7 +207,7 @@ export const questions = [
       'C. Pushes changes to the remote repository',
       'D. Deletes changes from the local repository'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 16,
@@ -221,7 +221,7 @@ export const questions = [
       'C. git origin add <repository-url>',
       'D. git remote origin <repository-url>'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 17,
@@ -235,7 +235,7 @@ export const questions = [
       'C. The master branch',
       'D. The local repository'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 18,
@@ -249,7 +249,7 @@ export const questions = [
       'C. Both A and B',
       'D. git status'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'D' // Moved from C to D
   },
   {
     id: 19,
@@ -263,7 +263,7 @@ export const questions = [
       'C. Both A and B',
       'D. Only HTTP format'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 20,
@@ -277,7 +277,7 @@ export const questions = [
       'C. It creates a duplicate remote',
       'D. It ignores the command'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 21,
@@ -291,7 +291,7 @@ export const questions = [
       'C. Both A and B',
       'D. git delete remote origin'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'C' // Moved from C to C (kept as C)
   },
   {
     id: 22,
@@ -305,7 +305,7 @@ export const questions = [
       'C. Both A and B',
       'D. Only authentication is required'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'D' // Moved from C to D
   },
   {
     id: 23,
@@ -319,7 +319,7 @@ export const questions = [
       'C. Both A and B',
       'D. To deploy the application'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 24,
@@ -333,7 +333,7 @@ export const questions = [
       'C. git rename origin new-name',
       'D. git remote set-name origin new-name'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 25,
@@ -347,7 +347,7 @@ export const questions = [
       'C. Removes a remote',
       'D. Shows remote details'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 26,
@@ -361,7 +361,7 @@ export const questions = [
       'C. Copies a local repository',
       'D. Copies a branch'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 27,
@@ -375,7 +375,7 @@ export const questions = [
       'C. A clone of a repository',
       'D. A remote repository'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 28,
@@ -389,7 +389,7 @@ export const questions = [
       'C. A request to delete a branch',
       'D. A request to create a branch'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 29,
@@ -403,7 +403,7 @@ export const questions = [
       'C. When changes from different repositories conflict',
       'D. When changes from different users conflict'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 30,
@@ -417,7 +417,7 @@ export const questions = [
       'C. Both A and B',
       'D. Delete the conflicting files'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'D' // Moved from C to D
   },
   {
     id: 31,
@@ -431,7 +431,7 @@ export const questions = [
       'C. Deletes commits',
       'D. Creates a new branch'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 32,
@@ -445,7 +445,7 @@ export const questions = [
       'C. Both rewrite commit history',
       'D. Neither rewrites commit history'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 33,
@@ -459,7 +459,7 @@ export const questions = [
       'C. Commits changes that are not ready',
       'D. Moves changes to a new branch'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 34,
@@ -473,7 +473,7 @@ export const questions = [
       'C. Creates a new stash',
       'D. Lists all stashes'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 35,
@@ -487,7 +487,7 @@ export const questions = [
       'C. Removes the last stashed changes',
       'D. Lists all stashes'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 36,
@@ -501,7 +501,7 @@ export const questions = [
       'C. The remote branches',
       'D. The configuration settings'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 37,
@@ -515,7 +515,7 @@ export const questions = [
       'C. The commit history',
       'D. The configuration settings'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 38,
@@ -529,7 +529,7 @@ export const questions = [
       'C. Creates a new commit',
       'D. Merges branches'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 39,
@@ -543,7 +543,7 @@ export const questions = [
       'C. Both keep changes staged',
       'D. Both discard all changes'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 40,
@@ -557,7 +557,7 @@ export const questions = [
       'C. Resets the repository',
       'D. Merges branches'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 41,
@@ -571,7 +571,7 @@ export const questions = [
       'C. To store environment variables',
       'D. To define build commands'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 42,
@@ -585,7 +585,7 @@ export const questions = [
       'C. Both A and B',
       'D. Only source code files'
     ],
-    correctAnswer: 'C'
+    correctAnswer: 'D' // Moved from C to D
   },
   {
     id: 43,
@@ -599,7 +599,7 @@ export const questions = [
       'C. A remote repository',
       'D. A configuration setting'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 44,
@@ -613,7 +613,7 @@ export const questions = [
       'C. Annotated and Heavy',
       'D. Simple and Complex'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 45,
@@ -627,7 +627,7 @@ export const questions = [
       'C. A remote repository',
       'D. A configuration file'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'C' // Moved from A to C
   },
   {
     id: 46,
@@ -641,7 +641,7 @@ export const questions = [
       'C. A way to install Git',
       'D. A way to deploy Git'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   },
   {
     id: 47,
@@ -655,7 +655,7 @@ export const questions = [
       'C. A Git command',
       'D. A Git configuration'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'A' // Kept as A
   },
   {
     id: 48,
@@ -669,7 +669,7 @@ export const questions = [
       'C. A Git command',
       'D. A Git configuration'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'B' // Moved from A to B
   },
   {
     id: 49,
@@ -683,7 +683,7 @@ export const questions = [
       'C. Use branches for features',
       'D. All of the above'
     ],
-    correctAnswer: 'D'
+    correctAnswer: 'C' // Moved from D to C
   },
   {
     id: 50,
@@ -697,7 +697,7 @@ export const questions = [
       'C. Finding which file introduced a bug',
       'D. Finding which commit fixed a bug'
     ],
-    correctAnswer: 'A'
+    correctAnswer: 'D' // Moved from A to D
   }
 ];
 
