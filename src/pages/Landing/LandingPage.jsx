@@ -584,7 +584,7 @@ function LandingPage() {
           <p className={`text-[10px] hidden sm:block font-medium tracking-wider uppercase transition-colors duration-300 ${
             isScrolled ? 'text-gray-500 dark:text-gray-400' : 'text-white/80'
           }`}>
-            by JEO Digital Solutions
+           
           </p>
         </div>
       </Link>
@@ -1325,8 +1325,10 @@ function LandingPage() {
           </div>
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; {new Date().getFullYear()} QuizMaster by JEO Digital Solutions. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} QuizMaster is Licensed to JEO Digital Solutions. All rights reserved.</p>
+            <p>Powered by <span className="font-medium text-blue-600 dark:text-blue-400">DXICTHUB</span></p>
           </div>
+
         </div>
       </footer>
 

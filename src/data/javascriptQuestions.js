@@ -1,3 +1,4 @@
+
 export const questions = [
   {
     id: 1,
@@ -11,7 +12,7 @@ export const questions = [
       'C. var',
       'D. constant'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'A'
   },
   {
     id: 2,
@@ -20,12 +21,12 @@ export const questions = [
     difficulty: 'easy',
     question: 'What is the difference between let and var?',
     options: [
-      'A. let is block-scoped, var is function-scoped',
-      'B. let is function-scoped, var is block-scoped',
-      'C. let and var are the same',
-      'D. let cannot be reassigned'
+      'A. let is function-scoped, var is block-scoped',
+      'B. let and var are the same',
+      'C. let cannot be reassigned',
+      'D. let is block-scoped, var is function-scoped'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'D'
   },
   {
     id: 3,
@@ -34,12 +35,12 @@ export const questions = [
     difficulty: 'easy',
     question: 'Which of the following is NOT a primitive data type in JavaScript?',
     options: [
-      'A. Object',
-      'B. String',
-      'C. Number',
+      'A. String',
+      'B. Number',
+      'C. Object',
       'D. Boolean'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 4,
@@ -53,7 +54,7 @@ export const questions = [
       'C. A conditional statement',
       'D. A loop structure'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'A'
   },
   {
     id: 5,
@@ -62,12 +63,12 @@ export const questions = [
     difficulty: 'easy',
     question: 'What is the syntax for an arrow function in JavaScript?',
     options: [
-      'A. () => {}',
-      'B. function() {}',
+      'A. function() {}',
+      'B. () => {}',
       'C. => () {}',
       'D. function => {}'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'B'
   },
   {
     id: 6,
@@ -77,11 +78,11 @@ export const questions = [
     question: 'What is hoisting in JavaScript?',
     options: [
       'A. The behavior where variable and function declarations are moved to the top of their scope',
-      'B. A feature that allows functions to be called before they are defined',
-      'C. A method of optimizing code performance',
+      'B. A method of optimizing code performance',
+      'C. A feature that allows functions to be called before they are defined',
       'D. A way to declare variables'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'A'
   },
   {
     id: 7,
@@ -95,7 +96,7 @@ export const questions = [
       'C. A function that cannot access outer variables',
       'D. A function that returns a function'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'A'
   },
   {
     id: 8,
@@ -104,12 +105,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is a Promise in JavaScript?',
     options: [
-      'A. An object representing the eventual completion or failure of an asynchronous operation',
-      'B. A synchronous operation result',
+      'A. A synchronous operation result',
+      'B. An object representing the eventual completion or failure of an asynchronous operation',
       'C. A function that returns a value immediately',
       'D. A way to handle errors'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'B'
   },
   {
     id: 9,
@@ -118,12 +119,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What does the async keyword do in JavaScript?',
     options: [
-      'A. It defines an asynchronous function that returns a Promise',
-      'B. It makes a function run faster',
-      'C. It ensures a function runs synchronously',
+      'A. It makes a function run faster',
+      'B. It ensures a function runs synchronously',
+      'C. It defines an asynchronous function that returns a Promise',
       'D. It optimizes function performance'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'C'
   },
   {
     id: 10,
@@ -132,12 +133,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is a class in JavaScript?',
     options: [
-      'A. A template for creating objects with shared properties and methods',
-      'B. A function that returns an object',
-      'C. A data type',
+      'A. A function that returns an object',
+      'B. A data type',
+      'C. A template for creating objects with shared properties and methods',
       'D. A way to organize code'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'C'
   },
   {
     id: 11,
@@ -146,12 +147,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What does the spread operator (...) do in JavaScript?',
     options: [
-      'A. It expands an iterable into individual elements',
-      'B. It creates a new array from an existing one',
+      'A. It creates a new array from an existing one',
+      'B. It expands an iterable into individual elements',
       'C. It merges objects',
       'D. It copies arrays'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'B'
   },
   {
     id: 12,
@@ -165,7 +166,7 @@ export const questions = [
       'C. A method for deleting properties from objects',
       'D. A way to clone objects'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'A'
   },
   {
     id: 13,
@@ -174,12 +175,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the difference between a Map and an Object in JavaScript?',
     options: [
-      'A. Map maintains insertion order and accepts any type as keys; Object keys are limited to strings',
-      'B. Map and Object are the same',
+      'A. Map and Object are the same',
+      'B. Map maintains insertion order and accepts any type as keys; Object keys are limited to strings',
       'C. Object is faster than Map',
       'D. Map cannot be iterated'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'B'
   },
   {
     id: 14,
@@ -188,12 +189,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the event loop in JavaScript?',
     options: [
-      'A. A mechanism that handles asynchronous callbacks by managing the call stack and task queue',
-      'B. A loop that runs forever',
-      'C. A way to handle events',
-      'D. A performance optimization tool'
+      'A. A loop that runs forever',
+      'B. A way to handle events',
+      'C. A performance optimization tool',
+      'D. A mechanism that handles asynchronous callbacks by managing the call stack and task queue'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'D'
   },
   {
     id: 15,
@@ -202,12 +203,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What does the `this` keyword refer to in JavaScript?',
     options: [
-      'A. The current execution context, which depends on how a function is called',
-      'B. The global object',
-      'C. The function itself',
+      'A. The global object',
+      'B. The function itself',
+      'C. The current execution context, which depends on how a function is called',
       'D. The parent object'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 16,
@@ -221,7 +222,7 @@ export const questions = [
       'C. A constructor function',
       'D. A type of object'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'A'
   },
   {
     id: 17,
@@ -230,12 +231,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is a callback function in JavaScript?',
     options: [
-      'A. A function passed as an argument to another function',
-      'B. A function that is called back after execution',
-      'C. A function that returns a value',
+      'A. A function that is called back after execution',
+      'B. A function that returns a value',
+      'C. A function passed as an argument to another function',
       'D. A function that is called recursively'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'C'
   },
   {
     id: 18,
@@ -244,12 +245,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is a higher-order function in JavaScript?',
     options: [
-      'A. A function that takes a function as an argument or returns a function',
-      'B. A function that is defined inside another function',
+      'A. A function that is defined inside another function',
+      'B. A function that takes a function as an argument or returns a function',
       'C. A function that has multiple parameters',
       'D. A function that is optimized for performance'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'B'
   },
   {
     id: 19,
@@ -258,12 +259,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'How do you handle errors in JavaScript?',
     options: [
-      'A. Using try-catch blocks',
-      'B. Using if-else statements',
-      'C. Using switch statements',
-      'D. Using error codes'
+      'A. Using if-else statements',
+      'B. Using switch statements',
+      'C. Using error codes',
+      'D. Using try-catch blocks'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 20,
@@ -272,12 +273,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of modules in JavaScript?',
     options: [
-      'A. To organize code into reusable, maintainable units with their own scope',
-      'B. To make code run faster',
+      'A. To make code run faster',
+      'B. To organize code into reusable, maintainable units with their own scope',
       'C. To reduce file size',
       'D. To enable multi-threading'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'B'
   },
   {
     id: 21,
@@ -286,12 +287,12 @@ export const questions = [
     difficulty: 'easy',
     question: 'What is a template literal in JavaScript?',
     options: [
-      'A. A string literal that allows embedded expressions and multi-line strings',
-      'B. A type of variable',
-      'C. A template for functions',
+      'A. A type of variable',
+      'B. A template for functions',
+      'C. A string literal that allows embedded expressions and multi-line strings',
       'D. A way to format strings'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'C'
   },
   {
     id: 22,
@@ -300,12 +301,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the difference between a Set and an Array in JavaScript?',
     options: [
-      'A. Set stores unique values; Array can have duplicates',
-      'B. Set and Array are the same',
-      'C. Array is faster than Set',
+      'A. Set and Array are the same',
+      'B. Array is faster than Set',
+      'C. Set stores unique values; Array can have duplicates',
       'D. Set cannot be iterated'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'C'
   },
   {
     id: 23,
@@ -319,7 +320,7 @@ export const questions = [
       'C. A function that creates objects',
       'D. A function that runs indefinitely'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'A'
   },
   {
     id: 24,
@@ -333,7 +334,7 @@ export const questions = [
       'C. A type of function',
       'D. A method of styling code'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'A'
   },
   {
     id: 25,
@@ -342,12 +343,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is a Proxy in JavaScript?',
     options: [
-      'A. An object that wraps another object and intercepts operations on it',
-      'B. A network proxy',
-      'C. A class that creates objects',
+      'A. A network proxy',
+      'B. A class that creates objects',
+      'C. An object that wraps another object and intercepts operations on it',
       'D. A function that intercepts events'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'C'
   },
   {
     id: 26,
@@ -356,12 +357,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What does Object.assign do in JavaScript?',
     options: [
-      'A. It copies properties from one or more source objects to a target object',
-      'B. It creates a new object',
-      'C. It deletes properties from an object',
+      'A. It creates a new object',
+      'B. It deletes properties from an object',
+      'C. It copies properties from one or more source objects to a target object',
       'D. It merges arrays'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'C'
   },
   {
     id: 27,
@@ -370,12 +371,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What does the map() method do in JavaScript?',
     options: [
-      'A. It creates a new array by applying a function to each element of the original array',
-      'B. It filters an array based on a condition',
-      'C. It reduces an array to a single value',
+      'A. It filters an array based on a condition',
+      'B. It reduces an array to a single value',
+      'C. It creates a new array by applying a function to each element of the original array',
       'D. It sorts an array'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 28,
@@ -389,7 +390,7 @@ export const questions = [
       'C. It reduces an array to a single value',
       'D. It sorts an array'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'A'
   },
   {
     id: 29,
@@ -398,12 +399,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What does the reduce() method do in JavaScript?',
     options: [
-      'A. It reduces an array to a single value by applying a function to each element',
-      'B. It filters an array based on a condition',
-      'C. It creates a new array by applying a function to each element',
+      'A. It filters an array based on a condition',
+      'B. It creates a new array by applying a function to each element',
+      'C. It reduces an array to a single value by applying a function to each element',
       'D. It sorts an array'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'C'
   },
   {
     id: 30,
@@ -412,12 +413,12 @@ export const questions = [
     difficulty: 'easy',
     question: 'What is the difference between null and undefined in JavaScript?',
     options: [
-      'A. undefined means a variable has been declared but not assigned a value; null is an assigned value representing no value',
-      'B. null and undefined are the same',
-      'C. null is a primitive type; undefined is an object',
-      'D. undefined is a keyword; null is not'
+      'A. null and undefined are the same',
+      'B. null is a primitive type; undefined is an object',
+      'C. undefined is a keyword; null is not',
+      'D. undefined means a variable has been declared but not assigned a value; null is an assigned value representing no value'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'D'
   },
   {
     id: 31,
@@ -431,7 +432,7 @@ export const questions = [
       'C. JavaScript Object Network',
       'D. JavaScript Online Network'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'A'
   },
   {
     id: 32,
@@ -440,12 +441,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the Fetch API in JavaScript?',
     options: [
-      'A. A modern API for making HTTP requests using Promises',
-      'B. A legacy API for making HTTP requests',
-      'C. A database API',
-      'D. A file system API'
+      'A. A legacy API for making HTTP requests',
+      'B. A database API',
+      'C. A file system API',
+      'D. A modern API for making HTTP requests using Promises'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 33,
@@ -454,12 +455,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What method is used to select an element by its ID in the DOM?',
     options: [
-      'A. document.getElementById()',
-      'B. document.querySelector()',
-      'C. document.getElementsByClassName()',
-      'D. document.getElementsByTagName()'
+      'A. document.querySelector()',
+      'B. document.getElementsByClassName()',
+      'C. document.getElementsByTagName()',
+      'D. document.getElementById()'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'D'
   },
   {
     id: 34,
@@ -468,12 +469,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'How do you add an event listener to a DOM element in JavaScript?',
     options: [
-      'A. Using the addEventListener() method',
-      'B. Using the attachEvent() method',
-      'C. Using the addEvent() method',
-      'D. Using the listenEvent() method'
+      'A. Using the attachEvent() method',
+      'B. Using the addEvent() method',
+      'C. Using the listenEvent() method',
+      'D. Using the addEventListener() method'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'D'
   },
   {
     id: 35,
@@ -482,12 +483,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the localStorage API used for in JavaScript?',
     options: [
-      'A. To store data persistently in the browser',
-      'B. To store data temporarily in memory',
-      'C. To store data on the server',
-      'D. To store data in cookies'
+      'A. To store data temporarily in memory',
+      'B. To store data on the server',
+      'C. To store data in cookies',
+      'D. To store data persistently in the browser'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 36,
@@ -501,7 +502,7 @@ export const questions = [
       'C. A function that returns a value',
       'D. A method of handling errors'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'A'
   },
   {
     id: 37,
@@ -510,12 +511,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of the setTimeout() function in JavaScript?',
     options: [
-      'A. To execute a function after a specified delay',
-      'B. To execute a function repeatedly at specified intervals',
-      'C. To set a timer for a function',
+      'A. To execute a function repeatedly at specified intervals',
+      'B. To set a timer for a function',
+      'C. To execute a function after a specified delay',
       'D. To stop a function from executing'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'C'
   },
   {
     id: 38,
@@ -524,12 +525,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of the setInterval() function in JavaScript?',
     options: [
-      'A. To execute a function repeatedly at specified intervals',
-      'B. To execute a function after a specified delay',
-      'C. To set a timer for a function',
+      'A. To execute a function after a specified delay',
+      'B. To set a timer for a function',
+      'C. To execute a function repeatedly at specified intervals',
       'D. To stop a function from executing'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'C'
   },
   {
     id: 39,
@@ -538,12 +539,12 @@ export const questions = [
     difficulty: 'easy',
     question: 'What method is used to convert a string to uppercase in JavaScript?',
     options: [
-      'A. toUpperCase()',
-      'B. upperCase()',
-      'C. toUpper()',
-      'D. toUpperCaseString()'
+      'A. upperCase()',
+      'B. toUpper()',
+      'C. toUpperCaseString()',
+      'D. toUpperCase()'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 40,
@@ -557,7 +558,7 @@ export const questions = [
       'C. shift()',
       'D. unshift()'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'A'
   },
   {
     id: 41,
@@ -566,12 +567,12 @@ export const questions = [
     difficulty: 'easy',
     question: 'What method is used to remove the last element from an array in JavaScript?',
     options: [
-      'A. pop()',
-      'B. push()',
-      'C. shift()',
-      'D. unshift()'
+      'A. push()',
+      'B. shift()',
+      'C. unshift()',
+      'D. pop()'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'D'
   },
   {
     id: 42,
@@ -580,12 +581,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is the difference between the spread and rest operators in JavaScript?',
     options: [
-      'A. Spread expands an iterable into elements; rest collects multiple elements into an array',
-      'B. Spread and rest are the same',
-      'C. Spread is used for objects; rest is used for arrays',
+      'A. Spread and rest are the same',
+      'B. Spread is used for objects; rest is used for arrays',
+      'C. Spread expands an iterable into elements; rest collects multiple elements into an array',
       'D. Spread is used for arrays; rest is used for objects'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'C'
   },
   {
     id: 43,
@@ -594,12 +595,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is a Symbol in JavaScript?',
     options: [
-      'A. A unique and immutable primitive value used as an object key',
-      'B. A type of variable',
-      'C. A function that returns a value',
-      'D. A method of handling errors'
+      'A. A type of variable',
+      'B. A function that returns a value',
+      'C. A method of handling errors',
+      'D. A unique and immutable primitive value used as an object key'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 44,
@@ -613,7 +614,7 @@ export const questions = [
       'C. A collection of unique values',
       'D. A type of Set'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'A'
   },
   {
     id: 45,
@@ -622,12 +623,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is a WeakSet in JavaScript?',
     options: [
-      'A. A collection of objects where objects are weakly referenced',
-      'B. A type of Set',
-      'C. A collection of unique values',
+      'A. A type of Set',
+      'B. A collection of unique values',
+      'C. A collection of objects where objects are weakly referenced',
       'D. A type of Map'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'C'
   },
   {
     id: 46,
@@ -636,12 +637,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'How do you define a private field in a JavaScript class?',
     options: [
-      'A. Using the # prefix',
-      'B. Using the private keyword',
-      'C. Using the _ prefix',
+      'A. Using the private keyword',
+      'B. Using the _ prefix',
+      'C. Using the # prefix',
       'D. Using the var keyword'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'C'
   },
   {
     id: 47,
@@ -650,12 +651,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is a static method in a JavaScript class?',
     options: [
-      'A. A method that belongs to the class itself, not to instances of the class',
-      'B. A method that cannot be changed',
-      'C. A method that is called on an instance',
-      'D. A method that is called automatically'
+      'A. A method that cannot be changed',
+      'B. A method that is called on an instance',
+      'C. A method that is called automatically',
+      'D. A method that belongs to the class itself, not to instances of the class'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 48,
@@ -669,7 +670,7 @@ export const questions = [
       'C. Functions that return values',
       'D. Functions that set values'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'A'
   },
   {
     id: 49,
@@ -678,12 +679,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is BigInt in JavaScript?',
     options: [
-      'A. A primitive type for representing integers with arbitrary precision',
-      'B. A type of number',
-      'C. A type of object',
-      'D. A type of string'
+      'A. A type of number',
+      'B. A type of object',
+      'C. A type of string',
+      'D. A primitive type for representing integers with arbitrary precision'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'D'
   },
   {
     id: 50,
@@ -692,12 +693,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'Which of the following is a JavaScript best practice?',
     options: [
-      'A. Use const and let instead of var',
-      'B. Use var for all variable declarations',
-      'C. Write all code in a single file',
+      'A. Use var for all variable declarations',
+      'B. Write all code in a single file',
+      'C. Use const and let instead of var',
       'D. Avoid using functions'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'C'
   }
 ];
 

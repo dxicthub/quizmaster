@@ -6,12 +6,12 @@ export const questions = [
     difficulty: 'easy',
     question: 'What does HTML stand for?',
     options: [
-      'A. Hyper Text Markup Language',
-      'B. High Tech Modern Language',
-      'C. Hyper Transfer Markup Language',
+      'A. High Tech Modern Language',
+      'B. Hyper Transfer Markup Language',
+      'C. Hyper Text Markup Language',
       'D. High Text Markup Language'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'C'
   },
   {
     id: 2,
@@ -21,11 +21,11 @@ export const questions = [
     question: 'What is the correct HTML structure?',
     options: [
       'A. !DOCTYPE html, html, head, body',
-      'B. html, head, body, !DOCTYPE',
-      'C. body, head, html, !DOCTYPE',
-      'D. head, html, body, !DOCTYPE'
+      'B. body, head, html, !DOCTYPE',
+      'C. head, html, body, !DOCTYPE',
+      'D. html, head, body, !DOCTYPE'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'A'
   },
   {
     id: 3,
@@ -35,11 +35,11 @@ export const questions = [
     question: 'Which HTML element is used for the largest heading?',
     options: [
       'A. h1',
-      'B. h6',
-      'C. header',
-      'D. heading'
+      'B. header',
+      'C. heading',
+      'D. h6'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'A'
   },
   {
     id: 4,
@@ -48,12 +48,12 @@ export const questions = [
     difficulty: 'easy',
     question: 'Which HTML element is used for paragraphs?',
     options: [
-      'A. p',
-      'B. para',
-      'C. paragraph',
-      'D. text'
+      'A. paragraph',
+      'B. text',
+      'C. p',
+      'D. para'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'C'
   },
   {
     id: 5,
@@ -62,12 +62,12 @@ export const questions = [
     difficulty: 'easy',
     question: 'Which HTML element is used to create a hyperlink?',
     options: [
-      'A. a',
-      'B. link',
+      'A. link',
+      'B. a',
       'C. href',
       'D. url'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'B'
   },
   {
     id: 6,
@@ -76,12 +76,12 @@ export const questions = [
     difficulty: 'easy',
     question: 'Which HTML element is used to display an image?',
     options: [
-      'A. img',
-      'B. image',
-      'C. picture',
-      'D. src'
+      'A. picture',
+      'B. src',
+      'C. image',
+      'D. img'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'D'
   },
   {
     id: 7,
@@ -90,12 +90,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the difference between ordered and unordered lists?',
     options: [
-      'A. Ordered lists use numbers; unordered lists use bullets',
+      'A. Both use bullets',
       'B. Ordered lists use bullets; unordered lists use numbers',
       'C. Both use numbers',
-      'D. Both use bullets'
+      'D. Ordered lists use numbers; unordered lists use bullets'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 8,
@@ -104,12 +104,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'Which HTML element is used to create a table?',
     options: [
-      'A. table',
-      'B. tab',
-      'C. grid',
-      'D. spreadsheet'
+      'A. tab',
+      'B. grid',
+      'C. spreadsheet',
+      'D. table'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 9,
@@ -118,12 +118,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'Which HTML element is used for table rows?',
     options: [
-      'A. tr',
-      'B. td',
-      'C. th',
-      'D. row'
+      'A. row',
+      'B. th',
+      'C. tr',
+      'D. td'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'C'
   },
   {
     id: 10,
@@ -132,12 +132,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'Which HTML element is used for table data cells?',
     options: [
-      'A. td',
-      'B. tr',
-      'C. th',
-      'D. data'
+      'A. data',
+      'B. th',
+      'C. tr',
+      'D. td'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'D'
   },
   {
     id: 11,
@@ -146,12 +146,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'Which HTML element is used to create a form?',
     options: [
-      'A. form',
-      'B. input',
-      'C. fieldset',
-      'D. form-group'
+      'A. form-group',
+      'B. fieldset',
+      'C. input',
+      'D. form'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 12,
@@ -161,26 +161,26 @@ export const questions = [
     question: 'Which HTML input type is used for text?',
     options: [
       'A. text',
-      'B. input',
+      'B. textbox',
       'C. string',
-      'D. textbox'
+      'D. input'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'A'
   },
   {
-    id: 13,
-    type: 'multiple-choice',
-    objective: 'HTML Buttons',
-    difficulty: 'medium',
-    question: 'Which HTML element is used to create a button?',
-    options: [
-      'A. button',
-      'B. btn',
-      'C. input type="button"',
-      'D. Both A and C'
-    ],
-    correctAnswer: 'B' // Moved from D to B
-  },
+  id: 13,
+  type: 'multiple-choice',
+  objective: 'HTML Buttons',
+  difficulty: 'medium',
+  question: 'Which HTML element is specifically used to create a button element?',
+  options: [
+    'A. input',
+    'B. form',
+    'C. btn',
+    'D. button'
+  ],
+  correctAnswer: 'D'
+},
   {
     id: 14,
     type: 'multiple-choice',
@@ -188,12 +188,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of the "href" attribute?',
     options: [
-      'A. To specify the URL of a link',
-      'B. To specify the source of an image',
-      'C. To specify the title of a page',
-      'D. To specify the style of an element'
+      'A. To specify the title of a page',
+      'B. To specify the style of an element',
+      'C. To specify the source of an image',
+      'D. To specify the URL of a link'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'D'
   },
   {
     id: 15,
@@ -202,12 +202,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of the "src" attribute?',
     options: [
-      'A. To specify the source of an image',
-      'B. To specify the URL of a link',
-      'C. To specify the title of a page',
-      'D. To specify the style of an element'
+      'A. To specify the URL of a link',
+      'B. To specify the title of a page',
+      'C. To specify the style of an element',
+      'D. To specify the source of an image'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 16,
@@ -216,12 +216,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of semantic HTML?',
     options: [
-      'A. To improve accessibility and SEO',
-      'B. To make the code look better',
-      'C. To reduce file size',
-      'D. To increase loading speed'
+      'A. To reduce file size',
+      'B. To improve accessibility and SEO',
+      'C. To increase loading speed',
+      'D. To make the code look better'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'B'
   },
   {
     id: 17,
@@ -230,12 +230,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'Which of the following is a semantic HTML element?',
     options: [
-      'A. header',
+      'A. All of the above',
       'B. footer',
       'C. nav',
-      'D. All of the above'
+      'D. header'
     ],
-    correctAnswer: 'B' // Moved from D to B
+    correctAnswer: 'A'
   },
   {
     id: 18,
@@ -244,12 +244,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of the "article" element?',
     options: [
-      'A. To represent a self-contained piece of content',
-      'B. To represent the main content',
-      'C. To represent navigation',
-      'D. To represent a section'
+      'A. To represent a section',
+      'B. To represent navigation',
+      'C. To represent the main content',
+      'D. To represent a self-contained piece of content'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'D'
   },
   {
     id: 19,
@@ -258,12 +258,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of the "section" element?',
     options: [
-      'A. To represent a thematic grouping of content',
-      'B. To represent the main content',
-      'C. To represent navigation',
+      'A. To represent the main content',
+      'B. To represent navigation',
+      'C. To represent a thematic grouping of content',
       'D. To represent a self-contained piece of content'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 20,
@@ -272,12 +272,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of the "nav" element?',
     options: [
-      'A. To represent navigation links',
+      'A. To represent a self-contained piece of content',
       'B. To represent the main content',
       'C. To represent a section',
-      'D. To represent a self-contained piece of content'
+      'D. To represent navigation links'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 21,
@@ -286,12 +286,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What attribute is used to submit a form?',
     options: [
-      'A. type="submit"',
-      'B. submit',
-      'C. onclick="submit"',
-      'D. action="submit"'
+      'A. action="submit"',
+      'B. onclick="submit"',
+      'C. submit',
+      'D. type="submit"'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'D'
   },
   {
     id: 22,
@@ -300,12 +300,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of the "required" attribute?',
     options: [
-      'A. To make a form field required',
-      'B. To make a form field optional',
-      'C. To make a form field disabled',
-      'D. To make a form field readonly'
+      'A. To make a form field optional',
+      'B. To make a form field disabled',
+      'C. To make a form field readonly',
+      'D. To make a form field required'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'D'
   },
   {
     id: 23,
@@ -314,12 +314,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of the "placeholder" attribute?',
     options: [
-      'A. To provide a hint or example text',
-      'B. To provide default value',
-      'C. To provide label text',
-      'D. To provide validation text'
+      'A. To provide default value',
+      'B. To provide label text',
+      'C. To provide validation text',
+      'D. To provide a hint or example text'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 24,
@@ -328,12 +328,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'Which HTML element is used for embedding video?',
     options: [
-      'A. video',
-      'B. embed',
-      'C. media',
-      'D. player'
+      'A. player',
+      'B. media',
+      'C. embed',
+      'D. video'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 25,
@@ -342,12 +342,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'Which HTML element is used for embedding audio?',
     options: [
-      'A. audio',
-      'B. embed',
+      'A. embed',
+      'B. player',
       'C. media',
-      'D. player'
+      'D. audio'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'D'
   },
   {
     id: 26,
@@ -357,11 +357,11 @@ export const questions = [
     question: 'What is the HTML Canvas element used for?',
     options: [
       'A. Drawing graphics via JavaScript',
-      'B. Displaying images',
+      'B. Displaying audio',
       'C. Displaying video',
-      'D. Displaying audio'
+      'D. Displaying images'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'A'
   },
   {
     id: 27,
@@ -370,12 +370,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is the HTML SVG element used for?',
     options: [
-      'A. Creating vector graphics',
-      'B. Creating raster graphics',
-      'C. Creating 3D graphics',
-      'D. Creating animations'
+      'A. Creating animations',
+      'B. Creating 3D graphics',
+      'C. Creating raster graphics',
+      'D. Creating vector graphics'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 28,
@@ -384,12 +384,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is the Geolocation API used for in HTML5?',
     options: [
-      'A. Getting the user\'s location',
-      'B. Getting the user\'s IP address',
-      'C. Getting the user\'s browser',
-      'D. Getting the user\'s device'
+      'A. Getting the user\'s browser',
+      'B. Getting the user\'s device',
+      'C. Getting the user\'s IP address',
+      'D. Getting the user\'s location'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 29,
@@ -398,12 +398,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is the Drag and Drop API used for in HTML5?',
     options: [
-      'A. Dragging and dropping elements',
-      'B. Copying and pasting elements',
-      'C. Moving elements',
-      'D. Deleting elements'
+      'A. Deleting elements',
+      'B. Moving elements',
+      'C. Copying and pasting elements',
+      'D. Dragging and dropping elements'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'D'
   },
   {
     id: 30,
@@ -412,12 +412,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is the Web Storage API used for in HTML5?',
     options: [
-      'A. Storing data in the browser',
-      'B. Storing data on the server',
+      'A. Storing data on the server',
+      'B. Storing data in a database',
       'C. Storing data in cookies',
-      'D. Storing data in a database'
+      'D. Storing data in the browser'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'D'
   },
   {
     id: 31,
@@ -427,11 +427,11 @@ export const questions = [
     question: 'What is the difference between localStorage and sessionStorage?',
     options: [
       'A. localStorage persists; sessionStorage is cleared when the browser closes',
-      'B. sessionStorage persists; localStorage is cleared when the browser closes',
+      'B. Both are cleared when the browser closes',
       'C. Both persist indefinitely',
-      'D. Both are cleared when the browser closes'
+      'D. sessionStorage persists; localStorage is cleared when the browser closes'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'A'
   },
   {
     id: 32,
@@ -440,12 +440,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What are Web Workers used for in HTML5?',
     options: [
-      'A. Running scripts in the background',
-      'B. Running scripts in the foreground',
-      'C. Running scripts on the server',
-      'D. Running scripts in the browser'
+      'A. Running scripts on the server',
+      'B. Running scripts in the browser',
+      'C. Running scripts in the foreground',
+      'D. Running scripts in the background'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 33,
@@ -454,12 +454,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What are Server-Sent Events used for in HTML5?',
     options: [
-      'A. Receiving updates from the server',
-      'B. Sending updates to the server',
-      'C. Two-way communication',
-      'D. WebSocket communication'
+      'A. Two-way communication',
+      'B. WebSocket communication',
+      'C. Sending updates to the server',
+      'D. Receiving updates from the server'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'D'
   },
   {
     id: 34,
@@ -468,12 +468,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is the WebSocket API used for in HTML5?',
     options: [
-      'A. Real-time two-way communication',
-      'B. One-way communication',
-      'C. Server-sent events',
-      'D. HTTP requests'
+      'A. One-way communication',
+      'B. Server-sent events',
+      'C. HTTP requests',
+      'D. Real-time two-way communication'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'D'
   },
   {
     id: 35,
@@ -482,12 +482,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is ARIA in HTML?',
     options: [
-      'A. Accessible Rich Internet Applications',
+      'A. Advanced Rich Internet Applications',
       'B. Accessible Rich Internet Attributes',
-      'C. Advanced Rich Internet Applications',
-      'D. Advanced Rich Internet Attributes'
+      'C. Advanced Rich Internet Attributes',
+      'D. Accessible Rich Internet Applications'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 36,
@@ -496,12 +496,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is the purpose of ARIA attributes?',
     options: [
-      'A. To improve accessibility for users with disabilities',
-      'B. To improve performance',
-      'C. To improve styling',
-      'D. To improve SEO'
+      'A. To improve SEO',
+      'B. To improve styling',
+      'C. To improve performance',
+      'D. To improve accessibility for users with disabilities'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 37,
@@ -511,11 +511,11 @@ export const questions = [
     question: 'What is a best practice for HTML accessibility?',
     options: [
       'A. Use alt text for images',
-      'B. Use semantic HTML',
-      'C. Use ARIA attributes when needed',
+      'B. Use ARIA attributes when needed',
+      'C. Use semantic HTML',
       'D. All of the above'
     ],
-    correctAnswer: 'B' // Moved from D to B
+    correctAnswer: 'D'
   },
   {
     id: 38,
@@ -525,11 +525,11 @@ export const questions = [
     question: 'What is a best practice for HTML SEO?',
     options: [
       'A. Use semantic HTML',
-      'B. Use descriptive titles',
-      'C. Use meta descriptions',
+      'B. Use meta descriptions',
+      'C. Use descriptive titles',
       'D. All of the above'
     ],
-    correctAnswer: 'C' // Moved from D to C
+    correctAnswer: 'D'
   },
   {
     id: 39,
@@ -538,12 +538,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of the "meta" tag?',
     options: [
-      'A. To provide metadata about the HTML document',
-      'B. To provide content about the HTML document',
+      'A. To provide content about the HTML document',
+      'B. To provide style about the HTML document',
       'C. To provide structure about the HTML document',
-      'D. To provide style about the HTML document'
+      'D. To provide metadata about the HTML document'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 40,
@@ -552,12 +552,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of the viewport meta tag?',
     options: [
-      'A. To control the layout on mobile devices',
-      'B. To control the layout on desktop devices',
-      'C. To control the layout on tablets',
-      'D. To control the layout on all devices'
+      'A. To control the layout on all devices',
+      'B. To control the layout on tablets',
+      'C. To control the layout on desktop devices',
+      'D. To control the layout on mobile devices'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 41,
@@ -566,12 +566,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of the !DOCTYPE declaration?',
     options: [
-      'A. To specify the HTML version',
-      'B. To specify the CSS version',
-      'C. To specify the JavaScript version',
-      'D. To specify the character encoding'
+      'A. To specify the CSS version',
+      'B. To specify the JavaScript version',
+      'C. To specify the character encoding',
+      'D. To tell the browser to use standards mode'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'D'
   },
   {
     id: 42,
@@ -580,12 +580,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of the "charset" attribute?',
     options: [
-      'A. To specify the character encoding',
-      'B. To specify the character set',
-      'C. To specify the character type',
-      'D. To specify the character format'
+      'A. To specify the character type',
+      'B. To specify the character format',
+      'C. To specify the character set',
+      'D. To specify the character encoding'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'D'
   },
   {
     id: 43,
@@ -594,12 +594,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of HTML entities?',
     options: [
-      'A. To display special characters',
-      'B. To display normal characters',
-      'C. To display hidden characters',
-      'D. To display encoded characters'
+      'A. To display hidden characters',
+      'B. To display encoded characters',
+      'C. To display normal characters',
+      'D. To display special characters'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 44,
@@ -608,12 +608,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the HTML entity for the ampersand (&) symbol?',
     options: [
-      'A. &amp;',
-      'B. &and;',
-      'C. &am;',
-      'D. &ampersand;'
+      'A. &and;',
+      'B. &am;',
+      'C. &ampersand;',
+      'D. &amp;'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 45,
@@ -622,12 +622,12 @@ export const questions = [
     difficulty: 'easy',
     question: 'How do you write a comment in HTML?',
     options: [
-      'A. <!-- comment -->',
-      'B. // comment',
-      'C. /* comment */',
-      'D. # comment'
+      'A. /* comment */',
+      'B. # comment',
+      'C. // comment',
+      'D. <!-- comment -->'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'D'
   },
   {
     id: 46,
@@ -636,12 +636,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of the "iframe" element?',
     options: [
-      'A. To embed another HTML document',
-      'B. To embed an image',
-      'C. To embed a video',
-      'D. To embed an audio'
+      'A. To embed an audio',
+      'B. To embed a video',
+      'C. To embed an image',
+      'D. To embed another HTML document'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'D'
   },
   {
     id: 47,
@@ -650,12 +650,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the difference between div and span?',
     options: [
-      'A. div is a block-level element; span is inline',
-      'B. div is inline; span is a block-level element',
-      'C. Both are block-level elements',
-      'D. Both are inline elements'
+      'A. Both are block-level elements',
+      'B. Both are inline elements',
+      'C. div is inline; span is a block-level element',
+      'D. div is a block-level element; span is inline'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 48,
@@ -664,12 +664,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of the "label" element?',
     options: [
-      'A. To provide a label for a form control',
-      'B. To provide a description for a form control',
+      'A. To provide a description for a form control',
+      'B. To provide a placeholder for a form control',
       'C. To provide a title for a form control',
-      'D. To provide a placeholder for a form control'
+      'D. To provide a label for a form control'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 49,
@@ -678,12 +678,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'Which of the following is an HTML best practice?',
     options: [
-      'A. Use semantic elements',
-      'B. Use valid HTML',
-      'C. Use proper indentation',
+      'A. Use proper indentation',
+      'B. Use semantic elements',
+      'C. Use valid HTML',
       'D. All of the above'
     ],
-    correctAnswer: 'B' // Moved from D to B
+    correctAnswer: 'D'
   },
   {
     id: 50,
@@ -692,12 +692,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is a trend in HTML development?',
     options: [
-      'A. Web Components',
-      'B. Progressive Web Apps',
+      'A. Progressive Web Apps',
+      'B. Web Components',
       'C. Server-Side Rendering',
       'D. All of the above'
     ],
-    correctAnswer: 'C' // Moved from D to C
+    correctAnswer: 'D'
   }
 ];
 

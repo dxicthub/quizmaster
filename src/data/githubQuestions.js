@@ -697,7 +697,7 @@ export const questions = [
       'C. Improved collaboration tools',
       'D. All of the above'
     ],
-    correctAnswer: 'C' // Moved from D to C
+    correctAnswer: 'D' // Moved from D to C
   }
 ];
 

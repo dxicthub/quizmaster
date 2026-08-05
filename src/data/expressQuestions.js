@@ -11,7 +11,7 @@ export const questions = [
       'C. A database ORM',
       'D. A testing framework'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'A'
   },
   {
     id: 2,
@@ -20,12 +20,12 @@ export const questions = [
     difficulty: 'easy',
     question: 'Which method is used to handle GET requests in Express?',
     options: [
-      'A. app.get()',
-      'B. app.post()',
+      'A. app.post()',
+      'B. app.get()',
       'C. app.put()',
       'D. app.delete()'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'B'
   },
   {
     id: 3,
@@ -34,12 +34,12 @@ export const questions = [
     difficulty: 'easy',
     question: 'Which method is used to handle POST requests in Express?',
     options: [
-      'A. app.post()',
-      'B. app.get()',
-      'C. app.put()',
+      'A. app.get()',
+      'B. app.put()',
+      'C. app.post()',
       'D. app.delete()'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 4,
@@ -48,12 +48,12 @@ export const questions = [
     difficulty: 'easy',
     question: 'What is middleware in Express?',
     options: [
-      'A. Functions that have access to the request and response objects',
-      'B. A database connection layer',
-      'C. A templating engine',
-      'D. A testing utility'
+      'A. A database connection layer',
+      'B. A templating engine',
+      'C. A testing utility',
+      'D. Functions that have access to the request and response objects'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ export const questions = [
       'C. Request body data',
       'D. Request headers'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'A'
   },
   {
     id: 6,
@@ -76,12 +76,12 @@ export const questions = [
     difficulty: 'easy',
     question: 'What does the req.query object contain in Express?',
     options: [
-      'A. Query string parameters',
-      'B. Route parameters',
+      'A. Route parameters',
+      'B. Query string parameters',
       'C. Request body data',
       'D. Request headers'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'B'
   },
   {
     id: 7,
@@ -90,12 +90,12 @@ export const questions = [
     difficulty: 'easy',
     question: 'What method is used to send a JSON response in Express?',
     options: [
-      'A. res.json()',
-      'B. res.send()',
-      'C. res.render()',
+      'A. res.send()',
+      'B. res.render()',
+      'C. res.json()',
       'D. res.sendFile()'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 8,
@@ -104,12 +104,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is route parameter in Express?',
     options: [
-      'A. A variable in the route path that captures a value from the URL',
-      'B. A query string parameter',
-      'C. A request body parameter',
-      'D. A header parameter'
+      'A. A query string parameter',
+      'B. A request body parameter',
+      'C. A header parameter',
+      'D. A variable in the route path that captures a value from the URL'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 9,
@@ -123,7 +123,7 @@ export const questions = [
       'C. To throw an error',
       'D. To render a view'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'A'
   },
   {
     id: 10,
@@ -133,11 +133,11 @@ export const questions = [
     question: 'How do you handle errors in Express.js?',
     options: [
       'A. Using error-handling middleware with four parameters',
-      'B. Using try-catch blocks',
-      'C. Using promises',
-      'D. All of the above'
+      'B. All of the above',
+      'C. Using try-catch blocks',
+      'D. Using promises'
     ],
-    correctAnswer: 'C' // Moved from D to C
+    correctAnswer: 'B'
   },
   {
     id: 11,
@@ -146,12 +146,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the signature of an error-handling middleware function?',
     options: [
-      'A. (err, req, res, next)',
-      'B. (req, res, next)',
-      'C. (err, res, next)',
+      'A. (req, res, next)',
+      'B. (err, res, next)',
+      'C. (err, req, res, next)',
       'D. (req, res, err, next)'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 12,
@@ -160,12 +160,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'How do you serve static files in Express?',
     options: [
-      'A. Using express.static() middleware',
-      'B. Using app.static() method',
-      'C. Using res.sendFile()',
-      'D. Using app.use(express.static())'
+      'A. Using app.static() method',
+      'B. Using res.sendFile()',
+      'C. Using app.use(express.static())',
+      'D. Using express.static() middleware'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 13,
@@ -174,12 +174,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'Which of the following is a template engine that can be used with Express?',
     options: [
-      'A. EJS',
-      'B. Pug',
-      'C. Handlebars',
-      'D. All of the above'
+      'A. All of the above',
+      'B. EJS',
+      'C. Pug',
+      'D. Handlebars'
     ],
-    correctAnswer: 'B' // Moved from D to B
+    correctAnswer: 'A'
   },
   {
     id: 14,
@@ -188,12 +188,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of body-parser in Express?',
     options: [
-      'A. To parse incoming request bodies',
-      'B. To parse query strings',
+      'A. To parse query strings',
+      'B. To parse incoming request bodies',
       'C. To parse route parameters',
       'D. To parse headers'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'B'
   },
   {
     id: 15,
@@ -202,12 +202,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of app.use() in Express?',
     options: [
-      'A. To mount middleware functions at a specified path',
-      'B. To handle GET requests',
-      'C. To handle POST requests',
+      'A. To handle GET requests',
+      'B. To handle POST requests',
+      'C. To mount middleware functions at a specified path',
       'D. To handle error responses'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 16,
@@ -216,12 +216,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of express.Router()?',
     options: [
-      'A. To create modular, mountable route handlers',
-      'B. To handle HTTP requests',
-      'C. To manage middleware',
-      'D. To handle errors'
+      'A. To handle HTTP requests',
+      'B. To manage middleware',
+      'C. To handle errors',
+      'D. To create modular, mountable route handlers'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 17,
@@ -235,7 +235,7 @@ export const questions = [
       'C. A type of error handling',
       'D. A type of routing'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'A'
   },
   {
     id: 18,
@@ -244,12 +244,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'How do you enable CORS in Express?',
     options: [
-      'A. Using the cors middleware package',
-      'B. Using app.cors()',
+      'A. Using app.cors()',
+      'B. Using the cors middleware package',
       'C. Using express.cors()',
       'D. Using res.cors()'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'B'
   },
   {
     id: 19,
@@ -258,12 +258,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is the purpose of sessions in Express?',
     options: [
-      'A. To store user data across multiple requests',
-      'B. To manage database connections',
-      'C. To handle file uploads',
+      'A. To manage database connections',
+      'B. To handle file uploads',
+      'C. To store user data across multiple requests',
       'D. To manage static files'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 20,
@@ -272,12 +272,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'How do you set a cookie in Express?',
     options: [
-      'A. Using res.cookie()',
-      'B. Using req.cookie()',
-      'C. Using app.cookie()',
-      'D. Using express.cookie()'
+      'A. Using req.cookie()',
+      'B. Using app.cookie()',
+      'C. Using express.cookie()',
+      'D. Using res.cookie()'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 21,
@@ -286,12 +286,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is a common authentication strategy used with Express?',
     options: [
-      'A. JWT (JSON Web Tokens)',
-      'B. Session-based authentication',
-      'C. OAuth',
-      'D. All of the above'
+      'A. All of the above',
+      'B. JWT (JSON Web Tokens)',
+      'C. Session-based authentication',
+      'D. OAuth'
     ],
-    correctAnswer: 'B' // Moved from D to B
+    correctAnswer: 'A'
   },
   {
     id: 22,
@@ -300,12 +300,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is Passport.js in the Express ecosystem?',
     options: [
-      'A. An authentication middleware for Node.js',
-      'B. A database library',
+      'A. A database library',
+      'B. An authentication middleware for Node.js',
       'C. A testing framework',
       'D. A build tool'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'B'
   },
   {
     id: 23,
@@ -314,12 +314,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'How do you access environment variables in Express?',
     options: [
-      'A. Using process.env',
-      'B. Using app.env',
-      'C. Using express.env',
+      'A. Using app.env',
+      'B. Using express.env',
+      'C. Using process.env',
       'D. Using req.env'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 24,
@@ -328,12 +328,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of app.set() in Express?',
     options: [
-      'A. To set application settings',
-      'B. To set route parameters',
-      'C. To set middleware',
-      'D. To set error handlers'
+      'A. To set route parameters',
+      'B. To set middleware',
+      'C. To set error handlers',
+      'D. To set application settings'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 25,
@@ -347,7 +347,7 @@ export const questions = [
       'C. To get route parameters',
       'D. To get middleware'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'A'
   },
   {
     id: 26,
@@ -356,12 +356,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'How do you handle file uploads in Express?',
     options: [
-      'A. Using multer middleware',
-      'B. Using body-parser',
+      'A. Using body-parser',
+      'B. Using multer middleware',
       'C. Using express.json()',
       'D. Using express.urlencoded()'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'B'
   },
   {
     id: 27,
@@ -372,10 +372,10 @@ export const questions = [
     options: [
       'A. Joi',
       'B. Yup',
-      'C. Validator.js',
-      'D. All of the above'
+      'C. All of the above',
+      'D. Validator.js'
     ],
-    correctAnswer: 'D' // Kept as D
+    correctAnswer: 'C'
   },
   {
     id: 28,
@@ -384,12 +384,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of morgan in Express?',
     options: [
-      'A. A logging middleware for HTTP requests',
-      'B. A database library',
-      'C. A testing framework',
-      'D. A build tool'
+      'A. A database library',
+      'B. A testing framework',
+      'C. A build tool',
+      'D. A logging middleware for HTTP requests'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 29,
@@ -403,7 +403,7 @@ export const questions = [
       'C. To compress database queries',
       'D. To compress session data'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'A'
   },
   {
     id: 30,
@@ -412,12 +412,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of helmet in Express?',
     options: [
-      'A. To secure HTTP headers',
-      'B. To secure database connections',
+      'A. To secure database connections',
+      'B. To secure HTTP headers',
       'C. To secure file uploads',
       'D. To secure sessions'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'B'
   },
   {
     id: 31,
@@ -426,12 +426,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is the purpose of rate limiting in Express?',
     options: [
-      'A. To limit the number of requests a client can make',
-      'B. To limit the size of requests',
-      'C. To limit the speed of responses',
+      'A. To limit the size of requests',
+      'B. To limit the speed of responses',
+      'C. To limit the number of requests a client can make',
       'D. To limit the number of concurrent connections'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 32,
@@ -445,7 +445,7 @@ export const questions = [
       'C. Using load balancing',
       'D. All of the above'
     ],
-    correctAnswer: 'A' // Moved from D to A
+    correctAnswer: 'D'
   },
   {
     id: 33,
@@ -459,7 +459,7 @@ export const questions = [
       'C. To manage middleware',
       'D. To handle errors'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'A'
   },
   {
     id: 34,
@@ -469,11 +469,11 @@ export const questions = [
     question: 'What is a best practice for REST API versioning?',
     options: [
       'A. Including the version in the URL path',
-      'B. Using query parameters for versioning',
-      'C. Using custom headers',
-      'D. All of the above'
+      'B. All of the above',
+      'C. Using query parameters for versioning',
+      'D. Using custom headers'
     ],
-    correctAnswer: 'C' // Moved from D to C
+    correctAnswer: 'B'
   },
   {
     id: 35,
@@ -482,12 +482,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What status code indicates a successful GET request?',
     options: [
-      'A. 200',
-      'B. 201',
-      'C. 204',
+      'A. 201',
+      'B. 204',
+      'C. 200',
       'D. 301'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 36,
@@ -496,12 +496,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What status code indicates a resource was created successfully?',
     options: [
-      'A. 201',
-      'B. 200',
-      'C. 204',
-      'D. 301'
+      'A. 200',
+      'B. 204',
+      'C. 301',
+      'D. 201'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 37,
@@ -515,7 +515,7 @@ export const questions = [
       'C. 403',
       'D. 404'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'A'
   },
   {
     id: 38,
@@ -524,12 +524,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What status code indicates a resource was not found?',
     options: [
-      'A. 404',
-      'B. 400',
+      'A. 400',
+      'B. 404',
       'C. 401',
       'D. 403'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'B'
   },
   {
     id: 39,
@@ -538,12 +538,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What status code indicates an internal server error?',
     options: [
-      'A. 500',
-      'B. 501',
-      'C. 502',
+      'A. 501',
+      'B. 502',
+      'C. 500',
       'D. 503'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 40,
@@ -552,12 +552,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'How do you enable HTTPS in Express?',
     options: [
-      'A. Using the https module with a certificate',
-      'B. Using app.https()',
-      'C. Using express.https()',
-      'D. Using res.https()'
+      'A. Using app.https()',
+      'B. Using express.https()',
+      'C. Using res.https()',
+      'D. Using the https module with a certificate'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 41,
@@ -571,7 +571,7 @@ export const questions = [
       'C. To manage database connections',
       'D. To handle file uploads'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'A'
   },
   {
     id: 42,
@@ -581,11 +581,11 @@ export const questions = [
     question: 'What is a common testing framework for Express applications?',
     options: [
       'A. Jest',
-      'B. Mocha',
-      'C. Supertest',
-      'D. All of the above'
+      'B. All of the above',
+      'C. Mocha',
+      'D. Supertest'
     ],
-    correctAnswer: 'C' // Moved from D to C
+    correctAnswer: 'B'
   },
   {
     id: 43,
@@ -594,12 +594,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'How do you enable debug logging in Express?',
     options: [
-      'A. Using the DEBUG environment variable',
-      'B. Using app.debug()',
-      'C. Using express.debug()',
+      'A. Using app.debug()',
+      'B. Using express.debug()',
+      'C. Using the DEBUG environment variable',
       'D. Using req.debug()'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 44,
@@ -613,7 +613,7 @@ export const questions = [
       'C. Using environment variables',
       'D. All of the above'
     ],
-    correctAnswer: 'A' // Moved from D to A
+    correctAnswer: 'D'
   },
   {
     id: 45,
@@ -622,12 +622,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is a security best practice in Express?',
     options: [
-      'A. Sanitize user input',
-      'B. Use HTTPS',
-      'C. Keep dependencies updated',
-      'D. All of the above'
+      'A. All of the above',
+      'B. Sanitize user input',
+      'C. Use HTTPS',
+      'D. Keep dependencies updated'
     ],
-    correctAnswer: 'B' // Moved from D to B
+    correctAnswer: 'A'
   },
   {
     id: 46,
@@ -637,11 +637,11 @@ export const questions = [
     question: 'What is a common deployment platform for Express applications?',
     options: [
       'A. Heroku',
-      'B. AWS',
-      'C. Vercel (serverless)',
-      'D. All of the above'
+      'B. All of the above',
+      'C. AWS',
+      'D. Vercel (serverless)'
     ],
-    correctAnswer: 'C' // Moved from D to C
+    correctAnswer: 'B'
   },
   {
     id: 47,
@@ -650,12 +650,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the default port for Express applications?',
     options: [
-      'A. 3000',
-      'B. 80',
-      'C. 443',
+      'A. 80',
+      'B. 443',
+      'C. 3000',
       'D. 8080'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 48,
@@ -669,7 +669,7 @@ export const questions = [
       'C. bodyParser.json()',
       'D. Both A and C'
     ],
-    correctAnswer: 'A' // Moved from D to A
+    correctAnswer: 'D'
   },
   {
     id: 49,
@@ -683,7 +683,7 @@ export const questions = [
       'C. bodyParser.urlencoded()',
       'D. Both A and C'
     ],
-    correctAnswer: 'B' // Moved from D to B
+    correctAnswer: 'D'
   },
   {
     id: 50,
@@ -697,7 +697,7 @@ export const questions = [
       'C. Use middleware effectively',
       'D. All of the above'
     ],
-    correctAnswer: 'C' // Moved from D to C
+    correctAnswer: 'D'
   }
 ];
 

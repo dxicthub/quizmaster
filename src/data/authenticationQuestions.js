@@ -1,3 +1,4 @@
+
 export const questions = [
   {
     id: 1,
@@ -6,12 +7,12 @@ export const questions = [
     difficulty: 'easy',
     question: 'What is authentication?',
     options: [
-      'A. Verifying the identity of a user',
-      'B. Authorizing user actions',
-      'C. Encrypting user data',
-      'D. Logging user activity'
+      'A. Authorizing user actions',
+      'B. Encrypting user data',
+      'C. Logging user activity',
+      'D. Verifying the identity of a user'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'D'
   },
   {
     id: 2,
@@ -20,12 +21,12 @@ export const questions = [
     difficulty: 'easy',
     question: 'What is the difference between authentication and authorization?',
     options: [
-      'A. Authentication verifies identity; authorization verifies permissions',
+      'A. They are the same thing',
       'B. Authorization verifies identity; authentication verifies permissions',
-      'C. They are the same thing',
-      'D. Authentication is for users; authorization is for systems'
+      'C. Authentication is for users; authorization is for systems',
+      'D. Authentication verifies identity; authorization verifies permissions'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'D'
   },
   {
     id: 3,
@@ -35,11 +36,11 @@ export const questions = [
     question: 'Which of the following is a common authentication method?',
     options: [
       'A. Password-based',
-      'B. Biometric',
-      'C. Multi-factor',
+      'B. Multi-factor',
+      'C. Biometric',
       'D. All of the above'
     ],
-    correctAnswer: 'A' // Moved from D to A
+    correctAnswer: 'D'
   },
   {
     id: 4,
@@ -48,12 +49,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the best practice for storing passwords?',
     options: [
-      'A. Hashing and salting',
-      'B. Storing in plain text',
-      'C. Using base64 encoding',
+      'A. Storing in plain text',
+      'B. Using base64 encoding',
+      'C. Hashing and salting',
       'D. Encrypting with AES'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 5,
@@ -63,11 +64,11 @@ export const questions = [
     question: 'Which of the following is a secure password hashing algorithm?',
     options: [
       'A. bcrypt',
-      'B. MD5',
-      'C. SHA-1',
+      'B. SHA-1',
+      'C. MD5',
       'D. Base64'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'A'
   },
   {
     id: 6,
@@ -76,12 +77,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What does JWT stand for?',
     options: [
-      'A. JSON Web Token',
-      'B. JavaScript Web Token',
+      'A. JavaScript Web Token',
+      'B. JSON Web Token',
       'C. Java Web Token',
       'D. JSON Written Token'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'B'
   },
   {
     id: 7,
@@ -95,7 +96,7 @@ export const questions = [
       'C. Header, Claims, Verify',
       'D. Header, Payload, Verify'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'A'
   },
   {
     id: 8,
@@ -104,12 +105,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is OAuth 2.0?',
     options: [
-      'A. An authorization framework',
-      'B. An authentication protocol',
-      'C. A database system',
-      'D. A programming language'
+      'A. An authentication protocol',
+      'B. A database system',
+      'C. A programming language',
+      'D. An authorization framework'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 9,
@@ -118,12 +119,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is the purpose of an OAuth authorization code?',
     options: [
-      'A. To exchange for an access token',
-      'B. To authenticate the user',
-      'C. To store user data',
-      'D. To encrypt the connection'
+      'A. To store user data',
+      'B. To exchange for an access token',
+      'C. To encrypt the connection',
+      'D. To authenticate the user'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'B'
   },
   {
     id: 10,
@@ -132,12 +133,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is an OAuth scope?',
     options: [
-      'A. A permission boundary',
-      'B. A security token',
-      'C. A user role',
+      'A. A security token',
+      'B. A user role',
+      'C. A permission boundary',
       'D. An API endpoint'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'C'
   },
   {
     id: 11,
@@ -146,12 +147,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is Multi-Factor Authentication (MFA)?',
     options: [
-      'A. Using multiple factors to verify identity',
-      'B. Using multiple passwords',
-      'C. Using multiple usernames',
-      'D. Using multiple sessions'
+      'A. Using multiple passwords',
+      'B. Using multiple usernames',
+      'C. Using multiple sessions',
+      'D. Using multiple factors to verify identity'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'D'
   },
   {
     id: 12,
@@ -160,12 +161,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'Which of the following is NOT a factor in MFA?',
     options: [
-      'A. Something you want',
-      'B. Something you know',
-      'C. Something you have',
-      'D. Something you are'
+      'A. Something you know',
+      'B. Something you have',
+      'C. Something you are',
+      'D. Something you want'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 13,
@@ -174,12 +175,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is session management in authentication?',
     options: [
-      'A. Managing user sessions after authentication',
-      'B. Managing user passwords',
-      'C. Managing user roles',
-      'D. Managing user permissions'
+      'A. Managing user passwords',
+      'B. Managing user roles',
+      'C. Managing user permissions',
+      'D. Managing user sessions after authentication'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 14,
@@ -188,12 +189,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is a session cookie?',
     options: [
-      'A. A cookie that stores session information',
-      'B. A cookie that stores user preferences',
+      'A. A cookie that stores user preferences',
+      'B. A cookie that stores session information',
       'C. A cookie that stores page views',
       'D. A cookie that stores analytics data'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'B'
   },
   {
     id: 15,
@@ -202,12 +203,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is the purpose of the HttpOnly flag on cookies?',
     options: [
-      'A. To prevent JavaScript access to the cookie',
-      'B. To prevent HTTP access to the cookie',
-      'C. To prevent HTTPS access to the cookie',
-      'D. To prevent all access to the cookie'
+      'A. To prevent HTTP access to the cookie',
+      'B. To prevent HTTPS access to the cookie',
+      'C. To prevent all access to the cookie',
+      'D. To prevent JavaScript access to the cookie'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'D'
   },
   {
     id: 16,
@@ -216,12 +217,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is the purpose of the Secure flag on cookies?',
     options: [
-      'A. To ensure cookies are only sent over HTTPS',
-      'B. To encrypt cookies',
-      'C. To prevent JavaScript access',
-      'D. To prevent HTTP access'
+      'A. To encrypt cookies',
+      'B. To prevent JavaScript access',
+      'C. To prevent HTTP access',
+      'D. To ensure cookies are only sent over HTTPS'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 17,
@@ -235,7 +236,7 @@ export const questions = [
       'C. To prevent SQL injection',
       'D. To prevent session hijacking'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'A'
   },
   {
     id: 18,
@@ -244,12 +245,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is a refresh token in OAuth 2.0?',
     options: [
-      'A. A token used to obtain new access tokens',
-      'B. A token used to authenticate users',
+      'A. A token used to authenticate users',
+      'B. A token used to obtain new access tokens',
       'C. A token used to authorize actions',
       'D. A token used to encrypt data'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'B'
   },
   {
     id: 19,
@@ -258,12 +259,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is an access token in OAuth 2.0?',
     options: [
-      'A. A token used to access protected resources',
-      'B. A token used to refresh sessions',
-      'C. A token used to authenticate users',
+      'A. A token used to refresh sessions',
+      'B. A token used to authenticate users',
+      'C. A token used to access protected resources',
       'D. A token used to encrypt data'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'C'
   },
   {
     id: 20,
@@ -272,12 +273,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is passwordless authentication?',
     options: [
-      'A. Authentication without using a password',
-      'B. Authentication without any security',
-      'C. Authentication without a username',
-      'D. Authentication without a server'
+      'A. Authentication without any security',
+      'B. Authentication without a username',
+      'C. Authentication without a server',
+      'D. Authentication without using a password'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 21,
@@ -286,12 +287,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is a magic link in authentication?',
     options: [
-      'A. A one-time login link sent via email',
-      'B. A magic spell for authentication',
-      'C. A permanent login link',
-      'D. A link to reset password'
+      'A. A magic spell for authentication',
+      'B. A permanent login link',
+      'C. A link to reset password',
+      'D. A one-time login link sent via email'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 22,
@@ -300,12 +301,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is social login?',
     options: [
-      'A. Authentication using social media accounts',
-      'B. Authentication using social security numbers',
-      'C. Authentication using social networks',
-      'D. Authentication using social engineering'
+      'A. Authentication using social security numbers',
+      'B. Authentication using social networks',
+      'C. Authentication using social engineering',
+      'D. Authentication using social media accounts'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'D'
   },
   {
     id: 23,
@@ -314,12 +315,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is SAML?',
     options: [
-      'A. Security Assertion Markup Language',
-      'B. Simple Authentication Markup Language',
-      'C. Standard Authentication Markup Language',
-      'D. Secure Authentication Markup Language'
+      'A. Simple Authentication Markup Language',
+      'B. Standard Authentication Markup Language',
+      'C. Secure Authentication Markup Language',
+      'D. Security Assertion Markup Language'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'D'
   },
   {
     id: 24,
@@ -328,12 +329,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is LDAP?',
     options: [
-      'A. Lightweight Directory Access Protocol',
-      'B. Lightweight Data Access Protocol',
-      'C. Lightweight Directory Authentication Protocol',
-      'D. Lightweight Data Authentication Protocol'
+      'A. Lightweight Data Access Protocol',
+      'B. Lightweight Directory Authentication Protocol',
+      'C. Lightweight Data Authentication Protocol',
+      'D. Lightweight Directory Access Protocol'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 25,
@@ -342,12 +343,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is Single Sign-On (SSO)?',
     options: [
-      'A. One authentication for multiple applications',
-      'B. One application for multiple authentications',
-      'C. One session for multiple users',
-      'D. One user for multiple sessions'
+      'A. One application for multiple authentications',
+      'B. One session for multiple users',
+      'C. One user for multiple sessions',
+      'D. One authentication for multiple applications'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 26,
@@ -356,12 +357,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is a common protection against brute force attacks?',
     options: [
-      'A. Rate limiting',
-      'B. Password hashing',
+      'A. Password hashing',
+      'B. Rate limiting',
       'C. Session management',
       'D. Encryption'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'B'
   },
   {
     id: 27,
@@ -370,12 +371,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is account lockout?',
     options: [
-      'A. Locking an account after failed login attempts',
-      'B. Locking an account after successful login',
-      'C. Locking an account after inactivity',
-      'D. Locking an account after expiration'
+      'A. Locking an account after successful login',
+      'B. Locking an account after inactivity',
+      'C. Locking an account after expiration',
+      'D. Locking an account after failed login attempts'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'D'
   },
   {
     id: 28,
@@ -384,12 +385,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is a secure way to implement password reset?',
     options: [
-      'A. Send a reset link with a token',
-      'B. Send the password via email',
-      'C. Reset without verification',
-      'D. Use a fixed reset code'
+      'A. Send the password via email',
+      'B. Reset without verification',
+      'C. Use a fixed reset code',
+      'D. Send a reset link with a token'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 29,
@@ -398,12 +399,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is biometric authentication?',
     options: [
-      'A. Authentication using physical characteristics',
-      'B. Authentication using biological samples',
-      'C. Authentication using biometric data',
-      'D. All of the above'
+      'A. Authentication using biological samples',
+      'B. Authentication using comprehensive data',
+      'C. All of the above',
+      'D. Authentication using physical characteristics'
     ],
-    correctAnswer: 'A' // Moved from D to A
+    correctAnswer: 'D'
   },
   {
     id: 30,
@@ -412,12 +413,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What does 2FA stand for?',
     options: [
-      'A. Two-Factor Authentication',
-      'B. Two-Factor Authorization',
+      'A. Two-Factor Authorization',
+      'B. Two-Factor Authentication',
       'C. Two-Factor Access',
       'D. Two-Factor Approval'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'B'
   },
   {
     id: 31,
@@ -426,12 +427,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is TOTP?',
     options: [
-      'A. Time-based One-Time Password',
-      'B. Token-based One-Time Password',
-      'C. Text-based One-Time Password',
-      'D. Trust-based One-Time Password'
+      'A. Token-based One-Time Password',
+      'B. Text-based One-Time Password',
+      'C. Trust-based One-Time Password',
+      'D. Time-based One-Time Password'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'D'
   },
   {
     id: 32,
@@ -441,11 +442,11 @@ export const questions = [
     question: 'What is HOTP?',
     options: [
       'A. HMAC-based One-Time Password',
-      'B. Hash-based One-Time Password',
-      'C. HMAC-based OTP',
-      'D. All of the above'
+      'B. HMAC-based OTP',
+      'C. All of the above',
+      'D. Hash-based One-Time Password'
     ],
-    correctAnswer: 'D' // Kept as D
+    correctAnswer: 'A'
   },
   {
     id: 33,
@@ -454,12 +455,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is an authentication token?',
     options: [
-      'A. A piece of data used to authenticate',
-      'B. A piece of hardware for authentication',
-      'C. A piece of software for authentication',
-      'D. A piece of code for authentication'
+      'A. A piece of hardware for authentication',
+      'B. A piece of software for authentication',
+      'C. A piece of code for authentication',
+      'D. A piece of data used to authenticate'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 34,
@@ -468,12 +469,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is a bearer token?',
     options: [
-      'A. A token that grants access to the bearer',
-      'B. A token that carries user data',
+      'A. A token that carries user data',
+      'B. A token that grants access to the bearer',
       'C. A token that carries authorization',
       'D. A token that carries authentication'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'B'
   },
   {
     id: 35,
@@ -482,12 +483,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is CSRF protection in authentication?',
     options: [
-      'A. Protecting against Cross-Site Request Forgery attacks',
-      'B. Protecting against Cross-Site Scripting attacks',
-      'C. Protecting against SQL injection attacks',
-      'D. Protecting against session hijacking'
+      'A. Protecting against Cross-Site Scripting attacks',
+      'B. Protecting against SQL injection attacks',
+      'C. Protecting against session hijacking',
+      'D. Protecting against Cross-Site Request Forgery attacks'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'D'
   },
   {
     id: 36,
@@ -496,12 +497,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is XSS protection?',
     options: [
-      'A. Protecting against Cross-Site Scripting attacks',
-      'B. Protecting against Cross-Site Request Forgery attacks',
-      'C. Protecting against SQL injection attacks',
-      'D. Protecting against session hijacking'
+      'A. Protecting against Cross-Site Request Forgery attacks',
+      'B. Protecting against SQL injection attacks',
+      'C. Protecting against session hijacking',
+      'D. Protecting against Cross-Site Scripting attacks'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 37,
@@ -510,12 +511,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is session fixation?',
     options: [
-      'A. An attack where an attacker sets a session ID',
-      'B. An attack where an attacker steals a session ID',
-      'C. An attack where an attacker deletes a session ID',
-      'D. An attack where an attacker encrypts a session ID'
+      'A. An attack where an attacker steals a session ID',
+      'B. An attack where an attacker deletes a session ID',
+      'C. An attack where an attacker encrypts a session ID',
+      'D. An attack where an attacker sets a session ID'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 38,
@@ -524,12 +525,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is session hijacking?',
     options: [
-      'A. An attack where an attacker steals a session ID',
-      'B. An attack where an attacker sets a session ID',
-      'C. An attack where an attacker deletes a session ID',
-      'D. An attack where an attacker encrypts a session ID'
+      'A. An attack where an attacker sets a session ID',
+      'B. An attack where an attacker deletes a session ID',
+      'C. An attack where an attacker encrypts a session ID',
+      'D. An attack where an attacker steals a session ID'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'D'
   },
   {
     id: 39,
@@ -538,12 +539,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is OIDC?',
     options: [
-      'A. OpenID Connect',
-      'B. Open Identity Connect',
-      'C. OpenID Configuration',
-      'D. Open Identity Configuration'
+      'A. Open Identity Connect',
+      'B. OpenID Configuration',
+      'C. Open Identity Configuration',
+      'D. OpenID Connect'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'D'
   },
   {
     id: 40,
@@ -553,11 +554,11 @@ export const questions = [
     question: 'Which of the following is an authentication best practice?',
     options: [
       'A. Use strong passwords',
-      'B. Implement MFA',
-      'C. Use secure protocols (HTTPS)',
+      'B. Use secure protocols (HTTPS)',
+      'C. Implement MFA',
       'D. All of the above'
     ],
-    correctAnswer: 'D' // Kept as D
+    correctAnswer: 'D'
   },
   {
     id: 41,
@@ -566,12 +567,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is Zero Trust in authentication?',
     options: [
-      'A. Never trust, always verify',
-      'B. Always trust, never verify',
-      'C. Trust once, verify never',
-      'D. Verify once, trust always'
+      'A. Always trust, never verify',
+      'B. Trust once, verify never',
+      'C. Verify once, trust always',
+      'D. Never trust, always verify'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 42,
@@ -580,12 +581,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is an Identity Provider (IdP)?',
     options: [
-      'A. A service that manages user identities',
-      'B. A service that provides user data',
-      'C. A service that provides authentication',
+      'A. A service that provides user data',
+      'B. A service that provides authentication',
+      'C. A service that manages user identities',
       'D. All of the above'
     ],
-    correctAnswer: 'B' // Moved from D to B
+    correctAnswer: 'D'
   },
   {
     id: 43,
@@ -594,12 +595,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is federated identity?',
     options: [
-      'A. Sharing identity across multiple systems',
-      'B. Centralized identity management',
-      'C. Decentralized identity management',
-      'D. Local identity management'
+      'A. Centralized identity management',
+      'B. Decentralized identity management',
+      'C. Local identity management',
+      'D. Sharing identity across multiple systems'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'D'
   },
   {
     id: 44,
@@ -608,12 +609,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is a password manager?',
     options: [
-      'A. A tool that securely stores and manages passwords',
-      'B. A tool that generates passwords',
-      'C. A tool that encrypts passwords',
-      'D. All of the above'
+      'A. A tool that generates passwords',
+      'B. A tool that encrypts passwords',
+      'C. All of the above',
+      'D. A tool that securely stores and manages passwords'
     ],
-    correctAnswer: 'D' // Kept as D
+    correctAnswer: 'D'
   },
   {
     id: 45,
@@ -622,12 +623,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is the purpose of rate limiting in authentication?',
     options: [
-      'A. To prevent brute force attacks',
-      'B. To improve performance',
-      'C. To reduce bandwidth usage',
-      'D. To cache authentication tokens'
+      'A. To improve performance',
+      'B. To reduce bandwidth usage',
+      'C. To cache authentication tokens',
+      'D. To prevent brute force attacks'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 46,
@@ -636,12 +637,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is PKCE in OAuth?',
     options: [
-      'A. Proof Key for Code Exchange',
-      'B. Public Key for Code Exchange',
+      'A. Public Key for Code Exchange',
+      'B. Proof Key for Code Exchange',
       'C. Private Key for Code Exchange',
       'D. Protected Key for Code Exchange'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'B'
   },
   {
     id: 47,
@@ -650,12 +651,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is device authentication?',
     options: [
-      'A. Authenticating a device rather than a user',
-      'B. Authenticating a user on a device',
-      'C. Authenticating a device user',
-      'D. Authenticating a device session'
+      'A. Authenticating a user on a device',
+      'B. Authenticating a device user',
+      'C. Authenticating a device session',
+      'D. Authenticating a device rather than a user'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'D'
   },
   {
     id: 48,
@@ -664,12 +665,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is continuous authentication?',
     options: [
-      'A. Continuously verifying identity throughout a session',
-      'B. Authenticating continuously without stopping',
-      'C. Authenticating multiple times simultaneously',
-      'D. Authenticating for multiple applications'
+      'A. Authenticating continuously without stopping',
+      'B. Authenticating multiple times simultaneously',
+      'C. Authenticating for multiple applications',
+      'D. Continuously verifying identity throughout a session'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 49,
@@ -678,12 +679,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'Which of the following is an authentication standard?',
     options: [
-      'A. OAuth 2.0',
-      'B. SAML 2.0',
-      'C. OpenID Connect',
-      'D. All of the above'
+      'A. SAML 2.0',
+      'B. OpenID Connect',
+      'C. All of the above',
+      'D. OAuth 2.0'
     ],
-    correctAnswer: 'A' // Moved from D to A
+    correctAnswer: 'C'
   },
   {
     id: 50,
@@ -692,12 +693,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is a trend in authentication?',
     options: [
-      'A. Passwordless authentication',
-      'B. Biometric authentication',
-      'C. Continuous authentication',
-      'D. All of the above'
+      'A. Biometric authentication',
+      'B. Continuous authentication',
+      'C. All of the above',
+      'D. Passwordless authentication'
     ],
-    correctAnswer: 'B' // Moved from D to B
+    correctAnswer: 'C'
   }
 ];
 

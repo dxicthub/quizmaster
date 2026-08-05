@@ -6,12 +6,12 @@ export const questions = [
     difficulty: 'easy',
     question: 'What is software deployment?',
     options: [
-      'A. The process of releasing software to users',
+      'A. The process of releasing software to users or a target environment',
       'B. Writing software code',
       'C. Designing software architecture',
       'D. Testing software'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'A'
   },
   {
     id: 2,
@@ -20,12 +20,12 @@ export const questions = [
     difficulty: 'easy',
     question: 'Which of the following is a deployment platform?',
     options: [
-      'A. Vercel',
-      'B. GitHub',
-      'C. Git',
-      'D. Node.js'
+      'A. Git',
+      'B. Node.js',
+      'C. Vercel',
+      'D. JavaScript'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'C'
   },
   {
     id: 3,
@@ -34,54 +34,54 @@ export const questions = [
     difficulty: 'easy',
     question: 'What is continuous deployment?',
     options: [
-      'A. Automatically deploying every change to production',
-      'B. Deploying once a month',
-      'C. Manual deployment process',
-      'D. Deployment only on weekends'
+      'A. Deploying once a month',
+      'B. Manual deployment process',
+      'C. Deployment only on weekends',
+      'D. Automatically deploying changes to production after they pass the required checks'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 4,
     type: 'multiple-choice',
     objective: 'Deployment Configuration',
     difficulty: 'medium',
-    question: 'What are environment variables used for in deployment?',
+    question: 'What are environment variables commonly used for in deployment?',
     options: [
-      'A. To store configuration values',
-      'B. To store source code',
-      'C. To store database records',
-      'D. To store images'
+      'A. Storing configuration values such as API endpoints and environment-specific settings',
+      'B. Storing source code',
+      'C. Storing database records',
+      'D. Storing images'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'A'
   },
   {
     id: 5,
     type: 'multiple-choice',
     objective: 'CI/CD',
     difficulty: 'easy',
-    question: 'What does CI/CD stand for?',
+    question: 'What does CI/CD commonly stand for?',
     options: [
-      'A. Continuous Integration/Continuous Deployment',
-      'B. Continuous Input/Continuous Delivery',
-      'C. Continuous Integration/Continuous Delivery',
-      'D. Continuous Input/Continuous Deployment'
+      'A. Continuous Input / Continuous Delivery',
+      'B. Continuous Integration / Continuous Delivery',
+      'C. Continuous Integration / Continuous Design',
+      'D. Continuous Input / Continuous Deployment'
     ],
-    correctAnswer: 'B' // Moved from C to B
+    correctAnswer: 'B'
   },
   {
     id: 6,
     type: 'multiple-choice',
     objective: 'CI',
     difficulty: 'medium',
-    question: 'What is Continuous Integration?',
+    question: 'What is Continuous Integration (CI)?',
     options: [
-      'A. Automatically building and testing code changes',
-      'B. Automatically deploying code changes',
-      'C. Manually integrating code changes',
+      'A. Automatically deploying every code change to production',
+      'B. Manually integrating code changes',
+      'C. Frequently integrating code changes and automatically building and testing them',
       'D. Testing code changes manually'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'C'
   },
   {
     id: 7,
@@ -90,40 +90,40 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is Continuous Delivery?',
     options: [
-      'A. Automatically deploying code to staging',
-      'B. Automatically deploying code to production',
+      'A. Automatically deploying every change directly to production',
+      'B. Keeping software in a releasable state through an automated build, test, and delivery process',
       'C. Manually deploying code',
       'D. Testing code manually'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'B'
   },
   {
     id: 8,
     type: 'multiple-choice',
     objective: 'Deployment Environments',
     difficulty: 'medium',
-    question: 'What are common deployment environments?',
+    question: 'Which set represents common deployment environments?',
     options: [
       'A. Development, Staging, Production',
-      'B. Development, Testing, Production',
-      'C. Development, Staging, Testing',
-      'D. Staging, Testing, Production'
+      'B. Development, Gaming, Production',
+      'C. Design, Staging, Production',
+      'D. Development, Backup, Production'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'A'
   },
   {
     id: 9,
     type: 'multiple-choice',
     objective: 'Staging Environment',
     difficulty: 'medium',
-    question: 'What is a staging environment used for?',
+    question: 'What is a staging environment primarily used for?',
     options: [
-      'A. Testing before production deployment',
-      'B. Development of new features',
-      'C. Production of final code',
-      'D. Testing in production'
+      'A. Writing source code',
+      'B. Testing and validating changes before production deployment',
+      'C. Replacing the production environment permanently',
+      'D. Storing user passwords'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'B'
   },
   {
     id: 10,
@@ -132,26 +132,26 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the production environment?',
     options: [
-      'A. The environment where the live application runs',
-      'B. The environment where development happens',
-      'C. The environment where testing happens',
-      'D. The environment where staging happens'
+      'A. The environment where developers experiment with code',
+      'B. The environment used only for automated testing',
+      'C. The environment where the live application or service is made available to users',
+      'D. The environment used only for staging'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'C'
   },
   {
     id: 11,
     type: 'multiple-choice',
     objective: 'Deployment Methods',
     difficulty: 'medium',
-    question: 'What is rolling deployment?',
+    question: 'What is a rolling deployment?',
     options: [
-      'A. Updating instances gradually',
-      'B. Updating all instances at once',
-      'C. Rolling back to previous version',
-      'D. Deploying to a single instance'
+      'A. Updating every server at exactly the same time',
+      'B. Reverting to a previous version',
+      'C. Deploying to only one server permanently',
+      'D. Gradually updating instances or servers in batches'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 12,
@@ -160,12 +160,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is blue-green deployment?',
     options: [
-      'A. Running two identical environments for zero-downtime deployment',
-      'B. Running two different environments',
-      'C. Running one environment at a time',
-      'D. Running multiple environments'
+      'A. Running two separate environments so traffic can be switched between the current and new versions',
+      'B. Running only one environment at a time',
+      'C. Deploying only to development',
+      'D. Using two different programming languages'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'A'
   },
   {
     id: 13,
@@ -174,12 +174,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is canary deployment?',
     options: [
-      'A. Gradually rolling out to a small subset of users',
-      'B. Rolling out to all users at once',
-      'C. Rolling back to previous version',
-      'D. Deploying to staging first'
+      'A. Rolling out a new version to all users immediately',
+      'B. Gradually exposing a new version to a small subset of users or traffic before wider rollout',
+      'C. Deploying only to a development environment',
+      'D. Permanently removing the old version before testing'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'B'
   },
   {
     id: 14,
@@ -188,68 +188,68 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is A/B testing in deployment?',
     options: [
-      'A. Comparing two versions to determine which performs better',
-      'B. Testing two different features',
-      'C. Testing two different environments',
-      'D. Testing two different users'
+      'A. Testing two database servers',
+      'B. Testing two programming languages',
+      'C. Comparing two versions or variants with users to determine which performs better',
+      'D. Testing two development computers'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'C'
   },
   {
     id: 15,
     type: 'multiple-choice',
     objective: 'Deployment Tools',
     difficulty: 'medium',
-    question: 'Which of the following is a deployment tool?',
+    question: 'Which of the following is commonly used as a CI/CD or deployment automation tool?',
     options: [
-      'A. Jenkins',
-      'B. GitHub Actions',
-      'C. GitLab CI',
-      'D. All of the above'
+      'A. Microsoft Word',
+      'B. Jenkins',
+      'C. Photoshop',
+      'D. Notepad'
     ],
-    correctAnswer: 'D' // Kept as D
+    correctAnswer: 'B'
   },
   {
     id: 16,
     type: 'multiple-choice',
     objective: 'Jenkins',
     difficulty: 'medium',
-    question: 'What is Jenkins used for?',
+    question: 'What is Jenkins commonly used for?',
     options: [
-      'A. Automation and CI/CD',
-      'B. Code versioning',
-      'C. Code review',
-      'D. Code testing'
+      'A. Automation of software build, testing, and CI/CD workflows',
+      'B. Version control itself',
+      'C. Designing websites',
+      'D. Writing database queries'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'A'
   },
   {
     id: 17,
     type: 'multiple-choice',
     objective: 'GitHub Actions',
     difficulty: 'medium',
-    question: 'What is GitHub Actions used for?',
+    question: 'What is GitHub Actions primarily used for?',
     options: [
-      'A. Automating workflows, CI/CD',
-      'B. Version control',
-      'C. Code hosting',
-      'D. Code review'
+      'A. Hosting database servers',
+      'B. Automating workflows such as CI/CD',
+      'C. Replacing Git version control',
+      'D. Designing graphical interfaces'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'B'
   },
   {
     id: 18,
     type: 'multiple-choice',
     objective: 'Deployment Automation',
     difficulty: 'advanced',
-    question: 'What is the benefit of deployment automation?',
+    question: 'Which is a major benefit of deployment automation?',
     options: [
-      'A. Reduces human error',
-      'B. Speeds up deployment',
-      'C. Increases reliability',
-      'D. All of the above'
+      'A. It eliminates the need for testing',
+      'B. It prevents developers from making code changes',
+      'C. It can reduce human error, improve consistency, and speed up deployments',
+      'D. It guarantees that software will never fail'
     ],
-    correctAnswer: 'C' // Moved from D to C
+    correctAnswer: 'C'
   },
   {
     id: 19,
@@ -258,26 +258,26 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is a rollback in deployment?',
     options: [
-      'A. Reverting to a previous version',
-      'B. Updating to a newer version',
-      'C. Deleting the current version',
-      'D. Skipping the deployment'
+      'A. Updating to a newer version',
+      'B. Deleting all previous versions',
+      'C. Starting a new development project',
+      'D. Reverting a deployment to a previous stable version'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 20,
     type: 'multiple-choice',
     objective: 'Rollback Strategies',
     difficulty: 'advanced',
-    question: 'What is a best practice for rollback?',
+    question: 'Which is a good rollback practice?',
     options: [
-      'A. Have a rollback plan ready',
-      'B. Automate rollback when possible',
-      'C. Test rollback procedures',
-      'D. All of the above'
+      'A. Have a tested rollback plan ready before deployment',
+      'B. Never keep previous versions',
+      'C. Disable monitoring during deployment',
+      'D. Delete backups after every deployment'
     ],
-    correctAnswer: 'A' // Moved from D to A
+    correctAnswer: 'A'
   },
   {
     id: 21,
@@ -286,12 +286,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is deployment monitoring?',
     options: [
-      'A. Tracking application performance after deployment',
-      'B. Tracking code changes',
-      'C. Tracking user activity',
-      'D. Tracking database changes'
+      'A. Monitoring only source-code formatting',
+      'B. Observing application health, performance, errors, and other indicators after deployment',
+      'C. Monitoring only developer activity',
+      'D. Monitoring only database backups'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'B'
   },
   {
     id: 22,
@@ -300,26 +300,26 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is deployment logging?',
     options: [
-      'A. Recording deployment events and errors',
-      'B. Recording user activity',
-      'C. Recording code changes',
-      'D. Recording database changes'
+      'A. Recording only user passwords',
+      'B. Recording only source-code comments',
+      'C. Recording deployment events, status information, and relevant errors',
+      'D. Recording only database usernames'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'C'
   },
   {
     id: 23,
     type: 'multiple-choice',
     objective: 'Deployment Security',
     difficulty: 'advanced',
-    question: 'What is a security best practice in deployment?',
+    question: 'Which is an important security practice during deployment?',
     options: [
-      'A. Use secure connections (HTTPS)',
-      'B. Manage secrets properly',
-      'C. Restrict access to deployments',
-      'D. All of the above'
+      'A. Store secrets directly in public source code',
+      'B. Give every developer unrestricted production access',
+      'C. Disable HTTPS',
+      'D. Use secure connections, protect secrets, and restrict deployment access'
     ],
-    correctAnswer: 'D' // Kept as D
+    correctAnswer: 'D'
   },
   {
     id: 24,
@@ -328,138 +328,138 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is secret management in deployment?',
     options: [
-      'A. Securely storing and managing sensitive information',
-      'B. Managing user passwords',
-      'C. Managing API keys',
-      'D. All of the above'
+      'A. Securely storing and controlling sensitive values such as API keys, passwords, and tokens',
+      'B. Publishing passwords in source code',
+      'C. Sharing API keys publicly',
+      'D. Storing secrets in plain text in documentation'
     ],
-    correctAnswer: 'A' // Moved from D to A
+    correctAnswer: 'A'
   },
   {
     id: 25,
     type: 'multiple-choice',
     objective: 'Deployment Strategies',
     difficulty: 'advanced',
-    question: 'What is the purpose of a deployment strategy?',
+    question: 'What is a primary purpose of a deployment strategy?',
     options: [
-      'A. To ensure smooth and safe deployments',
-      'B. To speed up deployments',
-      'C. To reduce deployment costs',
-      'D. To automate deployments'
+      'A. To make software development unnecessary',
+      'B. To eliminate the need for monitoring',
+      'C. To provide a planned approach for releasing software safely and reliably',
+      'D. To guarantee zero software defects'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'C'
   },
   {
     id: 26,
     type: 'multiple-choice',
     objective: 'Cloud Deployment',
     difficulty: 'medium',
-    question: 'Which of the following is a cloud deployment platform?',
+    question: 'Which of the following are major cloud computing platforms?',
     options: [
-      'A. AWS',
-      'B. Azure',
-      'C. Google Cloud',
-      'D. All of the above'
+      'A. Git and GitHub',
+      'B. HTML and CSS',
+      'C. AWS, Microsoft Azure, and Google Cloud',
+      'D. Node.js and Express'
     ],
-    correctAnswer: 'C' // Moved from D to C
+    correctAnswer: 'C'
   },
   {
     id: 27,
     type: 'multiple-choice',
     objective: 'AWS',
     difficulty: 'medium',
-    question: 'What is AWS used for?',
+    question: 'What is AWS commonly used for?',
     options: [
-      'A. Cloud computing and deployment',
-      'B. Version control',
-      'C. Code editing',
-      'D. Database management'
+      'A. Editing source code only',
+      'B. Version control only',
+      'C. Designing user interfaces only',
+      'D. Cloud computing, hosting, storage, networking, and application deployment'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 28,
     type: 'multiple-choice',
     objective: 'Azure',
     difficulty: 'medium',
-    question: 'What is Microsoft Azure used for?',
+    question: 'What is Microsoft Azure commonly used for?',
     options: [
-      'A. Cloud computing and deployment',
-      'B. Version control',
-      'C. Code editing',
-      'D. Database management'
+      'A. Cloud computing, hosting, and application deployment',
+      'B. Version control only',
+      'C. Code editing only',
+      'D. Image editing only'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'A'
   },
   {
     id: 29,
     type: 'multiple-choice',
     objective: 'Google Cloud',
     difficulty: 'medium',
-    question: 'What is Google Cloud Platform used for?',
+    question: 'What is Google Cloud commonly used for?',
     options: [
-      'A. Cloud computing and deployment',
-      'B. Version control',
-      'C. Code editing',
-      'D. Database management'
+      'A. Version control only',
+      'B. Cloud computing, hosting, storage, and application deployment',
+      'C. Code editing only',
+      'D. Desktop publishing only'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'B'
   },
   {
     id: 30,
     type: 'multiple-choice',
     objective: 'Docker',
     difficulty: 'advanced',
-    question: 'What is Docker used for in deployment?',
+    question: 'What is Docker commonly used for in deployment?',
     options: [
-      'A. Containerization of applications',
-      'B. Version control',
-      'C. Code editing',
-      'D. Database management'
+      'A. Version control',
+      'B. Code editing',
+      'C. Packaging and running applications in containers',
+      'D. Managing DNS records only'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'C'
   },
   {
     id: 31,
     type: 'multiple-choice',
     objective: 'Kubernetes',
     difficulty: 'advanced',
-    question: 'What is Kubernetes used for?',
+    question: 'What is Kubernetes primarily used for?',
     options: [
-      'A. Orchestrating containers',
-      'B. Version control',
-      'C. Code editing',
-      'D. Database management'
+      'A. Writing JavaScript code',
+      'B. Hosting Git repositories',
+      'C. Editing container images',
+      'D. Orchestrating and managing containerized applications'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 32,
     type: 'multiple-choice',
     objective: 'Containerization',
     difficulty: 'advanced',
-    question: 'What is containerization in deployment?',
+    question: 'What is containerization?',
     options: [
-      'A. Packaging applications with their dependencies',
-      'B. Creating containers for storage',
-      'C. Containerizing code',
-      'D. Containerizing databases'
+      'A. Packaging an application and its dependencies into a portable container',
+      'B. Storing files only on physical hard drives',
+      'C. Creating database tables',
+      'D. Writing application documentation'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'A'
   },
   {
     id: 33,
     type: 'multiple-choice',
     objective: 'Serverless Deployment',
     difficulty: 'advanced',
-    question: 'What is serverless deployment?',
+    question: 'What does serverless deployment generally mean?',
     options: [
-      'A. Deploying code without managing servers',
-      'B. Deploying without any servers',
-      'C. Deploying on physical servers',
-      'D. Deploying on virtual machines'
+      'A. Running software without any computers or servers',
+      'B. Running applications while the cloud provider manages the underlying server infrastructure',
+      'C. Running applications only on physical servers',
+      'D. Running applications without an internet connection'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'B'
   },
   {
     id: 34,
@@ -468,12 +468,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is AWS Lambda?',
     options: [
-      'A. A serverless computing service',
-      'B. A database service',
-      'C. A storage service',
-      'D. A networking service'
+      'A. A relational database service',
+      'B. A file storage service',
+      'C. A serverless compute service that runs code in response to events',
+      'D. A version-control platform'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'C'
   },
   {
     id: 35,
@@ -482,12 +482,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is a deployment pipeline?',
     options: [
-      'A. A series of automated steps to deploy code',
-      'B. A pipeline for data',
-      'C. A pipeline for code',
-      'D. A pipeline for testing'
+      'A. A database backup',
+      'B. A source-code repository',
+      'C. A collection of application screenshots',
+      'D. A sequence of automated or controlled stages used to build, test, and deploy software'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 36,
@@ -496,54 +496,54 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is Infrastructure as Code (IaC)?',
     options: [
-      'A. Managing infrastructure through code',
-      'B. Managing code through infrastructure',
-      'C. Managing infrastructure manually',
-      'D. Managing code manually'
+      'A. Managing and provisioning infrastructure using machine-readable configuration or code',
+      'B. Managing source code manually',
+      'C. Designing application logos',
+      'D. Writing documentation without automation'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'A'
   },
   {
     id: 37,
     type: 'multiple-choice',
     objective: 'Terraform',
     difficulty: 'advanced',
-    question: 'What is Terraform used for?',
+    question: 'What is Terraform commonly used for?',
     options: [
-      'A. Infrastructure as Code',
-      'B. Version control',
-      'C. Code editing',
-      'D. Database management'
+      'A. Version control',
+      'B. Code editing',
+      'C. Database administration only',
+      'D. Infrastructure as Code and infrastructure provisioning'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'D'
   },
   {
     id: 38,
     type: 'multiple-choice',
     objective: 'Deployment Best Practices',
     difficulty: 'advanced',
-    question: 'Which of the following is a deployment best practice?',
+    question: 'Which combination represents good deployment practices?',
     options: [
-      'A. Automate deployments',
-      'B. Test in staging before production',
-      'C. Monitor after deployment',
-      'D. All of the above'
+      'A. Deploy without testing and disable monitoring',
+      'B. Store secrets in source code and deploy manually',
+      'C. Test changes, automate where appropriate, and monitor after deployment',
+      'D. Remove rollback procedures'
     ],
-    correctAnswer: 'C' // Moved from D to C
+    correctAnswer: 'C'
   },
   {
     id: 39,
     type: 'multiple-choice',
     objective: 'Deployment Testing',
     difficulty: 'advanced',
-    question: 'What is the purpose of deployment testing?',
+    question: 'What is the primary purpose of deployment testing?',
     options: [
-      'A. To ensure the deployment works correctly',
-      'B. To test code before deployment',
-      'C. To test after deployment',
-      'D. To test user acceptance'
+      'A. To replace all software development testing',
+      'B. To increase the number of developers',
+      'C. To eliminate the need for monitoring',
+      'D. To verify that the deployed application works correctly in its target environment'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 40,
@@ -552,12 +552,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is deployment documentation?',
     options: [
-      'A. Documentation about how to deploy the application',
-      'B. Documentation about how to use the application',
-      'C. Documentation about how to develop the application',
-      'D. Documentation about how to test the application'
+      'A. Documentation describing how to deploy, configure, verify, and potentially roll back an application',
+      'B. Documentation containing only user passwords',
+      'C. Documentation about graphic design only',
+      'D. Documentation about unrelated software'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'A'
   },
   {
     id: 41,
@@ -566,54 +566,54 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is a deployment checklist?',
     options: [
-      'A. A list of items to verify before deployment',
-      'B. A list of items to do after deployment',
-      'C. A list of items to test during deployment',
-      'D. A list of items to document'
+      'A. A list of programming languages used in a project',
+      'B. A list of items and checks to verify before, during, or after deployment',
+      'C. A list of users registered on a website',
+      'D. A list of database tables'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'B'
   },
   {
     id: 42,
     type: 'multiple-choice',
     objective: 'Deployment Success Criteria',
     difficulty: 'advanced',
-    question: 'What defines a successful deployment?',
+    question: 'Which combination best describes a successful deployment?',
     options: [
-      'A. The application is live and working correctly',
-      'B. The deployment completed without errors',
-      'C. All tests passed',
-      'D. All of the above'
+      'A. The deployment finishes regardless of whether the application works',
+      'B. Only the build succeeds',
+      'C. The application is successfully deployed, functions correctly, and meets required checks',
+      'D. The deployment takes as long as possible'
     ],
-    correctAnswer: 'C' // Moved from D to C
+    correctAnswer: 'C'
   },
   {
     id: 43,
     type: 'multiple-choice',
     objective: 'Deployment Risks',
     difficulty: 'advanced',
-    question: 'What is a common deployment risk?',
+    question: 'Which of the following can be a deployment risk?',
     options: [
       'A. Downtime',
-      'B. Data loss',
-      'C. Performance issues',
+      'B. Data loss or corruption',
+      'C. Performance degradation',
       'D. All of the above'
     ],
-    correctAnswer: 'D' // Kept as D
+    correctAnswer: 'D'
   },
   {
     id: 44,
     type: 'multiple-choice',
     objective: 'Deployment Mitigation',
     difficulty: 'advanced',
-    question: 'What is a way to mitigate deployment risks?',
+    question: 'Which combination can help mitigate deployment risks?',
     options: [
-      'A. Have a rollback plan',
-      'B. Test thoroughly',
-      'C. Monitor closely',
-      'D. All of the above'
+      'A. Use testing, monitoring, backups, and a rollback plan',
+      'B. Disable monitoring',
+      'C. Deploy without testing',
+      'D. Remove previous application versions immediately'
     ],
-    correctAnswer: 'A' // Moved from D to A
+    correctAnswer: 'A'
   },
   {
     id: 45,
@@ -622,26 +622,26 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is the role of collaboration in deployment?',
     options: [
-      'A. Coordinating between teams for successful deployment',
-      'B. Working individually on deployments',
-      'C. Deploying without communication',
-      'D. Deploying without planning'
+      'A. Allowing teams to work without communication',
+      'B. Coordinating developers, operations, security, and other stakeholders for a successful release',
+      'C. Preventing teams from sharing deployment information',
+      'D. Eliminating deployment planning'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'B'
   },
   {
     id: 46,
     type: 'multiple-choice',
     objective: 'Deployment Feedback',
     difficulty: 'advanced',
-    question: 'What is the importance of deployment feedback?',
+    question: 'Why is feedback important after deployment?',
     options: [
-      'A. To improve future deployments',
-      'B. To confirm deployment success',
-      'C. To identify issues',
-      'D. All of the above'
+      'A. It eliminates the need for future testing',
+      'B. It guarantees that every deployment will succeed',
+      'C. It helps identify problems and improve future deployments',
+      'D. It prevents developers from making changes'
     ],
-    correctAnswer: 'C' // Moved from D to C
+    correctAnswer: 'C'
   },
   {
     id: 47,
@@ -650,54 +650,54 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What are deployment metrics?',
     options: [
-      'A. Measurements to track deployment performance',
-      'B. Measurements to track code quality',
-      'C. Measurements to track user activity',
-      'D. Measurements to track database performance'
+      'A. Measurements used to evaluate software development salaries',
+      'B. Measurements used only to count source-code files',
+      'C. Measurements used only to track office attendance',
+      'D. Measurements used to assess deployment performance, reliability, frequency, or related delivery outcomes'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'D'
   },
   {
     id: 48,
     type: 'multiple-choice',
     objective: 'Deployment Time',
     difficulty: 'advanced',
-    question: 'What is the importance of deployment time?',
+    question: 'Why can reducing deployment time be valuable?',
     options: [
-      'A. Faster deployments mean faster time to market',
-      'B. Slower deployments mean better quality',
-      'C. Deployment time doesn\'t matter',
-      'D. Deployment time only matters for large projects'
+      'A. Faster deployments can shorten time to market and enable quicker feedback',
+      'B. Slower deployments always produce better software',
+      'C. Deployment time has no effect on software delivery',
+      'D. Deployment speed matters only for very large companies'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'A'
   },
   {
     id: 49,
     type: 'multiple-choice',
     objective: 'Deployment Frequency',
     difficulty: 'advanced',
-    question: 'What is the benefit of frequent deployments?',
+    question: 'What is a potential benefit of frequent, well-controlled deployments?',
     options: [
-      'A. Faster feedback and innovation',
-      'B. More deployment work',
-      'C. Higher deployment risk',
-      'D. Lower deployment quality'
+      'A. They eliminate all deployment risks',
+      'B. They can provide faster feedback and enable smaller, more manageable changes',
+      'C. They guarantee zero defects',
+      'D. They eliminate the need for automated testing'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'B'
   },
   {
     id: 50,
     type: 'multiple-choice',
     objective: 'Deployment Future',
     difficulty: 'advanced',
-    question: 'What is a trend in deployment?',
+    question: 'Which of the following are important trends or approaches in modern software deployment?',
     options: [
-      'A. GitOps',
-      'B. Serverless deployment',
-      'C. Progressive delivery',
-      'D. All of the above'
+      'A. Manual deployment only',
+      'B. Deploying without testing',
+      'C. GitOps, serverless deployment, and progressive delivery',
+      'D. Removing deployment automation'
     ],
-    correctAnswer: 'C' // Moved from D to C
+    correctAnswer: 'C'
   }
 ];
 
