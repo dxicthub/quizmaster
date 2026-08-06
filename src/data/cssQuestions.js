@@ -11,7 +11,7 @@ export const questions = [
       'C. Computer Style Sheets',
       'D. Color Style Sheets'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'A'
   },
   {
     id: 2,
@@ -20,12 +20,12 @@ export const questions = [
     difficulty: 'easy',
     question: 'Which CSS selector targets an element by its ID?',
     options: [
-      'A. #id',
-      'B. .id',
+      'A. .id',
+      'B. #id',
       'C. *id',
       'D. element#id'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'B'
   },
   {
     id: 3,
@@ -34,12 +34,12 @@ export const questions = [
     difficulty: 'easy',
     question: 'Which CSS selector targets an element by its class?',
     options: [
-      'A. .class',
-      'B. #class',
-      'C. *class',
-      'D. element.class'
+      'A. #class',
+      'B. *class',
+      'C. .class',
+      'D. element#class'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 4,
@@ -48,26 +48,26 @@ export const questions = [
     difficulty: 'easy',
     question: 'Which of the following is a valid CSS color format?',
     options: [
-      'A. #FF0000',
-      'B. rgb(255,0,0)',
-      'C. red',
+      'A. color(red)',
+      'B. color: red',
+      'C. rgb-color(255,0,0)',
       'D. All of the above'
     ],
-    correctAnswer: 'A' // Moved from D to A
+    correctAnswer: 'D'
   },
   {
     id: 5,
     type: 'multiple-choice',
     objective: 'CSS Units',
     difficulty: 'easy',
-    question: 'What is the difference between px and em in CSS?',
+    question: 'Which statement correctly describes px and em in CSS?',
     options: [
-      'A. px is absolute; em is relative to parent',
-      'B. px is relative; em is absolute',
-      'C. Both are absolute',
-      'D. Both are relative'
+      'A. px is an absolute length unit; em is relative to font size',
+      'B. Both px and em are absolute units',
+      'C. Both px and em are relative to the viewport',
+      'D. px is relative to the viewport; em is absolute'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'A'
   },
   {
     id: 6,
@@ -76,40 +76,40 @@ export const questions = [
     difficulty: 'medium',
     question: 'Which CSS property is used to enable flexbox?',
     options: [
-      'A. display: flex',
-      'B. display: block',
+      'A. display: block',
+      'B. display: flex',
       'C. display: inline',
       'D. display: grid'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'B'
   },
   {
     id: 7,
     type: 'multiple-choice',
     objective: 'CSS Flexbox',
     difficulty: 'medium',
-    question: 'What is the purpose of justify-content in flexbox?',
+    question: 'What does justify-content control in a flex container?',
     options: [
-      'A. To align items horizontally',
-      'B. To align items vertically',
-      'C. To align items in a grid',
-      'D. To align items in a row'
+      'A. The size of flex items',
+      'B. The wrapping behavior of flex items',
+      'C. Alignment of items along the main axis',
+      'D. Alignment of items along the cross axis'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 8,
     type: 'multiple-choice',
     objective: 'CSS Flexbox',
     difficulty: 'medium',
-    question: 'What is the purpose of align-items in flexbox?',
+    question: 'What does align-items control in a flex container?',
     options: [
-      'A. To align items vertically',
-      'B. To align items horizontally',
-      'C. To align items in a grid',
-      'D. To align items in a column'
+      'A. The size of flex items',
+      'B. The wrapping behavior of flex items',
+      'C. Alignment of items along the main axis',
+      'D. Alignment of items along the cross axis'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 9,
@@ -123,7 +123,7 @@ export const questions = [
       'C. display: block',
       'D. display: inline'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'A'
   },
   {
     id: 10,
@@ -132,12 +132,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of grid-template-columns?',
     options: [
-      'A. To define the number and size of columns',
-      'B. To define the number and size of rows',
-      'C. To define the gap between columns',
-      'D. To define the alignment of columns'
+      'A. To define the gap between columns',
+      'B. To define the number and size of columns',
+      'C. To define the alignment of columns',
+      'D. To define the number and size of rows'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'B'
   },
   {
     id: 11,
@@ -146,12 +146,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of grid-template-rows?',
     options: [
-      'A. To define the number and size of rows',
-      'B. To define the number and size of columns',
-      'C. To define the gap between rows',
+      'A. To define the number and size of columns',
+      'B. To define the gap between rows',
+      'C. To define the number and size of rows',
       'D. To define the alignment of rows'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 12,
@@ -160,12 +160,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What are the components of the CSS box model?',
     options: [
-      'A. Content, padding, border, margin',
-      'B. Content, spacing, border, margin',
-      'C. Content, padding, border, spacing',
-      'D. Content, padding, margin, spacing'
+      'A. Content, spacing, border, margin',
+      'B. Content, padding, border, spacing',
+      'C. Content, padding, margin, spacing',
+      'D. Content, padding, border, margin'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 13,
@@ -179,7 +179,7 @@ export const questions = [
       'C. Padding and margin are the same',
       'D. Padding is for content; margin is for spacing'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'A'
   },
   {
     id: 14,
@@ -188,12 +188,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What are the possible values for the position property?',
     options: [
-      'A. static, relative, absolute, fixed, sticky',
-      'B. static, relative, absolute, fixed, fluid',
+      'A. static, relative, absolute, fixed, fluid',
+      'B. static, relative, absolute, fixed, sticky',
       'C. static, relative, absolute, sticky, floating',
       'D. static, relative, absolute, fixed, flexible'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'B'
   },
   {
     id: 15,
@@ -202,12 +202,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What does position: absolute do?',
     options: [
-      'A. Positions relative to the nearest positioned ancestor',
-      'B. Positions relative to the viewport',
-      'C. Positions relative to the parent',
+      'A. Positions relative to the viewport',
+      'B. Positions relative to the parent',
+      'C. Positions relative to the nearest positioned ancestor',
       'D. Positions relative to the document'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 16,
@@ -216,26 +216,26 @@ export const questions = [
     difficulty: 'medium',
     question: 'What does position: fixed do?',
     options: [
-      'A. Positions relative to the viewport',
-      'B. Positions relative to the nearest positioned ancestor',
-      'C. Positions relative to the parent',
-      'D. Positions relative to the document'
+      'A. Positions relative to the nearest positioned ancestor',
+      'B. Positions relative to the parent',
+      'C. Positions relative to the document',
+      'D. Positions relative to the viewport'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 17,
     type: 'multiple-choice',
     objective: 'CSS Animations',
     difficulty: 'advanced',
-    question: 'What property is used to create keyframe animations?',
+    question: 'What at-rule is used to define keyframe animations?',
     options: [
       'A. @keyframes',
       'B. animation',
       'C. @animations',
       'D. keyframes'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'A'
   },
   {
     id: 18,
@@ -244,12 +244,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is the purpose of animation-duration?',
     options: [
-      'A. To specify how long an animation takes to complete',
-      'B. To specify when an animation starts',
+      'A. To specify when an animation starts',
+      'B. To specify how long an animation takes to complete',
       'C. To specify how many times an animation repeats',
       'D. To specify the timing function of an animation'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'B'
   },
   {
     id: 19,
@@ -258,12 +258,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of CSS transitions?',
     options: [
-      'A. To smoothly change property values over time',
-      'B. To create complex animations',
-      'C. To change property values instantly',
+      'A. To create complex animations',
+      'B. To change property values instantly',
+      'C. To smoothly change property values over time',
       'D. To create keyframe animations'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 20,
@@ -272,12 +272,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of transition-duration?',
     options: [
-      'A. To specify how long a transition takes',
-      'B. To specify when a transition starts',
-      'C. To specify how many times a transition repeats',
-      'D. To specify the timing function of a transition'
+      'A. To specify when a transition starts',
+      'B. To specify how many times a transition repeats',
+      'C. To specify the timing function of a transition',
+      'D. To specify how long a transition takes'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 21,
@@ -286,26 +286,26 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is a media query used for?',
     options: [
-      'A. To apply styles based on device characteristics',
+      'A. To apply styles based on device or viewport characteristics',
       'B. To query a database',
       'C. To make HTTP requests',
       'D. To validate input'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'A'
   },
   {
     id: 22,
     type: 'multiple-choice',
     objective: 'CSS Media Queries',
     difficulty: 'medium',
-    question: 'What is the syntax for a media query?',
+    question: 'What is the correct general syntax for a media query?',
     options: [
-      'A. @media (condition) { styles }',
-      'B. @media { condition: styles }',
-      'C. @media { styles condition }',
-      'D. @media condition { styles }'
+      'A. @media { condition: styles }',
+      'B. @media (condition) { styles }',
+      'C. @media condition { styles }',
+      'D. @media { styles condition }'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'B'
   },
   {
     id: 23,
@@ -314,12 +314,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is responsive design?',
     options: [
-      'A. Designing websites that adapt to different screen sizes',
-      'B. Designing websites that are fast',
-      'C. Designing websites that are secure',
+      'A. Designing websites that are fast',
+      'B. Designing websites that are secure',
+      'C. Designing websites that adapt to different screen sizes',
       'D. Designing websites that are accessible'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 24,
@@ -328,12 +328,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What are viewport units in CSS?',
     options: [
-      'A. Units relative to the viewport size',
-      'B. Units relative to the parent size',
-      'C. Units relative to the font size',
-      'D. Units relative to the element size'
+      'A. Units relative to the parent size',
+      'B. Units relative to the font size',
+      'C. Units relative to the element size',
+      'D. Units relative to the viewport size'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 25,
@@ -347,7 +347,7 @@ export const questions = [
       'C. A selector that targets elements with a specific ID',
       'D. A selector that targets elements with a specific attribute'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'A'
   },
   {
     id: 26,
@@ -356,12 +356,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is a pseudo-element in CSS?',
     options: [
-      'A. A selector that targets parts of an element',
-      'B. A selector that targets the entire element',
+      'A. A selector that targets the entire element',
+      'B. A selector that targets parts of an element',
       'C. A selector that targets a specific state',
       'D. A selector that targets a specific class'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'B'
   },
   {
     id: 27,
@@ -370,12 +370,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is CSS specificity?',
     options: [
-      'A. The weight that determines which styles are applied',
-      'B. The speed at which styles are applied',
-      'C. The number of styles applied',
+      'A. The speed at which styles are applied',
+      'B. The number of styles applied',
+      'C. The weight that determines which competing styles are applied',
       'D. The order of styles applied'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 28,
@@ -384,12 +384,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is the order of CSS specificity from highest to lowest?',
     options: [
-      'A. ID, Class, Element',
-      'B. Class, ID, Element',
-      'C. Element, Class, ID',
-      'D. ID, Element, Class'
+      'A. Class, ID, Element',
+      'B. Element, Class, ID',
+      'C. ID, Element, Class',
+      'D. ID, Class, Element'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 29,
@@ -403,35 +403,35 @@ export const questions = [
       'C. A variable in CSS preprocessors',
       'D. A variable in HTML'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'A'
   },
   {
     id: 30,
     type: 'multiple-choice',
     objective: 'CSS Variables Syntax',
     difficulty: 'advanced',
-    question: 'What is the syntax for defining a CSS variable?',
+    question: 'What is the syntax for defining a CSS custom property?',
     options: [
-      'A. --variable-name: value',
-      'B. var-variable-name: value',
+      'A. var-variable-name: value',
+      'B. --variable-name: value',
       'C. $variable-name: value',
       'D. @variable-name: value'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'B'
   },
   {
     id: 31,
     type: 'multiple-choice',
     objective: 'CSS Variables Usage',
     difficulty: 'advanced',
-    question: 'What is the syntax for using a CSS variable?',
+    question: 'What is the syntax for using a CSS custom property?',
     options: [
-      'A. var(--variable-name)',
-      'B. var(variable-name)',
-      'C. $variable-name',
+      'A. var(variable-name)',
+      'B. $variable-name',
+      'C. var(--variable-name)',
       'D. @variable-name'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 32,
@@ -440,12 +440,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is a CSS gradient?',
     options: [
-      'A. A smooth transition between colors',
-      'B. A sharp transition between colors',
-      'C. A pattern of colors',
-      'D. A single color'
+      'A. A sharp transition between colors',
+      'B. A pattern of colors',
+      'C. A single color',
+      'D. A smooth transition between colors'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 33,
@@ -455,11 +455,11 @@ export const questions = [
     question: 'What is the difference between linear-gradient and radial-gradient?',
     options: [
       'A. linear is along a line; radial is from a center point',
-      'B. linear is from a center point; radial is along a line',
-      'C. linear is horizontal; radial is vertical',
-      'D. linear is vertical; radial is horizontal'
+      'B. linear is horizontal; radial is vertical',
+      'C. linear is vertical; radial is horizontal',
+      'D. linear is from a center point; radial is along a line'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'A'
   },
   {
     id: 34,
@@ -468,12 +468,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is the purpose of CSS transforms?',
     options: [
-      'A. To rotate, scale, skew, or translate elements',
-      'B. To change the color of elements',
+      'A. To change the color of elements',
+      'B. To rotate, scale, skew, or translate elements',
       'C. To change the size of elements',
       'D. To change the position of elements'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'B'
   },
   {
     id: 35,
@@ -482,12 +482,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What does transform: rotate(45deg) do?',
     options: [
-      'A. Rotates an element by 45 degrees',
-      'B. Scales an element by 45%',
-      'C. Skews an element by 45 degrees',
+      'A. Scales an element by 45%',
+      'B. Skews an element by 45 degrees',
+      'C. Rotates an element by 45 degrees',
       'D. Translates an element by 45px'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 36,
@@ -496,12 +496,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is the purpose of CSS filters?',
     options: [
-      'A. To apply visual effects to elements',
-      'B. To apply styling to elements',
-      'C. To apply animation to elements',
-      'D. To apply positioning to elements'
+      'A. To apply animation to elements',
+      'B. To apply positioning to elements',
+      'C. To apply styling to elements',
+      'D. To apply visual effects to elements'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 37,
@@ -515,7 +515,7 @@ export const questions = [
       'C. Applies a contrast of 5%',
       'D. Applies a drop shadow of 5px'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'A'
   },
   {
     id: 38,
@@ -524,12 +524,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of box-shadow?',
     options: [
-      'A. To add shadow effects to elements',
-      'B. To add border effects to elements',
+      'A. To add border effects to elements',
+      'B. To add shadow effects to elements',
       'C. To add outline effects to elements',
       'D. To add background effects to elements'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'B'
   },
   {
     id: 39,
@@ -538,26 +538,26 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is the purpose of border-radius?',
     options: [
-      'A. To round the corners of elements',
-      'B. To add borders to elements',
-      'C. To add shadows to elements',
+      'A. To add borders to elements',
+      'B. To add shadows to elements',
+      'C. To round the corners of elements',
       'D. To add padding to elements'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 40,
     type: 'multiple-choice',
     objective: 'CSS Opacity',
     difficulty: 'medium',
-    question: 'What is the purpose of opacity?',
+    question: 'What does the CSS opacity property control?',
     options: [
-      'A. To control the transparency of elements',
-      'B. To control the visibility of elements',
-      'C. To control the display of elements',
-      'D. To control the positioning of elements'
+      'A. The element’s display mode',
+      'B. The element’s position',
+      'C. The element’s stacking order',
+      'D. The transparency of an element'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 41,
@@ -571,7 +571,7 @@ export const questions = [
       'C. To control the position of elements',
       'D. To control the visibility of elements'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'A'
   },
   {
     id: 42,
@@ -580,12 +580,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is the difference between flexbox and grid?',
     options: [
-      'A. Flexbox is one-dimensional; grid is two-dimensional',
-      'B. Flexbox is two-dimensional; grid is one-dimensional',
-      'C. Flexbox and grid are the same',
-      'D. Flexbox is for rows; grid is for columns'
+      'A. Flexbox is two-dimensional; grid is one-dimensional',
+      'B. Flexbox is one-dimensional; grid is two-dimensional',
+      'C. Flexbox is for rows; grid is for columns',
+      'D. Flexbox and grid are the same'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'B'
   },
   {
     id: 43,
@@ -594,12 +594,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is a CSS preprocessor?',
     options: [
-      'A. A tool that extends CSS with variables and functions',
-      'B. A tool that minifies CSS',
-      'C. A tool that validates CSS',
+      'A. A tool that minifies CSS',
+      'B. A tool that validates CSS',
+      'C. A tool that extends CSS with features such as variables and functions',
       'D. A tool that formats CSS'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 44,
@@ -613,35 +613,35 @@ export const questions = [
       'C. Stylus',
       'D. All of the above'
     ],
-    correctAnswer: 'A' // Moved from D to A
+    correctAnswer: 'D'
   },
   {
     id: 45,
     type: 'multiple-choice',
     objective: 'CSS Performance',
     difficulty: 'advanced',
-    question: 'What is a CSS performance best practice?',
+    question: 'Which of the following can help improve CSS performance?',
     options: [
-      'A. Minimize CSS file size',
-      'B. Use efficient selectors',
-      'C. Avoid layout thrashing',
-      'D. All of the above'
+      'A. Use efficient selectors',
+      'B. Use unnecessarily complex selectors',
+      'C. Add unused CSS rules',
+      'D. Load multiple unnecessary stylesheets'
     ],
-    correctAnswer: 'B' // Moved from D to B
+    correctAnswer: 'A'
   },
   {
     id: 46,
     type: 'multiple-choice',
     objective: 'CSS Accessibility',
     difficulty: 'advanced',
-    question: 'What is a CSS accessibility best practice?',
+    question: 'Which of the following is a CSS accessibility best practice?',
     options: [
-      'A. Use sufficient color contrast',
-      'B. Use appropriate font sizes',
-      'C. Ensure focus visibility',
-      'D. All of the above'
+      'A. Use appropriate font sizes',
+      'B. Ensure sufficient color contrast',
+      'C. Hide keyboard focus indicators',
+      'D. Use very low-contrast text'
     ],
-    correctAnswer: 'C' // Moved from D to C
+    correctAnswer: 'B'
   },
   {
     id: 47,
@@ -650,26 +650,26 @@ export const questions = [
     difficulty: 'advanced',
     question: 'How do you create print styles in CSS?',
     options: [
-      'A. Using @media print',
-      'B. Using @print',
-      'C. Using @media screen',
+      'A. Using @print',
+      'B. Using @media screen',
+      'C. Using @media print',
       'D. Using @media all'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 48,
     type: 'multiple-choice',
     objective: 'CSS Custom Properties',
     difficulty: 'advanced',
-    question: 'What is the scope of CSS custom properties?',
+    question: 'What is a key characteristic of CSS custom properties?',
     options: [
-      'A. They inherit from parent to child',
-      'B. They are global only',
-      'C. They are local only',
-      'D. They are scoped to the element only'
+      'A. They are global only',
+      'B. They are local only',
+      'C. They never inherit',
+      'D. They inherit from parent to child by default'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 49,
@@ -678,26 +678,26 @@ export const questions = [
     difficulty: 'advanced',
     question: 'Which of the following is a CSS best practice?',
     options: [
-      'A. Use semantic class names',
-      'B. Organize CSS files logically',
-      'C. Use CSS variables for consistency',
-      'D. All of the above'
+      'A. Use random class names',
+      'B. Use semantic class names',
+      'C. Put all styles in inline attributes',
+      'D. Duplicate the same CSS rules unnecessarily'
     ],
-    correctAnswer: 'B' // Moved from D to B
+    correctAnswer: 'B'
   },
   {
     id: 50,
     type: 'multiple-choice',
     objective: 'CSS Future',
     difficulty: 'advanced',
-    question: 'What is a trend in CSS?',
+    question: 'Which of the following represents current trends or approaches in modern CSS development?',
     options: [
       'A. CSS-in-JS',
-      'B. Utility-first CSS (Tailwind)',
+      'B. Utility-first CSS such as Tailwind CSS',
       'C. CSS custom properties',
       'D. All of the above'
     ],
-    correctAnswer: 'C' // Moved from D to C
+    correctAnswer: 'D'
   }
 ];
 

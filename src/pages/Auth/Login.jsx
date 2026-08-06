@@ -315,11 +315,11 @@ function Login() {
               variants={itemVariants}
               className="mt-4 p-4 rounded-xl bg-gradient-to-r from-blue-50/50 to-indigo-50/50 dark:from-blue-900/10 dark:to-indigo-900/10 border border-blue-200/50 dark:border-blue-800/30"
             >
-              <div className="flex items-start gap-3">
-                <FaLightbulb className="text-amber-500 text-lg mt-0.5" />
+              <div className="flex items-start text-center gap-3">
+               
                 <div>
                   <p className="text-sm text-gray-600 dark:text-gray-300">
-                    💡 Your passcode was provided during registration.
+                     Your passcode was provided during registration.
                   </p>
                   <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                     If you forgot it, please contact support for assistance.

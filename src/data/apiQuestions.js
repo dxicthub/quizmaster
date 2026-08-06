@@ -1,3 +1,4 @@
+
 export const questions = [
   {
     id: 1,
@@ -6,12 +7,12 @@ export const questions = [
     difficulty: 'easy',
     question: 'What does API stand for?',
     options: [
-      'A. Application Programming Interface',
-      'B. Application Protocol Interface',
-      'C. Advanced Programming Interface',
-      'D. Application Process Interface'
+      'A. Application Protocol Interface',
+      'B. Advanced Programming Interface',
+      'C. Application Process Interface',
+      'D. Application Programming Interface'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'D'
   },
   {
     id: 2,
@@ -25,7 +26,7 @@ export const questions = [
       'C. GraphQL API',
       'D. All of the above'
     ],
-    correctAnswer: 'A' // Moved from D to A
+    correctAnswer: 'D'
   },
   {
     id: 3,
@@ -34,12 +35,12 @@ export const questions = [
     difficulty: 'easy',
     question: 'What does REST stand for?',
     options: [
-      'A. Representational State Transfer',
-      'B. Resource State Transfer',
-      'C. Request State Transfer',
-      'D. Response State Transfer'
+      'A. Resource State Transfer',
+      'B. Request State Transfer',
+      'C. Response State Transfer',
+      'D. Representational State Transfer'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'D'
   },
   {
     id: 4,
@@ -48,12 +49,12 @@ export const questions = [
     difficulty: 'easy',
     question: 'Which HTTP method is used to retrieve data from an API?',
     options: [
-      'A. GET',
-      'B. POST',
-      'C. PUT',
+      'A. POST',
+      'B. PUT',
+      'C. GET',
       'D. DELETE'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 5,
@@ -67,7 +68,7 @@ export const questions = [
       'C. PUT',
       'D. DELETE'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'A'
   },
   {
     id: 6,
@@ -76,12 +77,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'Which HTTP method is used to update a resource entirely?',
     options: [
-      'A. PUT',
-      'B. PATCH',
+      'A. PATCH',
+      'B. PUT',
       'C. POST',
       'D. GET'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'B'
   },
   {
     id: 7,
@@ -95,7 +96,7 @@ export const questions = [
       'C. POST',
       'D. DELETE'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'A'
   },
   {
     id: 8,
@@ -109,7 +110,7 @@ export const questions = [
       'C. GET',
       'D. PUT'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'A'
   },
   {
     id: 9,
@@ -118,12 +119,12 @@ export const questions = [
     difficulty: 'easy',
     question: 'What does a 200 status code indicate?',
     options: [
-      'A. Success',
-      'B. Not Found',
+      'A. Not Found',
+      'B. Success',
       'C. Server Error',
       'D. Unauthorized'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'B'
   },
   {
     id: 10,
@@ -132,12 +133,12 @@ export const questions = [
     difficulty: 'easy',
     question: 'What does a 404 status code indicate?',
     options: [
-      'A. Resource not found',
-      'B. Success',
-      'C. Server error',
+      'A. Success',
+      'B. Server error',
+      'C. Resource not found',
       'D. Unauthorized'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'C'
   },
   {
     id: 11,
@@ -146,12 +147,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What does a 400 status code indicate?',
     options: [
-      'A. Bad Request',
-      'B. Not Found',
-      'C. Unauthorized',
-      'D. Server Error'
+      'A. Not Found',
+      'B. Unauthorized',
+      'C. Server Error',
+      'D. Bad Request'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'D'
   },
   {
     id: 12,
@@ -165,7 +166,7 @@ export const questions = [
       'C. Not Found',
       'D. Server Error'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'A'
   },
   {
     id: 13,
@@ -174,12 +175,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What does a 403 status code indicate?',
     options: [
-      'A. Forbidden',
-      'B. Unauthorized',
-      'C. Bad Request',
-      'D. Not Found'
+      'A. Unauthorized',
+      'B. Bad Request',
+      'C. Not Found',
+      'D. Forbidden'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 14,
@@ -188,12 +189,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What does a 500 status code indicate?',
     options: [
-      'A. Internal Server Error',
-      'B. Bad Request',
+      'A. Bad Request',
+      'B. Internal Server Error',
       'C. Not Found',
       'D. Unauthorized'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'B'
   },
   {
     id: 15,
@@ -202,12 +203,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is API authentication?',
     options: [
-      'A. Verifying the identity of the client',
-      'B. Encrypting API requests',
-      'C. Caching API responses',
-      'D. Logging API calls'
+      'A. Encrypting API requests',
+      'B. Caching API responses',
+      'C. Logging API calls',
+      'D. Verifying the identity of the client'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'D'
   },
   {
     id: 16,
@@ -221,7 +222,7 @@ export const questions = [
       'C. JWT',
       'D. All of the above'
     ],
-    correctAnswer: 'D' // Kept as D
+    correctAnswer: 'D'
   },
   {
     id: 17,
@@ -230,12 +231,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is an API key?',
     options: [
-      'A. A unique identifier used to authenticate API requests',
-      'B. A password for the API',
+      'A. A password for the API',
+      'B. A unique identifier used to authenticate API requests',
       'C. A username for the API',
       'D. A token for the API'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'B'
   },
   {
     id: 18,
@@ -244,12 +245,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What does JWT stand for?',
     options: [
-      'A. JSON Web Token',
-      'B. JavaScript Web Token',
+      'A. JavaScript Web Token',
+      'B. JSON Web Token',
       'C. Java Web Token',
       'D. JSON Written Token'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'B'
   },
   {
     id: 19,
@@ -258,12 +259,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What are the three parts of a JWT?',
     options: [
-      'A. Header, Payload, Signature',
-      'B. Header, Body, Signature',
-      'C. Header, Claims, Verify',
+      'A. Header, Body, Signature',
+      'B. Header, Claims, Verify',
+      'C. Header, Payload, Signature',
       'D. Header, Payload, Verify'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'C'
   },
   {
     id: 20,
@@ -272,12 +273,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is OAuth?',
     options: [
-      'A. An open standard for access delegation',
-      'B. A programming language',
+      'A. A programming language',
+      'B. An open standard for access delegation',
       'C. A database system',
       'D. A design framework'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'B'
   },
   {
     id: 21,
@@ -286,12 +287,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is rate limiting in APIs?',
     options: [
-      'A. Limiting the number of requests a client can make',
-      'B. Limiting the size of requests',
-      'C. Limiting the speed of responses',
+      'A. Limiting the size of requests',
+      'B. Limiting the speed of responses',
+      'C. Limiting the number of requests a client can make',
       'D. Limiting the number of concurrent connections'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'C'
   },
   {
     id: 22,
@@ -300,12 +301,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is API versioning?',
     options: [
-      'A. Managing different versions of an API',
-      'B. Managing API performance',
-      'C. Managing API security',
+      'A. Managing API performance',
+      'B. Managing API security',
+      'C. Managing different versions of an API',
       'D. Managing API documentation'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'C'
   },
   {
     id: 23,
@@ -314,12 +315,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is API documentation?',
     options: [
-      'A. Information about how to use an API',
-      'B. Information about the API\'s implementation',
+      'A. Information about the API\'s implementation',
+      'B. Information about how to use an API',
       'C. Information about the API\'s database',
       'D. Information about the API\'s server'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'B'
   },
   {
     id: 24,
@@ -329,11 +330,11 @@ export const questions = [
     question: 'Which of the following is a common API testing tool?',
     options: [
       'A. Postman',
-      'B. Insomnia',
-      'C. cURL',
-      'D. All of the above'
+      'B. All of the above',
+      'C. Insomnia',
+      'D. cURL'
     ],
-    correctAnswer: 'D' // Kept as D
+    correctAnswer: 'B'
   },
   {
     id: 25,
@@ -342,12 +343,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is Postman used for?',
     options: [
-      'A. Testing and developing APIs',
-      'B. Writing API documentation',
-      'C. Monitoring API performance',
-      'D. All of the above'
+      'A. Writing API documentation',
+      'B. Monitoring API performance',
+      'C. All of the above',
+      'D. Testing and developing APIs'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 26,
@@ -356,12 +357,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is GraphQL?',
     options: [
-      'A. A query language for APIs',
-      'B. A database query language',
-      'C. A programming language',
-      'D. A design framework'
+      'A. A database query language',
+      'B. A programming language',
+      'C. A design framework',
+      'D. A query language for APIs'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'D'
   },
   {
     id: 27,
@@ -370,12 +371,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is a key difference between GraphQL and REST?',
     options: [
-      'A. GraphQL allows clients to request specific data',
-      'B. REST allows clients to request specific data',
-      'C. GraphQL is faster than REST',
-      'D. REST is faster than GraphQL'
+      'A. REST allows clients to request specific data',
+      'B. GraphQL is faster than REST',
+      'C. REST is faster than GraphQL',
+      'D. GraphQL allows clients to request specific data'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'D'
   },
   {
     id: 28,
@@ -386,10 +387,10 @@ export const questions = [
     options: [
       'A. Injection attacks',
       'B. Broken authentication',
-      'C. Sensitive data exposure',
-      'D. All of the above'
+      'C. All of the above',
+      'D. Sensitive data exposure'
     ],
-    correctAnswer: 'D' // Kept as D
+    correctAnswer: 'C'
   },
   {
     id: 29,
@@ -398,12 +399,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is CORS in the context of APIs?',
     options: [
-      'A. A mechanism that allows restricted resources to be requested from another domain',
-      'B. A security protocol',
-      'C. An authentication method',
-      'D. A database protocol'
+      'A. A security protocol',
+      'B. An authentication method',
+      'C. A database protocol',
+      'D. A mechanism that allows restricted resources to be requested from another domain'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 30,
@@ -417,7 +418,7 @@ export const questions = [
       'C. The API server',
       'D. The API client'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'A'
   },
   {
     id: 31,
@@ -431,7 +432,7 @@ export const questions = [
       'C. Both A and B',
       'D. HTML only'
     ],
-    correctAnswer: 'C' // Kept as C
+    correctAnswer: 'C'
   },
   {
     id: 32,
@@ -440,12 +441,12 @@ export const questions = [
     difficulty: 'easy',
     question: 'What does JSON stand for?',
     options: [
-      'A. JavaScript Object Notation',
-      'B. JavaScript Online Notation',
-      'C. Java Object Notation',
+      'A. JavaScript Online Notation',
+      'B. Java Object Notation',
+      'C. JavaScript Object Notation',
       'D. Java Online Notation'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'C'
   },
   {
     id: 33,
@@ -459,7 +460,7 @@ export const questions = [
       'C. Page loading in web applications',
       'D. Page ranking in search results'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'A'
   },
   {
     id: 34,
@@ -468,12 +469,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is filtering in APIs?',
     options: [
-      'A. Returning only data that matches specific criteria',
-      'B. Removing sensitive data from responses',
+      'A. Removing sensitive data from responses',
+      'B. Returning only data that matches specific criteria',
       'C. Sorting data in responses',
       'D. Grouping data in responses'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'B'
   },
   {
     id: 35,
@@ -482,12 +483,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is sorting in APIs?',
     options: [
-      'A. Ordering data in responses based on specific fields',
-      'B. Filtering data in responses',
+      'A. Filtering data in responses',
+      'B. Ordering data in responses based on specific fields',
       'C. Pagination in responses',
       'D. Validation in responses'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'B'
   },
   {
     id: 36,
@@ -501,7 +502,7 @@ export const questions = [
       'C. Validating the API client',
       'D. Validating the API database'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'A'
   },
   {
     id: 37,
@@ -515,7 +516,7 @@ export const questions = [
       'C. Crashing on errors',
       'D. Logging errors only'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'A'
   },
   {
     id: 38,
@@ -524,12 +525,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is logging in APIs?',
     options: [
-      'A. Recording API requests and responses',
-      'B. Writing API documentation',
-      'C. Testing API endpoints',
+      'A. Writing API documentation',
+      'B. Testing API endpoints',
+      'C. Recording API requests and responses',
       'D. Monitoring API performance'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'C'
   },
   {
     id: 39,
@@ -538,12 +539,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is monitoring in APIs?',
     options: [
-      'A. Tracking API performance and availability',
-      'B. Tracking API documentation',
+      'A. Tracking API documentation',
+      'B. Tracking API performance and availability',
       'C. Tracking API development',
       'D. Tracking API testing'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'B'
   },
   {
     id: 40,
@@ -557,7 +558,7 @@ export const questions = [
       'C. Version your API',
       'D. All of the above'
     ],
-    correctAnswer: 'D' // Kept as D
+    correctAnswer: 'D'
   },
   {
     id: 41,
@@ -566,12 +567,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is API design?',
     options: [
-      'A. Planning and structuring API endpoints',
-      'B. Designing the API server',
-      'C. Designing the API database',
-      'D. Designing the API client'
+      'A. Designing the API server',
+      'B. Designing the API database',
+      'C. Designing the API client',
+      'D. Planning and structuring API endpoints'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'D'
   },
   {
     id: 42,
@@ -580,12 +581,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'Which of the following is a RESTful principle?',
     options: [
-      'A. Statelessness',
-      'B. Client-server architecture',
-      'C. Cacheability',
-      'D. All of the above'
+      'A. All of the above',
+      'B. Statelessness',
+      'C. Client-server architecture',
+      'D. Cacheability'
     ],
-    correctAnswer: 'B' // Moved from D to B
+    correctAnswer: 'A'
   },
   {
     id: 43,
@@ -599,7 +600,7 @@ export const questions = [
       'C. A server file',
       'D. A client application'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'A'
   },
   {
     id: 44,
@@ -608,12 +609,12 @@ export const questions = [
     difficulty: 'medium',
     question: 'What is an API endpoint?',
     options: [
-      'A. A URL where an API can be accessed',
-      'B. A database table',
+      'A. A database table',
+      'B. A URL where an API can be accessed',
       'C. A server file',
       'D. A client application'
     ],
-    correctAnswer: 'D' // Moved from A to D
+    correctAnswer: 'B'
   },
   {
     id: 45,
@@ -622,12 +623,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is an API gateway?',
     options: [
-      'A. A server that acts as a single entry point for APIs',
-      'B. A database server',
-      'C. A web server',
+      'A. A database server',
+      'B. A web server',
+      'C. A server that acts as a single entry point for APIs',
       'D. An application server'
     ],
-    correctAnswer: 'A' // Kept as A
+    correctAnswer: 'C'
   },
   {
     id: 46,
@@ -636,12 +637,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is API management?',
     options: [
-      'A. Controlling, monitoring, and analyzing API usage',
-      'B. Managing the API server',
-      'C. Managing the API database',
+      'A. Managing the API server',
+      'B. Managing the API database',
+      'C. Controlling, monitoring, and analyzing API usage',
       'D. Managing the API client'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'C'
   },
   {
     id: 47,
@@ -655,7 +656,7 @@ export const questions = [
       'C. Analyzing the API database',
       'D. Analyzing the API client'
     ],
-    correctAnswer: 'C' // Moved from A to C
+    correctAnswer: 'A'
   },
   {
     id: 48,
@@ -664,12 +665,12 @@ export const questions = [
     difficulty: 'advanced',
     question: 'What is a security best practice for APIs?',
     options: [
-      'A. Use HTTPS',
-      'B. Implement proper authentication',
-      'C. Validate input',
-      'D. All of the above'
+      'A. All of the above',
+      'B. Use HTTPS',
+      'C. Implement proper authentication',
+      'D. Validate input'
     ],
-    correctAnswer: 'D' // Kept as D
+    correctAnswer: 'A'
   },
   {
     id: 49,
@@ -683,7 +684,7 @@ export const questions = [
       'C. RAML',
       'D. All of the above'
     ],
-    correctAnswer: 'A' // Moved from D to A
+    correctAnswer: 'D'
   },
   {
     id: 50,
@@ -694,10 +695,10 @@ export const questions = [
     options: [
       'A. GraphQL adoption',
       'B. API-first development',
-      'C. Serverless APIs',
-      'D. All of the above'
+      'C. All of the above',
+      'D. Serverless APIs'
     ],
-    correctAnswer: 'B' // Moved from D to B
+    correctAnswer: 'C'
   }
 ];
 

@@ -25,7 +25,7 @@ export const questions = [
       'C. Both A and B',
       'D. git help'
     ],
-    correctAnswer: 'B' // Moved from C to B (rotated options)
+    correctAnswer: 'C' // Moved from C to B (rotated options)
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ export const questions = [
       'C. git create',
       'D. git new'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'A' // Moved from A to B
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ export const questions = [
       'C. git set user.name "Your Name"',
       'D. git name "Your Name"'
     ],
-    correctAnswer: 'B' // Moved from A to B
+    correctAnswer: 'A' // Moved from A to B
   },
   {
     id: 5,
@@ -123,7 +123,7 @@ export const questions = [
       'C. Both A and B',
       'D. git upload'
     ],
-    correctAnswer: 'B' // Moved from C to B
+    correctAnswer: 'C' // Moved from C to B
   },
   {
     id: 10,

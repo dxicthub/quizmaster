@@ -584,7 +584,7 @@ function LandingPage() {
           <p className={`text-[10px] hidden sm:block font-medium tracking-wider uppercase transition-colors duration-300 ${
             isScrolled ? 'text-gray-500 dark:text-gray-400' : 'text-white/80'
           }`}>
-            by JEO Digital Solutions
+           
           </p>
         </div>
       </Link>
