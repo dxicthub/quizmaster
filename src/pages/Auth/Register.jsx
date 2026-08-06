@@ -612,7 +612,7 @@ function Register() {
                 ) : (
                   <>
                     <span>Create Account</span>
-                    <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
+                    
                   </>
                 )}
               </motion.button>
@@ -642,8 +642,8 @@ function Register() {
                 onClick={() => navigate('/login')}
                 className="group inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold hover:underline transition-all duration-300"
               >
-                Login here
-                <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform duration-300" />
+                <strong>Login here</strong>
+                
               </button>
             </motion.div>
 
@@ -652,14 +652,14 @@ function Register() {
               variants={itemVariants}
               className="mt-4 p-4 rounded-xl bg-gradient-to-r from-blue-50/50 to-indigo-50/50 dark:from-blue-900/10 dark:to-indigo-900/10 border border-blue-200/50 dark:border-blue-800/30"
             >
-              <div className="flex items-start gap-3">
-                <FaLightbulb className="text-amber-500 text-lg mt-0.5" />
-                <div>
+              <div className="flex items-center justify-center gap-3">
+                
+                <div className=" justify-center text-xs">
                   <p className="text-sm text-gray-600 dark:text-gray-300">
-                    📱 Phone: <strong>+234 801 234 5678</strong> (Nigeria format)
+                   <strong> Phone: +234 (Nigeria format)</strong>
                   </p>
                   <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                    🔒 Email and phone number must be unique
+                    <strong>Email and phone number must be unique</strong>
                   </p>
                 </div>
               </div>

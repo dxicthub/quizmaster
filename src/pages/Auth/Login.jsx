@@ -57,7 +57,6 @@ function Login() {
     setIsLoading(false);
     
     if (success) {
-      toast.success('Welcome back!');
       setTimeout(() => {
         navigate('/app');
       }, 1000);
@@ -83,6 +82,20 @@ function Login() {
 
   const handleBackToLanding = () => {
     navigate('/');
+  };
+
+  // ✅ NEW: Function to navigate to landing page contact section
+  const handleContactUsClick = (e) => {
+    e.preventDefault();
+    // Navigate to landing page with contact section hash
+    navigate('/#contact');
+    // Small delay to ensure navigation completes before scrolling
+    setTimeout(() => {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
   };
 
   const containerVariants = {
@@ -257,7 +270,7 @@ function Login() {
                 ) : (
                   <>
                     <span>Login</span>
-                    <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
+                    
                   </>
                 )}
               </motion.button>
@@ -289,11 +302,11 @@ function Login() {
               >
                 <FaUserShield className="text-lg group-hover:rotate-12 transition-transform duration-300" />
                 <span>Admin Login</span>
-                <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform duration-300" />
+                
               </button>
             </motion.div>
 
-            {/* Register Link */}
+            {/* ✅ UPDATED: Register Link with "here" linking to Contact Us */}
             <motion.div 
               variants={itemVariants}
               className="mt-4 text-center"
@@ -305,9 +318,16 @@ function Login() {
                   className="text-blue-600 dark:text-blue-400 font-semibold hover:underline transition-colors duration-300 inline-flex items-center gap-1 group"
                 >
                   Register here
-                  <FaArrowRight className="text-xs group-hover:translate-x-1 transition-transform duration-300" />
+                  
                 </Link>
               </p>
+            </motion.div>
+
+            {/* ✅ NEW: Contact Us Link */}
+            <motion.div
+              variants={itemVariants}
+              className="mt-3 text-center"
+            >
             </motion.div>
 
             {/* Help Tip */}
@@ -316,13 +336,12 @@ function Login() {
               className="mt-4 p-4 rounded-xl bg-gradient-to-r from-blue-50/50 to-indigo-50/50 dark:from-blue-900/10 dark:to-indigo-900/10 border border-blue-200/50 dark:border-blue-800/30"
             >
               <div className="flex items-start text-center gap-3">
-               
                 <div>
                   <p className="text-sm text-gray-600 dark:text-gray-300">
-                     Your passcode was provided during registration.
+                    Your passcode was provided during registration.
                   </p>
                   <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                    If you forgot it, please contact support for assistance.
+                    If you forgot it, please <button onClick={handleContactUsClick} className="text-blue-600 dark:text-blue-400 hover:underline font-medium">contact us</button> for assistance.
                   </p>
                 </div>
               </div>

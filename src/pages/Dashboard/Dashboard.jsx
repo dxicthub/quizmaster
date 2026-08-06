@@ -218,9 +218,7 @@ function Dashboard() {
                   </div>
                 </div>
                 <div>
-                  <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-500 bg-clip-text text-transparent">
-                    Welcome{student ? `, ${student.fullName}` : ''}! 👋
-                  </h1>
+                  
                   <p className="text-gray-500 dark:text-gray-400 mt-1 flex items-center gap-2">
                     <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
                     Select a quiz to test your knowledge and track your progress

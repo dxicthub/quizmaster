@@ -49,6 +49,9 @@ function QuizPage() {
     getProgress,
     getResults,
     selectQuiz,
+    // ✅ Get the active quiz state from context
+    isQuizActive,
+    setQuizActive,
   } = useQuiz();
 
   const [isReviewing, setIsReviewing] = useState(false);
@@ -191,6 +194,9 @@ function QuizPage() {
     
     startQuiz();
     
+    // ✅ Set quiz as active when started
+    setQuizActive(true);
+    
     const totalMinutes = state.questions.length <= 50 ? 20 : 40;
     toast.success(`🚀 Quiz started! You have ${totalMinutes} minutes. Good luck, ${student?.fullName || 'Student'}!`, {
       duration: 3000,
@@ -245,6 +251,10 @@ function QuizPage() {
     setTimeout(() => {
       completeQuiz();
       setSubmitting(false);
+      
+      // ✅ Clear quiz active state on completion
+      setQuizActive(false);
+      
       toast.success('✅ Quiz submitted successfully!', {
         duration: 2000,
         position: 'top-center',
@@ -289,6 +299,8 @@ function QuizPage() {
       if (result.isConfirmed) {
         setResultsDisplayed(false);
         restartQuiz();
+        // ✅ Clear quiz active state on restart
+        setQuizActive(false);
         navigate('/app');
         toast.success('Quiz restarted successfully!');
       }
@@ -320,9 +332,46 @@ function QuizPage() {
     navigate('/app/results');
   };
 
+  // ✅ UPDATED: Protected "Back to Dashboard" handler
   const handleBackToDashboard = () => {
     if (state.isSubmitting) return;
     
+    // ✅ Check if quiz is active - prevent navigation
+    if (isQuizActive && !isQuizComplete) {
+      // Show toast notification
+      toast.error('Sorry, you must complete your Quiz', {
+        duration: 4000,
+        position: 'top-center',
+        style: {
+          background: '#dc2626',
+          color: 'white',
+          fontWeight: 'bold',
+          padding: '16px',
+          borderRadius: '12px',
+          boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+        },
+        icon: '🔒',
+      });
+      
+      // Also show a more prominent modal
+      Swal.fire({
+        title: '🔒 Quiz in Progress',
+        text: 'Sorry, you must complete your Quiz',
+        icon: 'warning',
+        confirmButtonColor: '#3b82f6',
+        confirmButtonText: 'Continue Quiz',
+        backdrop: 'rgba(0,0,0,0.6)',
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        customClass: {
+          popup: 'rounded-2xl shadow-2xl',
+          confirmButton: 'px-6 py-2.5 rounded-xl font-semibold',
+        }
+      });
+      return;
+    }
+    
+    // ✅ Normal navigation when quiz is not active
     if (!isQuizComplete && quizStarted) {
       Swal.fire({
         title: '⚠️ Exit Quiz?',
@@ -342,11 +391,15 @@ function QuizPage() {
       }).then((result) => {
         if (result.isConfirmed) {
           clearQuizState();
+          // ✅ Clear quiz active state
+          setQuizActive(false);
           navigate('/app');
         }
       });
     } else {
       clearQuizState();
+      // ✅ Clear quiz active state
+      setQuizActive(false);
       navigate('/app');
     }
   };
@@ -467,14 +520,14 @@ function QuizPage() {
       </div>
 
       <div className="max-w-7xl mx-auto">
-        {/* Header with Back Button */}
+        {/* Header with Protected Back Button */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           className="mb-6 flex items-center justify-between"
         >
           <button
-            onClick={handleBackToDashboard}
+            onClick={handleBackToDashboard}  // ✅ Using protected handler
             className="flex items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 transition-all duration-300 group"
           >
             <div className="p-2 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 group-hover:shadow-md transition-all duration-300 group-hover:scale-105">

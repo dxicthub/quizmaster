@@ -207,7 +207,7 @@ function AdminLogin() {
                   type="button"
                   className="text-sm text-purple-600 dark:text-purple-400 hover:underline transition-colors duration-300"
                 >
-                  Forgot password?
+             
                 </button>
               </div>
 
@@ -227,7 +227,7 @@ function AdminLogin() {
                 ) : (
                   <>
                     <span>Login to Admin</span>
-                    <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
+                   
                   </>
                 )}
               </motion.button>
@@ -254,8 +254,8 @@ function AdminLogin() {
                 className="group inline-flex items-center gap-2 px-6 py-3 bg-blue-50/50 dark:bg-blue-900/20 border border-blue-200/50 dark:border-blue-700/30 hover:bg-blue-100/50 dark:hover:bg-blue-900/30 rounded-xl text-blue-600 dark:text-blue-400 font-medium transition-all duration-300 hover:shadow-lg"
               >
                 <FaGraduationCap className="text-lg group-hover:rotate-12 transition-transform duration-300" />
-                <span>Student Login</span>
-                <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform duration-300" />
+                <span>Student?  Login here</span>
+                
               </motion.button>
             </div>
 

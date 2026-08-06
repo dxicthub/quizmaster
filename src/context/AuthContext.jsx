@@ -434,11 +434,10 @@ export function AuthProvider({ children }) {
         registrationComplete: true,
       });
       
-      toast.success(`Welcome back, ${student.fullName}! 👋`);
-      return { success: true };
+    
     }
 
-    toast.error('Invalid email or passcode. Please try again.');
+  
     return { success: false, reason: 'invalid' };
   };
 

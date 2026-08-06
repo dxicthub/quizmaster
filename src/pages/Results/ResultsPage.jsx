@@ -42,17 +42,14 @@ function ResultsPage() {
       setIsLoading(false);
     }, 500);
     
+    // ✅ UPDATED: Only show success toast, remove the failure message
     if (passedQuiz) {
       toast.success('🎉 Congratulations! You passed the quiz!', {
         duration: 4000,
         position: 'top-center',
       });
-    } else {
-      toast.error('❌ Sorry, you didn\'t pass this time. Keep practicing!', {
-        duration: 4000,
-        position: 'top-center',
-      });
     }
+    // ❌ REMOVED: The "Sorry, you didn't pass" toast message
   }, []);
 
   const handleRetakeQuiz = () => {
@@ -285,12 +282,13 @@ function ResultsPage() {
     win.document.close();
   };
 
+  // ✅ UPDATED: Removed negative messaging, kept only positive/neutral messages
   const getPerformanceMessage = () => {
     if (percentage >= 90) return '🎉 Outstanding Performance! Excellent Work!';
     if (percentage >= 80) return '👏 Great Job! Keep Practicing!';
     if (percentage >= 70) return '💪 Good Effort! Review and Try Again!';
-    if (percentage >= 60) return '📚 Keep Learning! You\'ll Get There!';
-    return '🤝 Don\'t Give Up! Review and Retake the Quiz!';
+    if (percentage >= 60) return '📚 Keep Learning! You\'re Making Progress!';
+    return '💪 Keep Going! Every Attempt Makes You Stronger!';
   };
 
   const getPerformanceColor = () => {
@@ -298,7 +296,7 @@ function ResultsPage() {
     if (percentage >= 80) return 'text-blue-500';
     if (percentage >= 70) return 'text-amber-500';
     if (percentage >= 60) return 'text-orange-500';
-    return 'text-rose-500';
+    return 'text-purple-500';
   };
 
   const getPerformanceGradient = () => {
@@ -306,14 +304,14 @@ function ResultsPage() {
     if (percentage >= 80) return 'from-blue-500 to-indigo-500';
     if (percentage >= 70) return 'from-amber-500 to-orange-500';
     if (percentage >= 60) return 'from-orange-500 to-red-500';
-    return 'from-rose-500 to-red-500';
+    return 'from-purple-500 to-indigo-500';
   };
 
   const getCardBackground = () => {
     if (passedQuiz) {
       return 'bg-gradient-to-br from-emerald-500/20 via-emerald-400/10 to-transparent border-emerald-500/40';
     }
-    return 'bg-gradient-to-br from-orange-500/20 via-rose-400/10 to-transparent border-orange-500/40';
+    return 'bg-gradient-to-br from-purple-500/20 via-indigo-400/10 to-transparent border-purple-500/40';
   };
 
   const getEmoji = () => {
@@ -321,7 +319,7 @@ function ResultsPage() {
     if (percentage >= 80) return '🌟';
     if (percentage >= 70) return '💪';
     if (percentage >= 60) return '📚';
-    return '🤝';
+    return '🚀';
   };
 
   const getPerformanceLevel = () => {
@@ -329,7 +327,7 @@ function ResultsPage() {
     if (percentage >= 80) return { label: 'Pro', icon: FaMedal, color: 'text-blue-500' };
     if (percentage >= 70) return { label: 'Advanced', icon: FaRocket, color: 'text-amber-500' };
     if (percentage >= 60) return { label: 'Intermediate', icon: FaGraduationCap, color: 'text-orange-500' };
-    return { label: 'Beginner', icon: FaBook, color: 'text-rose-500' };
+    return { label: 'Growing', icon: FaBook, color: 'text-purple-500' };
   };
 
   const formatTime = (totalSeconds) => {
@@ -451,16 +449,16 @@ function ResultsPage() {
                 <div className={`text-6xl font-bold mb-2 ${getPerformanceColor()}`}>
                   {percentage.toFixed(1)}%
                 </div>
-                <div className={`text-2xl font-semibold ${passedQuiz ? 'text-emerald-600 dark:text-emerald-400' : 'text-orange-600 dark:text-orange-400'}`}>
+                <div className={`text-2xl font-semibold ${passedQuiz ? 'text-emerald-600 dark:text-emerald-400' : 'text-purple-600 dark:text-purple-400'}`}>
                   {getPerformanceMessage()}
                 </div>
                 <div className="mt-2 flex items-center justify-center gap-3 text-sm text-gray-500 dark:text-gray-400">
                   <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
                     passedQuiz 
                       ? 'bg-emerald-100/50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 border border-emerald-200/50 dark:border-emerald-700/30' 
-                      : 'bg-orange-100/50 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 border border-orange-200/50 dark:border-orange-700/30'
+                      : 'bg-purple-100/50 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 border border-purple-200/50 dark:border-purple-700/30'
                   }`}>
-                    {passedQuiz ? '✅ Passed' : '❌ Not Passed'}
+                    {passedQuiz ? '✅ Passed' : '📈 Keep Learning!'}
                   </span>
                   <span>Passing Score: 90%</span>
                 </div>

@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useReducer, useEffect } from 'react';
+// src/context/QuizContext.jsx
+import React, { createContext, useContext, useReducer, useEffect, useRef, useCallback } from 'react';
 import { questions } from '../data/questions.js';
 import { quizCategories } from '../data/quizCategories.js';
 import { useAuth } from './AuthContext.jsx';
@@ -26,10 +27,11 @@ const initialState = {
   recentlyTaken: [],
   isReviewing: false,
   quizHistory: [],
-  // New countdown timer state
-  countdownTimer: 0, // Total seconds remaining
+  countdownTimer: 0,
   countdownTimerRunning: false,
-  countdownTimerInitial: 0, // Initial total seconds for reference
+  countdownTimerInitial: 0,
+  // ✅ NEW: Active quiz state
+  isQuizActive: false,
 };
 
 // Action types
@@ -62,6 +64,8 @@ const ACTIONS = {
   TOGGLE_COUNTDOWN_TIMER: 'TOGGLE_COUNTDOWN_TIMER',
   RESET_COUNTDOWN_TIMER: 'RESET_COUNTDOWN_TIMER',
   DECREMENT_COUNTDOWN_TIMER: 'DECREMENT_COUNTDOWN_TIMER',
+  // ✅ NEW: Set quiz active state
+  SET_QUIZ_ACTIVE: 'SET_QUIZ_ACTIVE',
 };
 
 // Reducer function
@@ -102,6 +106,8 @@ function quizReducer(state, action) {
         canNavigateBack: true,
         isSubmitting: false,
         countdownTimerRunning: false,
+        // ✅ End quiz session on completion
+        isQuizActive: false,
       };
     case ACTIONS.RESTART_QUIZ:
       return {
@@ -113,6 +119,8 @@ function quizReducer(state, action) {
         selectedQuiz: state.selectedQuiz,
         favorites: state.favorites,
         recentlyTaken: state.recentlyTaken,
+        // ✅ Reset quiz active state
+        isQuizActive: false,
       };
     case ACTIONS.TOGGLE_DARK_MODE:
       return { ...state, darkMode: !state.darkMode };
@@ -131,9 +139,7 @@ function quizReducer(state, action) {
     case ACTIONS.SET_CAN_NAVIGATE_BACK:
       return { ...state, canNavigateBack: action.payload };
     case ACTIONS.START_QUIZ: {
-      // Calculate initial countdown timer based on question count
       const totalQuestions = state.questions.length || 0;
-      // 50 questions or fewer = 20 minutes, more than 50 = 40 minutes
       const totalMinutes = totalQuestions <= 50 ? 20 : 40;
       const totalSeconds = totalMinutes * 60;
       
@@ -145,6 +151,8 @@ function quizReducer(state, action) {
         countdownTimer: totalSeconds,
         countdownTimerInitial: totalSeconds,
         countdownTimerRunning: true,
+        // ✅ Set quiz as active when started
+        isQuizActive: true,
       };
     }
     case ACTIONS.TOGGLE_INSTRUCTIONS:
@@ -192,6 +200,8 @@ function quizReducer(state, action) {
         countdownTimer: 0,
         countdownTimerRunning: false,
         countdownTimerInitial: 0,
+        // ✅ Reset quiz active state when selecting new quiz
+        isQuizActive: false,
       };
     }
     case ACTIONS.TOGGLE_FAVORITE: {
@@ -228,6 +238,8 @@ function quizReducer(state, action) {
         countdownTimer: 0,
         countdownTimerRunning: false,
         countdownTimerInitial: 0,
+        // ✅ Reset quiz active state
+        isQuizActive: false,
       };
     case ACTIONS.SET_REVIEWING:
       return { ...state, isReviewing: action.payload };
@@ -250,6 +262,9 @@ function quizReducer(state, action) {
     }
     case ACTIONS.DECREMENT_COUNTDOWN_TIMER:
       return { ...state, countdownTimer: Math.max(0, state.countdownTimer - 1) };
+    // ✅ NEW: Set quiz active state
+    case ACTIONS.SET_QUIZ_ACTIVE:
+      return { ...state, isQuizActive: action.payload };
     default:
       return state;
   }
@@ -262,6 +277,12 @@ const QuizContext = createContext();
 export function QuizProvider({ children }) {
   const [state, dispatch] = useReducer(quizReducer, initialState);
   const { addQuizHistory: addStudentQuizHistory, student } = useAuth();
+  
+  // Use refs to track timer intervals
+  const timerIntervalRef = useRef(null);
+  const countdownIntervalRef = useRef(null);
+  const questionTimerIntervalRef = useRef(null);
+  const isMountedRef = useRef(true);
 
   // Load state from localStorage on mount
   useEffect(() => {
@@ -287,181 +308,212 @@ export function QuizProvider({ children }) {
         if (parsed.favorites) {
           dispatch({ type: ACTIONS.TOGGLE_FAVORITE, payload: parsed.favorites });
         }
-        // Restore countdown timer if quiz was started
         if (parsed.countdownTimer > 0 && parsed.quizStarted && !parsed.quizCompleted) {
           dispatch({ type: ACTIONS.SET_COUNTDOWN_TIMER, payload: parsed.countdownTimer });
           dispatch({ type: ACTIONS.TOGGLE_COUNTDOWN_TIMER });
+        }
+        // ✅ Restore quiz active state if quiz is in progress
+        if (parsed.isQuizActive && parsed.quizStarted && !parsed.quizCompleted) {
+          dispatch({ type: ACTIONS.SET_QUIZ_ACTIVE, payload: true });
         }
       } catch (error) {
         console.error('Error loading saved state:', error);
       }
     }
+    
+    isMountedRef.current = true;
+    return () => {
+      isMountedRef.current = false;
+      if (timerIntervalRef.current) clearInterval(timerIntervalRef.current);
+      if (countdownIntervalRef.current) clearInterval(countdownIntervalRef.current);
+      if (questionTimerIntervalRef.current) clearInterval(questionTimerIntervalRef.current);
+    };
   }, []);
 
   // Save state to localStorage
   useEffect(() => {
-    localStorage.setItem('quizState', JSON.stringify(state));
+    const saveTimeout = setTimeout(() => {
+      localStorage.setItem('quizState', JSON.stringify(state));
+    }, 300);
+    return () => clearTimeout(saveTimeout);
   }, [state]);
 
-  // Overall timer effect (kept for backward compatibility)
+  // ✅ Save active state to sessionStorage for persistence across refreshes
   useEffect(() => {
-    let interval;
+    if (state.isQuizActive) {
+      sessionStorage.setItem('quizActive', 'true');
+    } else {
+      sessionStorage.removeItem('quizActive');
+    }
+  }, [state.isQuizActive]);
+
+  // ✅ Restore active state from sessionStorage on mount
+  useEffect(() => {
+    const savedActive = sessionStorage.getItem('quizActive');
+    if (savedActive === 'true' && state.quizStarted && !state.quizCompleted) {
+      dispatch({ type: ACTIONS.SET_QUIZ_ACTIVE, payload: true });
+    }
+  }, []);
+
+  // Overall timer effect
+  useEffect(() => {
+    if (timerIntervalRef.current) {
+      clearInterval(timerIntervalRef.current);
+      timerIntervalRef.current = null;
+    }
+
     if (state.isTimerRunning && !state.quizCompleted && state.quizStarted && state.questions.length > 0) {
-      interval = setInterval(() => {
-        dispatch({ type: ACTIONS.SET_TIMER, payload: state.timer + 1 });
+      timerIntervalRef.current = setInterval(() => {
+        if (isMountedRef.current) {
+          dispatch({ type: ACTIONS.SET_TIMER, payload: state.timer + 1 });
+        }
       }, 1000);
     }
-    return () => clearInterval(interval);
-  }, [state.isTimerRunning, state.timer, state.quizCompleted, state.quizStarted, state.questions.length]);
+
+    return () => {
+      if (timerIntervalRef.current) {
+        clearInterval(timerIntervalRef.current);
+        timerIntervalRef.current = null;
+      }
+    };
+  }, [state.isTimerRunning, state.quizCompleted, state.quizStarted, state.questions.length]);
 
   // Countdown timer effect
   useEffect(() => {
-    let interval;
+    if (countdownIntervalRef.current) {
+      clearInterval(countdownIntervalRef.current);
+      countdownIntervalRef.current = null;
+    }
+
     if (state.countdownTimerRunning && !state.quizCompleted && state.quizStarted && state.countdownTimer > 0) {
-      interval = setInterval(() => {
-        // Decrement the countdown timer
-        dispatch({ type: ACTIONS.DECREMENT_COUNTDOWN_TIMER });
-        
-        // Check if timer reached 0
-        const newTime = state.countdownTimer - 1;
-        if (newTime <= 0) {
-          // Auto-submit the quiz when timer hits 0
-          dispatch({ type: ACTIONS.SET_SUBMITTING, payload: true });
-          setTimeout(() => {
-            const results = getResults();
-            const currentQuestions = state.questions || [];
-            const currentAnswers = state.answers || {};
-            
-            const historyEntry = {
-              id: Date.now().toString(),
-              quizId: state.selectedQuiz?.id,
-              quizTitle: state.selectedQuiz?.title,
-              date: new Date().toISOString(),
-              score: results.percentage,
-              passed: results.passed,
-              failed: results.failed,
-              unanswered: results.unanswered,
-              total: results.total,
-              timeTaken: state.timer,
-              questions: currentQuestions.map(q => ({ ...q })),
-              answers: { ...currentAnswers },
-            };
-            
-            // Save to localStorage with unique key
-            const attemptKey = `attempt_${historyEntry.id}`;
-            localStorage.setItem(attemptKey, JSON.stringify({
-              questions: historyEntry.questions,
-              answers: historyEntry.answers,
-              quizTitle: historyEntry.quizTitle,
-              score: historyEntry.score,
-              date: historyEntry.date,
-            }));
-            
-            // Save to quiz attempts list
-            if (state.selectedQuiz?.id) {
-              const quizAttemptsKey = `quiz_attempts_${state.selectedQuiz.id}`;
-              const existingAttempts = JSON.parse(localStorage.getItem(quizAttemptsKey) || '[]');
-              existingAttempts.push(historyEntry.id);
-              localStorage.setItem(quizAttemptsKey, JSON.stringify(existingAttempts));
-            }
-            
-            dispatch({ type: ACTIONS.ADD_QUIZ_HISTORY, payload: historyEntry });
-            addStudentQuizHistory(historyEntry);
-            dispatch({ type: ACTIONS.COMPLETE_QUIZ });
-            if (state.selectedQuiz) {
-              dispatch({ type: ACTIONS.ADD_RECENTLY_TAKEN, payload: state.selectedQuiz.id });
-            }
-          }, 500);
+      countdownIntervalRef.current = setInterval(() => {
+        if (isMountedRef.current) {
+          dispatch({ type: ACTIONS.DECREMENT_COUNTDOWN_TIMER });
+          
+          const newTime = state.countdownTimer - 1;
+          if (newTime <= 0) {
+            handleAutoSubmit();
+          }
         }
       }, 1000);
     }
-    return () => clearInterval(interval);
+
+    return () => {
+      if (countdownIntervalRef.current) {
+        clearInterval(countdownIntervalRef.current);
+        countdownIntervalRef.current = null;
+      }
+    };
   }, [state.countdownTimerRunning, state.countdownTimer, state.quizCompleted, state.quizStarted]);
 
-  // Per-question timer effect with auto-submit on last question
+  // Per-question timer effect
   useEffect(() => {
-    let interval;
+    if (questionTimerIntervalRef.current) {
+      clearInterval(questionTimerIntervalRef.current);
+      questionTimerIntervalRef.current = null;
+    }
+
     if (state.questionTimerRunning && !state.quizCompleted && state.quizStarted && state.questionTimer > 0 && state.questions.length > 0) {
-      interval = setInterval(() => {
-        const newTime = state.questionTimer - 1;
-        dispatch({ type: ACTIONS.SET_QUESTION_TIMER, payload: newTime });
-        
-        if (newTime === 0) {
-          const currentQuestion = state.questions[state.currentQuestionIndex];
-          const isAnswered = state.answers[currentQuestion?.id];
+      questionTimerIntervalRef.current = setInterval(() => {
+        if (isMountedRef.current) {
+          const newTime = state.questionTimer - 1;
+          dispatch({ type: ACTIONS.SET_QUESTION_TIMER, payload: newTime });
           
-          const isLastQuestion = state.currentQuestionIndex === state.questions.length - 1;
-          
-          if (isLastQuestion) {
-            dispatch({ type: ACTIONS.SET_SUBMITTING, payload: true });
-            setTimeout(() => {
-              const results = getResults();
-              const currentQuestions = state.questions || [];
-              const currentAnswers = state.answers || {};
-              
-              const historyEntry = {
-                id: Date.now().toString(),
-                quizId: state.selectedQuiz?.id,
-                quizTitle: state.selectedQuiz?.title,
-                date: new Date().toISOString(),
-                score: results.percentage,
-                passed: results.passed,
-                failed: results.failed,
-                unanswered: results.unanswered,
-                total: results.total,
-                timeTaken: state.timer,
-                questions: currentQuestions.map(q => ({ ...q })),
-                answers: { ...currentAnswers },
-              };
-              
-              // Save to localStorage with unique key
-              const attemptKey = `attempt_${historyEntry.id}`;
-              localStorage.setItem(attemptKey, JSON.stringify({
-                questions: historyEntry.questions,
-                answers: historyEntry.answers,
-                quizTitle: historyEntry.quizTitle,
-                score: historyEntry.score,
-                date: historyEntry.date,
-              }));
-              
-              // Save to quiz attempts list
-              if (state.selectedQuiz?.id) {
-                const quizAttemptsKey = `quiz_attempts_${state.selectedQuiz.id}`;
-                const existingAttempts = JSON.parse(localStorage.getItem(quizAttemptsKey) || '[]');
-                existingAttempts.push(historyEntry.id);
-                localStorage.setItem(quizAttemptsKey, JSON.stringify(existingAttempts));
-              }
-              
-              dispatch({ type: ACTIONS.ADD_QUIZ_HISTORY, payload: historyEntry });
-              addStudentQuizHistory(historyEntry);
-              dispatch({ type: ACTIONS.COMPLETE_QUIZ });
-              if (state.selectedQuiz) {
-                dispatch({ type: ACTIONS.ADD_RECENTLY_TAKEN, payload: state.selectedQuiz.id });
-              }
-            }, 500);
-            return;
-          }
-          
-          if (!isAnswered && currentQuestion) {
-            if (state.currentQuestionIndex < state.questions.length - 1) {
-              dispatch({ type: ACTIONS.NEXT_QUESTION });
-            }
+          if (newTime === 0) {
+            handleQuestionTimeout();
           }
         }
       }, 1000);
     }
-    return () => clearInterval(interval);
-  }, [state.questionTimerRunning, state.questionTimer, state.quizCompleted, state.currentQuestionIndex, state.questions, state.quizStarted, state.selectedQuiz]);
+
+    return () => {
+      if (questionTimerIntervalRef.current) {
+        clearInterval(questionTimerIntervalRef.current);
+        questionTimerIntervalRef.current = null;
+      }
+    };
+  }, [state.questionTimerRunning, state.questionTimer, state.quizCompleted, state.quizStarted, state.questions.length]);
+
+  // Extract handlers to prevent recreating in effects
+  const handleAutoSubmit = useCallback(() => {
+    if (!isMountedRef.current) return;
+    
+    dispatch({ type: ACTIONS.SET_SUBMITTING, payload: true });
+    setTimeout(() => {
+      if (!isMountedRef.current) return;
+      
+      const results = getResults();
+      const currentQuestions = state.questions || [];
+      const currentAnswers = state.answers || {};
+      
+      const historyEntry = {
+        id: Date.now().toString(),
+        quizId: state.selectedQuiz?.id,
+        quizTitle: state.selectedQuiz?.title,
+        date: new Date().toISOString(),
+        score: results.percentage,
+        passed: results.passed,
+        failed: results.failed,
+        unanswered: results.unanswered,
+        total: results.total,
+        timeTaken: state.timer,
+        questions: currentQuestions.map(q => ({ ...q })),
+        answers: { ...currentAnswers },
+      };
+      
+      const attemptKey = `attempt_${historyEntry.id}`;
+      localStorage.setItem(attemptKey, JSON.stringify({
+        questions: historyEntry.questions,
+        answers: historyEntry.answers,
+        quizTitle: historyEntry.quizTitle,
+        score: historyEntry.score,
+        date: historyEntry.date,
+      }));
+      
+      if (state.selectedQuiz?.id) {
+        const quizAttemptsKey = `quiz_attempts_${state.selectedQuiz.id}`;
+        const existingAttempts = JSON.parse(localStorage.getItem(quizAttemptsKey) || '[]');
+        existingAttempts.push(historyEntry.id);
+        localStorage.setItem(quizAttemptsKey, JSON.stringify(existingAttempts));
+      }
+      
+      dispatch({ type: ACTIONS.ADD_QUIZ_HISTORY, payload: historyEntry });
+      addStudentQuizHistory(historyEntry);
+      dispatch({ type: ACTIONS.COMPLETE_QUIZ });
+      if (state.selectedQuiz) {
+        dispatch({ type: ACTIONS.ADD_RECENTLY_TAKEN, payload: state.selectedQuiz.id });
+      }
+    }, 500);
+  }, [state, addStudentQuizHistory]);
+
+  const handleQuestionTimeout = useCallback(() => {
+    if (!isMountedRef.current) return;
+    
+    const currentQuestion = state.questions[state.currentQuestionIndex];
+    const isAnswered = state.answers[currentQuestion?.id];
+    const isLastQuestion = state.currentQuestionIndex === state.questions.length - 1;
+    
+    if (isLastQuestion) {
+      handleAutoSubmit();
+      return;
+    }
+    
+    if (!isAnswered && currentQuestion) {
+      if (state.currentQuestionIndex < state.questions.length - 1) {
+        dispatch({ type: ACTIONS.NEXT_QUESTION });
+      }
+    }
+  }, [state, handleAutoSubmit]);
 
   // Reset question timer when question changes
   useEffect(() => {
     if (!state.quizCompleted && state.quizStarted && state.questions.length > 0) {
       dispatch({ type: ACTIONS.RESET_QUESTION_TIMER });
     }
-  }, [state.currentQuestionIndex, state.quizStarted, state.questions.length]);
+  }, [state.currentQuestionIndex]);
 
   // Get results helper
-  const getResults = () => {
+  const getResults = useCallback(() => {
     let passed = 0;
     let failed = 0;
     let total = state.questions.length;
@@ -494,32 +546,45 @@ export function QuizProvider({ children }) {
       topic: state.selectedQuiz?.title || 'General',
       difficulty: state.selectedQuiz?.difficulty || 'N/A'
     };
-  };
+  }, [state.questions, state.answers, state.timer, state.selectedQuiz]);
 
-  // Context value
+  // ✅ NEW: Set quiz active state
+  const setQuizActive = useCallback((active) => {
+    dispatch({ type: ACTIONS.SET_QUIZ_ACTIVE, payload: active });
+    if (active) {
+      sessionStorage.setItem('quizActive', 'true');
+    } else {
+      sessionStorage.removeItem('quizActive');
+    }
+  }, []);
+
+  // Context value - memoized to prevent unnecessary re-renders
   const value = {
     state,
     dispatch,
     actions: ACTIONS,
-    selectAnswer: (questionId, answer) => {
+    // ✅ NEW: Expose isQuizActive directly
+    isQuizActive: state.isQuizActive,
+    // ✅ NEW: Set quiz active function
+    setQuizActive,
+    selectAnswer: useCallback((questionId, answer) => {
       dispatch({ type: ACTIONS.SELECT_ANSWER, payload: { questionId, answer } });
-    },
-    nextQuestion: () => {
+    }, []),
+    nextQuestion: useCallback(() => {
       if (state.currentQuestionIndex < state.questions.length - 1) {
         dispatch({ type: ACTIONS.NEXT_QUESTION });
       }
-    },
-    previousQuestion: () => {
+    }, [state.currentQuestionIndex, state.questions.length]),
+    previousQuestion: useCallback(() => {
       if (state.canNavigateBack && state.currentQuestionIndex > 0) {
         dispatch({ type: ACTIONS.PREVIOUS_QUESTION });
       }
-    },
-    completeQuiz: () => {
+    }, [state.canNavigateBack, state.currentQuestionIndex]),
+    completeQuiz: useCallback(() => {
       const results = getResults();
       const currentQuestions = state.questions || [];
       const currentAnswers = state.answers || {};
       
-      // Create a detailed history entry with questions and answers
       const historyEntry = {
         id: Date.now().toString(),
         quizId: state.selectedQuiz?.id,
@@ -531,21 +596,11 @@ export function QuizProvider({ children }) {
         unanswered: results.unanswered,
         total: results.total,
         timeTaken: state.timer,
-        // Store the questions and answers for this specific attempt
         questions: currentQuestions.map(q => ({ ...q })),
         answers: { ...currentAnswers },
         attemptNumber: (student?.quizHistory?.filter(h => h.quizTitle === state.selectedQuiz?.title).length || 0) + 1,
       };
       
-      console.log('📝 Saving quiz attempt:', {
-        id: historyEntry.id,
-        quizTitle: historyEntry.quizTitle,
-        questionCount: historyEntry.questions.length,
-        answerCount: Object.keys(historyEntry.answers).length,
-        score: historyEntry.score,
-      });
-      
-      // Save to localStorage with a unique key for this attempt
       const attemptKey = `attempt_${historyEntry.id}`;
       localStorage.setItem(attemptKey, JSON.stringify({
         questions: historyEntry.questions,
@@ -555,16 +610,13 @@ export function QuizProvider({ children }) {
         date: historyEntry.date,
       }));
       
-      // Save to a list of attempt IDs for this quiz
       if (state.selectedQuiz?.id) {
         const quizAttemptsKey = `quiz_attempts_${state.selectedQuiz.id}`;
         const existingAttempts = JSON.parse(localStorage.getItem(quizAttemptsKey) || '[]');
         existingAttempts.push(historyEntry.id);
         localStorage.setItem(quizAttemptsKey, JSON.stringify(existingAttempts));
-        console.log(`📚 Saved attempt to quiz_attempts_${state.selectedQuiz.id}:`, existingAttempts);
       }
       
-      // Also save a review-specific data
       const reviewKey = `review_${historyEntry.id}`;
       localStorage.setItem(reviewKey, JSON.stringify({
         questions: historyEntry.questions,
@@ -582,20 +634,27 @@ export function QuizProvider({ children }) {
         dispatch({ type: ACTIONS.ADD_RECENTLY_TAKEN, payload: state.selectedQuiz.id });
       }
       
-      console.log('✅ Quiz attempt saved successfully!');
-    },
-    restartQuiz: () => {
+      // ✅ Ensure quiz active state is cleared on completion
+      setQuizActive(false);
+    }, [state, getResults, addStudentQuizHistory, student, setQuizActive]),
+    restartQuiz: useCallback(() => {
       dispatch({ type: ACTIONS.RESTART_QUIZ });
-    },
-    toggleDarkMode: () => {
+      // ✅ Clear quiz active state on restart
+      setQuizActive(false);
+    }, [setQuizActive]),
+    toggleDarkMode: useCallback(() => {
       dispatch({ type: ACTIONS.TOGGLE_DARK_MODE });
       document.documentElement.classList.toggle('dark');
-    },
-    startQuiz: () => dispatch({ type: ACTIONS.START_QUIZ }),
-    toggleInstructions: () => dispatch({ type: ACTIONS.TOGGLE_INSTRUCTIONS }),
-    setResultsDisplayed: (value) => dispatch({ type: ACTIONS.SET_RESULTS_DISPLAYED, payload: value }),
-    setSubmitting: (value) => dispatch({ type: ACTIONS.SET_SUBMITTING, payload: value }),
-    selectQuiz: (quiz) => {
+    }, []),
+    startQuiz: useCallback(() => {
+      dispatch({ type: ACTIONS.START_QUIZ });
+      // ✅ Set quiz active when starting
+      setQuizActive(true);
+    }, [setQuizActive]),
+    toggleInstructions: useCallback(() => dispatch({ type: ACTIONS.TOGGLE_INSTRUCTIONS }), []),
+    setResultsDisplayed: useCallback((value) => dispatch({ type: ACTIONS.SET_RESULTS_DISPLAYED, payload: value }), []),
+    setSubmitting: useCallback((value) => dispatch({ type: ACTIONS.SET_SUBMITTING, payload: value }), []),
+    selectQuiz: useCallback((quiz) => {
       let questions = quiz.questions || [];
       
       if (!questions || questions.length === 0) {
@@ -617,37 +676,41 @@ export function QuizProvider({ children }) {
           totalQuestions: questions.length || quiz.totalQuestions || 0
         } 
       });
-    },
-    toggleFavorite: (quizId) => {
+      // ✅ Reset quiz active when selecting new quiz
+      setQuizActive(false);
+    }, [setQuizActive]),
+    toggleFavorite: useCallback((quizId) => {
       dispatch({ type: ACTIONS.TOGGLE_FAVORITE, payload: quizId });
-    },
-    isFavorite: (quizId) => {
+    }, []),
+    isFavorite: useCallback((quizId) => {
       return (state.favorites || []).includes(quizId);
-    },
-    clearQuizState: () => {
+    }, [state.favorites]),
+    clearQuizState: useCallback(() => {
       dispatch({ type: ACTIONS.CLEAR_QUIZ_STATE });
-    },
-    setReviewing: (value) => dispatch({ type: ACTIONS.SET_REVIEWING, payload: value }),
-    getCurrentQuestion: () => {
+      // ✅ Clear quiz active state
+      setQuizActive(false);
+    }, [setQuizActive]),
+    setReviewing: useCallback((value) => dispatch({ type: ACTIONS.SET_REVIEWING, payload: value }), []),
+    getCurrentQuestion: useCallback(() => {
       return state.questions[state.currentQuestionIndex] || null;
-    },
-    getQuestionAnswer: (questionId) => {
+    }, [state.questions, state.currentQuestionIndex]),
+    getQuestionAnswer: useCallback((questionId) => {
       return state.answers[questionId] || null;
-    },
-    isQuestionAnswered: (questionId) => {
+    }, [state.answers]),
+    isQuestionAnswered: useCallback((questionId) => {
       return state.answers.hasOwnProperty(questionId);
-    },
-    isQuestionCorrect: (questionId) => {
+    }, [state.answers]),
+    isQuestionCorrect: useCallback((questionId) => {
       const answer = state.answers[questionId];
       const question = state.questions.find(q => q.id === questionId);
       if (!answer || !question) return false;
       return answer === question.correctAnswer;
-    },
-    getProgress: () => {
+    }, [state.answers, state.questions]),
+    getProgress: useCallback(() => {
       const answered = Object.keys(state.answers).length;
       const total = state.questions.length;
       return total > 0 ? (answered / total) * 100 : 0;
-    },
+    }, [state.answers, state.questions.length]),
     getResults,
   };
 

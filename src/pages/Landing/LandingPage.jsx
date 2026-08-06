@@ -560,155 +560,155 @@ function LandingPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-      {/* Navigation - Enhanced with glassmorphism */}{/* Navigation - Fixed with proper scroll-based colors */}
-<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-  isScrolled 
-    ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl shadow-lg border-b border-gray-200/50 dark:border-gray-700/50' 
-    : 'bg-transparent'
-}`}>
-  <div className="container mx-auto px-4 py-3 max-w-7xl">
-    <div className="flex items-center justify-between">
-      <Link to="/" className="flex items-center gap-3 group" onClick={() => setActiveNav('home')}>
-        <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity" />
-          <div className="relative p-2 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl shadow-lg shadow-blue-500/30">
-            <FaGraduationCap className="text-white text-2xl" />
-          </div>
-        </div>
-        <div>
-          <h1 className={`text-xl font-bold transition-colors duration-300 ${
-            isScrolled ? 'text-gray-800 dark:text-white' : 'text-white'
-          }`}>
-            QuizMaster
-          </h1>
-          <p className={`text-[10px] hidden sm:block font-medium tracking-wider uppercase transition-colors duration-300 ${
-            isScrolled ? 'text-gray-500 dark:text-gray-400' : 'text-white/80'
-          }`}>
-           
-          </p>
-        </div>
-      </Link>
-      
-      <div className="hidden lg:flex items-center gap-6">
-        {navLinks.map((link) => (
-          <button
-            key={link.id}
-            onClick={() => handleNavClick(link.id)}
-            className={`text-sm font-medium transition-all duration-300 relative ${
-              activeNav === link.id
-                ? isScrolled 
-                  ? 'text-blue-600 dark:text-blue-400' 
-                  : 'text-white'
-                : isScrolled
-                  ? 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
-                  : 'text-white/80 hover:text-white'
-            }`}
-          >
-            {link.label}
-            {activeNav === link.id && (
-              <motion.div
-                layoutId="activeNav"
-                className={`absolute -bottom-1 left-0 right-0 h-0.5 rounded-full ${
+      {/* Navigation - Enhanced with glassmorphism */}
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl shadow-lg border-b border-gray-200/50 dark:border-gray-700/50' 
+          : 'bg-transparent'
+      }`}>
+        <div className="container mx-auto px-4 py-3 max-w-7xl">
+          <div className="flex items-center justify-between">
+            <Link to="/" className="flex items-center gap-3 group" onClick={() => setActiveNav('home')}>
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity" />
+                <div className="relative p-2 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl shadow-lg shadow-blue-500/30">
+                  <FaGraduationCap className="text-white text-2xl" />
+                </div>
+              </div>
+              <div>
+                <h1 className={`text-xl font-bold transition-colors duration-300 ${
+                  isScrolled ? 'text-gray-800 dark:text-white' : 'text-white'
+                }`}>
+                  QuizMaster
+                </h1>
+                <p className={`text-[10px] hidden sm:block font-medium tracking-wider uppercase transition-colors duration-300 ${
+                  isScrolled ? 'text-gray-500 dark:text-gray-400' : 'text-white/80'
+                }`}>
+                  Learn & Master
+                </p>
+              </div>
+            </Link>
+            
+            <div className="hidden lg:flex items-center gap-6">
+              {navLinks.map((link) => (
+                <button
+                  key={link.id}
+                  onClick={() => handleNavClick(link.id)}
+                  className={`text-sm font-medium transition-all duration-300 relative ${
+                    activeNav === link.id
+                      ? isScrolled 
+                        ? 'text-blue-600 dark:text-blue-400' 
+                        : 'text-white'
+                      : isScrolled
+                        ? 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                        : 'text-white/80 hover:text-white'
+                  }`}
+                >
+                  {link.label}
+                  {activeNav === link.id && (
+                    <motion.div
+                      layoutId="activeNav"
+                      className={`absolute -bottom-1 left-0 right-0 h-0.5 rounded-full ${
+                        isScrolled 
+                          ? 'bg-gradient-to-r from-blue-500 to-indigo-500' 
+                          : 'bg-gradient-to-r from-yellow-400 to-yellow-300'
+                      }`}
+                    />
+                  )}
+                </button>
+              ))}
+            </div>
+            
+            <div className="hidden lg:flex items-center gap-3">
+              <button
+                onClick={() => setShowRoleModal(true)}
+                className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
                   isScrolled 
-                    ? 'bg-gradient-to-r from-blue-500 to-indigo-500' 
-                    : 'bg-gradient-to-r from-yellow-400 to-yellow-300'
+                    ? 'text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20' 
+                    : 'text-white/90 hover:text-white hover:bg-white/10'
                 }`}
-              />
-            )}
-          </button>
-        ))}
-      </div>
-      
-      <div className="hidden lg:flex items-center gap-3">
-        <button
-          onClick={() => setShowRoleModal(true)}
-          className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
-            isScrolled 
-              ? 'text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20' 
-              : 'text-white/90 hover:text-white hover:bg-white/10'
-          }`}
-        >
-          Login
-        </button>
-        <button
-          onClick={() => setShowRoleModal(true)}
-          className={`px-5 py-2 rounded-xl text-sm font-medium shadow-lg transition-all duration-300 hover:scale-105 ${
-            isScrolled 
-              ? 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-blue-500/30 hover:shadow-blue-500/50' 
-              : 'bg-gradient-to-r from-yellow-500 to-yellow-400 text-gray-900 shadow-yellow-500/30 hover:shadow-yellow-500/50'
-          }`}
-        >
-          Sign Up
-        </button>
-      </div>
-      
-      {/* Mobile menu button */}
-      <button
-        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        className="lg:hidden p-2 rounded-xl hover:bg-white/10 dark:hover:bg-white/10 transition-colors"
-      >
-        <svg className={`w-6 h-6 transition-colors duration-300 ${
-          isScrolled ? 'text-gray-700 dark:text-white' : 'text-white'
-        }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          {mobileMenuOpen ? (
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          ) : (
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              >
+                Login
+              </button>
+              <button
+                onClick={() => setShowRoleModal(true)}
+                className={`px-5 py-2 rounded-xl text-sm font-medium shadow-lg transition-all duration-300 hover:scale-105 ${
+                  isScrolled 
+                    ? 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-blue-500/30 hover:shadow-blue-500/50' 
+                    : 'bg-gradient-to-r from-yellow-500 to-yellow-400 text-gray-900 shadow-yellow-500/30 hover:shadow-yellow-500/50'
+                }`}
+              >
+                Sign Up
+              </button>
+            </div>
+            
+            {/* Mobile menu button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="lg:hidden p-2 rounded-xl hover:bg-white/10 dark:hover:bg-white/10 transition-colors"
+            >
+              <svg className={`w-6 h-6 transition-colors duration-300 ${
+                isScrolled ? 'text-gray-700 dark:text-white' : 'text-white'
+              }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {mobileMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
+          
+          {/* Mobile Menu */}
+          {mobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="lg:hidden pt-4 pb-3 border-t mt-3"
+            >
+              {navLinks.map((link) => (
+                <button
+                  key={link.id}
+                  onClick={() => handleNavClick(link.id)}
+                  className={`block w-full text-left px-4 py-2.5 text-sm font-medium transition-colors rounded-lg ${
+                    activeNav === link.id
+                      ? isScrolled
+                        ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400'
+                        : 'bg-white/20 text-white'
+                      : isScrolled
+                        ? 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50'
+                        : 'text-white/80 hover:text-white hover:bg-white/10'
+                  }`}
+                >
+                  {link.label}
+                </button>
+              ))}
+              <div className="flex flex-col gap-2 mt-3 px-4">
+                <button
+                  onClick={() => setShowRoleModal(true)}
+                  className={`w-full py-2.5 rounded-xl text-sm font-medium transition-colors ${
+                    isScrolled
+                      ? 'text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20'
+                      : 'text-white/90 hover:text-white hover:bg-white/10'
+                  }`}
+                >
+                  Login
+                </button>
+                <button
+                  onClick={() => setShowRoleModal(true)}
+                  className={`w-full py-2.5 rounded-xl text-sm font-medium shadow-lg ${
+                    isScrolled 
+                      ? 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white' 
+                      : 'bg-gradient-to-r from-yellow-500 to-yellow-400 text-gray-900'
+                  }`}
+                >
+                  Sign Up
+                </button>
+              </div>
+            </motion.div>
           )}
-        </svg>
-      </button>
-    </div>
-    
-    {/* Mobile Menu */}
-    {mobileMenuOpen && (
-      <motion.div
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="lg:hidden pt-4 pb-3 border-t mt-3"
-      >
-        {navLinks.map((link) => (
-          <button
-            key={link.id}
-            onClick={() => handleNavClick(link.id)}
-            className={`block w-full text-left px-4 py-2.5 text-sm font-medium transition-colors rounded-lg ${
-              activeNav === link.id
-                ? isScrolled
-                  ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400'
-                  : 'bg-white/20 text-white'
-                : isScrolled
-                  ? 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50'
-                  : 'text-white/80 hover:text-white hover:bg-white/10'
-            }`}
-          >
-            {link.label}
-          </button>
-        ))}
-        <div className="flex flex-col gap-2 mt-3 px-4">
-          <button
-            onClick={() => setShowRoleModal(true)}
-            className={`w-full py-2.5 rounded-xl text-sm font-medium transition-colors ${
-              isScrolled
-                ? 'text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20'
-                : 'text-white/90 hover:text-white hover:bg-white/10'
-            }`}
-          >
-            Login
-          </button>
-          <button
-            onClick={() => setShowRoleModal(true)}
-            className={`w-full py-2.5 rounded-xl text-sm font-medium shadow-lg ${
-              isScrolled 
-                ? 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white' 
-                : 'bg-gradient-to-r from-yellow-500 to-yellow-400 text-gray-900'
-            }`}
-          >
-            Sign Up
-          </button>
         </div>
-      </motion.div>
-    )}
-  </div>
-</nav>
+      </nav>
 
       {/* Hero Section - Enhanced */}
       <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
@@ -827,7 +827,6 @@ function LandingPage() {
               {/* Hero image or illustration placeholder */}
               <div className="relative w-full max-w-md">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-3xl blur-3xl" />
-                
               </div>
             </motion.div>
           </div>
@@ -1161,7 +1160,7 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* Contact Section - Enhanced */}
+      {/* ✅ UPDATED: Contact Section - Form on Top, Cards Below */}
       <section id="contact" className="py-20 bg-white dark:bg-gray-800">
         <div className="container mx-auto px-4 max-w-7xl">
           <motion.div
@@ -1178,33 +1177,218 @@ function LandingPage() {
               Get in <span className="bg-gradient-to-r from-green-500 to-emerald-500 bg-clip-text text-transparent">Touch</span>
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Have questions? We're here to help!
+              Have questions? We're here to help! Send us a message or reach out through any of the channels below.
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="glassmorphism card-shadow rounded-2xl p-6 text-center border border-gray-200/50 dark:border-gray-700/50 hover:shadow-xl transition-all duration-300 group">
-              <div className="w-14 h-14 mx-auto rounded-xl bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center text-white text-2xl mb-3 shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform duration-300">
-                <FaEnvelope />
+          {/* Contact Form - Full Width and Larger */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.6 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto mb-12"
+          >
+            <div className="glassmorphism card-shadow rounded-2xl p-8 border border-gray-200/50 dark:border-gray-700/50 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center text-white shadow-lg shadow-blue-500/30">
+                  <FaEnvelope className="text-xl" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200">Send Us a Message</h3>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">We'll respond within 24 hours</p>
+                </div>
               </div>
-              <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-1">Email</h4>
-              <p className="text-gray-600 dark:text-gray-400 text-sm">support@quizmaster.com</p>
+              
+              <form onSubmit={(e) => {
+                e.preventDefault();
+                toast.success('✅ Message sent successfully! We\'ll get back to you soon.');
+                e.target.reset();
+              }} className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {/* Name */}
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+                      Full Name <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="Enter your full name"
+                      className="w-full px-4 py-3 bg-gray-50/50 dark:bg-gray-700/50 border border-gray-200/50 dark:border-gray-700/50 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
+                    />
+                  </div>
+                  
+                  {/* Email */}
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+                      Email Address <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      required
+                      placeholder="Enter your email address"
+                      className="w-full px-4 py-3 bg-gray-50/50 dark:bg-gray-700/50 border border-gray-200/50 dark:border-gray-700/50 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
+                    />
+                  </div>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {/* Phone */}
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      placeholder="Enter your phone number"
+                      className="w-full px-4 py-3 bg-gray-50/50 dark:bg-gray-700/50 border border-gray-200/50 dark:border-gray-700/50 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
+                    />
+                  </div>
+                  
+                  {/* Topic Dropdown */}
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+                      Topic <span className="text-red-500">*</span>
+                    </label>
+                    <select
+                      required
+                      className="w-full px-4 py-3 bg-gray-50/50 dark:bg-gray-700/50 border border-gray-200/50 dark:border-gray-700/50 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 appearance-none cursor-pointer"
+                    >
+                      <option value="">Select a topic...</option>
+                      <option value="account-registration">Account Registration & Setup</option>
+                      <option value="login-issues">Login Issues & Password Reset</option>
+                      <option value="quiz-taking">Taking Quizzes & Assessment</option>
+                      <option value="quiz-results">Quiz Results & Scoring</option>
+                      <option value="progress-tracking">Progress Tracking & Reports</option>
+                      <option value="technical-support">Technical Support & Bugs</option>
+                      <option value="feature-requests">Feature Requests & Suggestions</option>
+                      <option value="certificates">Certificates & Achievements</option>
+                      <option value="payment-billing">Payment & Billing Questions</option>
+                      <option value="general-inquiry">General Inquiry & Feedback</option>
+                    </select>
+                  </div>
+                </div>
+                
+                {/* Message */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+                    Message <span className="text-red-500">*</span>
+                  </label>
+                  <textarea
+                    required
+                    rows="4"
+                    placeholder="Describe your question or issue in detail..."
+                    className="w-full px-4 py-3 bg-gray-50/50 dark:bg-gray-700/50 border border-gray-200/50 dark:border-gray-700/50 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 resize-none"
+                  ></textarea>
+                </div>
+                
+                {/* Submit Button */}
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  type="submit"
+                  className="w-full py-3.5 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-xl font-semibold text-base shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 flex items-center justify-center gap-3 group"
+                >
+                  <span>Send Message</span>
+                  <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
+                </motion.button>
+                
+                <p className="text-xs text-center text-gray-400 dark:text-gray-500">
+                  We'll respond within 24 hours. Your information is safe with us.
+                </p>
+              </form>
             </div>
+          </motion.div>
+          
+          {/* Contact Cards - Below the form with spacing */}
+          <div className="max-w-5xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-8"
+            >
+              <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-300">
+                Or reach out through our channels
+              </h3>
+              <div className="h-0.5 w-16 mx-auto bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mt-2"></div>
+            </motion.div>
             
-            <div className="glassmorphism card-shadow rounded-2xl p-6 text-center border border-gray-200/50 dark:border-gray-700/50 hover:shadow-xl transition-all duration-300 group">
-              <div className="w-14 h-14 mx-auto rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center text-white text-2xl mb-3 shadow-lg shadow-green-500/30 group-hover:scale-110 transition-transform duration-300">
-                <FaPhone />
-              </div>
-              <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-1">Phone</h4>
-              <p className="text-gray-600 dark:text-gray-400 text-sm">+234 813 164 9230</p>
-            </div>
-            
-            <div className="glassmorphism card-shadow rounded-2xl p-6 text-center border border-gray-200/50 dark:border-gray-700/50 hover:shadow-xl transition-all duration-300 group">
-              <div className="w-14 h-14 mx-auto rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white text-2xl mb-3 shadow-lg shadow-purple-500/30 group-hover:scale-110 transition-transform duration-300">
-                <FaMapMarkerAlt />
-              </div>
-              <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-1">Location</h4>
-              <p className="text-gray-600 dark:text-gray-400 text-sm">Nigeria</p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {/* Email Card */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.5 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5, scale: 1.03 }}
+                className="glassmorphism card-shadow rounded-2xl p-6 text-center border border-gray-200/50 dark:border-gray-700/50 hover:shadow-xl transition-all duration-300 group"
+              >
+                <div className="w-14 h-14 mx-auto rounded-xl bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center text-white text-2xl mb-3 shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform duration-300">
+                  <FaEnvelope />
+                </div>
+                <h4 className="font-semibold text-gray-800 dark:text-gray-200 text-sm">Email</h4>
+                <p className="text-gray-600 dark:text-gray-400 text-xs mt-1 break-all">support@quizmaster.com</p>
+              </motion.div>
+              
+              {/* Phone Card */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.5 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5, scale: 1.03 }}
+                className="glassmorphism card-shadow rounded-2xl p-6 text-center border border-gray-200/50 dark:border-gray-700/50 hover:shadow-xl transition-all duration-300 group"
+              >
+                <div className="w-14 h-14 mx-auto rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center text-white text-2xl mb-3 shadow-lg shadow-green-500/30 group-hover:scale-110 transition-transform duration-300">
+                  <FaPhone />
+                </div>
+                <h4 className="font-semibold text-gray-800 dark:text-gray-200 text-sm">Phone</h4>
+                <p className="text-gray-600 dark:text-gray-400 text-xs mt-1">+234 813 164 9230</p>
+              </motion.div>
+              
+              {/* Location Card */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.5 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5, scale: 1.03 }}
+                className="glassmorphism card-shadow rounded-2xl p-6 text-center border border-gray-200/50 dark:border-gray-700/50 hover:shadow-xl transition-all duration-300 group"
+              >
+                <div className="w-14 h-14 mx-auto rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white text-2xl mb-3 shadow-lg shadow-purple-500/30 group-hover:scale-110 transition-transform duration-300">
+                  <FaMapMarkerAlt />
+                </div>
+                <h4 className="font-semibold text-gray-800 dark:text-gray-200 text-sm">Location</h4>
+                <p className="text-gray-600 dark:text-gray-400 text-xs mt-1">Nigeria</p>
+              </motion.div>
+              
+              {/* WhatsApp Card */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, duration: 0.5 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5, scale: 1.03 }}
+                className="glassmorphism card-shadow rounded-2xl p-6 text-center border border-green-200/50 dark:border-green-700/30 hover:shadow-xl transition-all duration-300 group cursor-pointer"
+                onClick={() => {
+                  const phone = '08123645507';
+                  const message = 'Hello QuizMaster, I need assistance with:';
+                  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+                  window.open(url, '_blank');
+                }}
+              >
+                <div className="w-14 h-14 mx-auto rounded-xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-white text-2xl mb-3 shadow-lg shadow-green-500/30 group-hover:scale-110 transition-transform duration-300 group-hover:shadow-green-500/50">
+                  <FaWhatsapp />
+                </div>
+                <h4 className="font-semibold text-gray-800 dark:text-gray-200 text-sm">WhatsApp</h4>
+                <p className="text-gray-600 dark:text-gray-400 text-xs mt-1">081 236 455 07</p>
+                <div className="mt-2 inline-block px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full text-[10px] font-semibold">
+                  Click to Chat
+                </div>
+              </motion.div>
             </div>
           </div>
         </div>
