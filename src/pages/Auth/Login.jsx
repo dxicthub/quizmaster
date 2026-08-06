@@ -269,6 +269,7 @@ function Login() {
                   </>
                 ) : (
                   <>
+                  <FaUserShield className="text-lg group-hover:rotate-12 transition-transform duration-300" />
                     <span>Login</span>
                     
                   </>
